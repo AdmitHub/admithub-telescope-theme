@@ -1,0 +1,29 @@
+.grid-wrap 
+  max-width grid-width
+  margin 0 auto
+
+.grid-row
+  clearfix()
+  padding 0 (grid-page-gutter/2)
+
+  @media mq-med
+    padding 0 grid-page-gutter
+    margin-left: -(grid-gutter);
+
+.grid-el
+  padding 0 1.5rem
+
+.grid-space
+  @media mq-med
+    margin-left grid-gutter
+
+for i in 1 2 3 4
+  .grid-{i}
+    grid-col i
+
+.grid-2-3
+  grid-col (3/2)
+
+.grid-inline-block
+  float none
+  inline-block()

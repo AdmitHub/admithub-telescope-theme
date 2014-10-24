@@ -1,0 +1,145 @@
+ul-reset()
+  list-style none
+  margin 0
+  padding 0
+
+pos-y-center-companion()
+  &:before
+    content ''
+    inline-block()
+    vertical-align middle
+    height 100%
+
+dim(size)
+  height size
+  width size
+  
+
+inline-block(important = false)
+  if important is true
+    display inline-block !important
+  else
+    display inline-block
+  vertical-align: middle
+
+remove-button()
+  background none
+  border 0
+  padding 0
+
+type-size(font line = 1.2)
+  font-size unit(font 'px')
+  font-size unit(font/10 'rem')
+  line-height unit(line 'em')
+
+type-secondary()
+  color color-type-secondary !important
+
+remify(value)
+    u = unit(value)
+
+    if u is 'px'
+      return unit(value/10 'rem')
+    else
+      return unit(value u)
+
+serif(weight = 300)
+  font-family "grad", "georgia", serif
+  font-weight weight
+
+sans(weight = 300)
+  font-family "ff-tisa-sans-web-pro", "helvetica neue", "helvetica", "arial", sans-serif
+  font-weight weight
+
+type-small()
+  type-size 13
+
+type-medium()
+  type-size 16
+
+type-regular()
+  type-size 18
+
+type-large()
+  type-size 24
+
+type-xlarge()
+  type-size 30
+
+type-huge()
+  type-size 48 1.2
+
+  @media mq-med
+    type-size 60 1.1
+
+type-xhuge()
+  type-size 70 1
+
+type-serif-bold()
+  serif 600
+
+type-sans-bold()
+  sans 600
+
+type-sans-uppercase()
+  type-sans-bold()
+  text-transform uppercase
+
+ui-height(height)
+  height height
+  line-height height
+
+ui-btn-color(color)
+  background-color color
+
+  &:hover
+    background-color darken(color, 8)
+
+grid-col(num)
+  margin-bottom grid-gutter
+  padding-bottom grid-gutter
+  width 100%
+  border-bottom border-grey-light
+
+  &:last-child
+    border-bottom 0
+
+  &.grid-no-y-space
+    margin-bottom 0
+    padding-bottom 0
+    border-bottom 0
+
+  @media mq-med
+    float left
+    border 0
+
+    if num is 4
+      width 50%
+      &:nth-of-type(odd)
+        clear both
+
+    if num is 2
+      &:nth-of-type(odd)
+        clear both
+
+  @media mq-lg
+    border-bottom 0
+    width (100%/num)
+
+    if num is 3 or num is 4
+      &:nth-of-type(odd)
+        clear none
+
+placeholder()
+  &:-moz-placeholder
+    {block}
+
+  &::-moz-placeholder
+    {block}
+
+  &:-ms-input-placeholder
+    {block}
+
+  &::-webkit-input-placeholder
+    {block}
+  

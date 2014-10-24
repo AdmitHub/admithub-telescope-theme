@@ -1,0 +1,29 @@
+body,
+input {
+  font-family base-font-family
+  font-size base-font-size
+}
+
+input,
+button
+  outline 0
+
+ul
+  list-style: none
+
+ul,ol
+  margin-top 0
+  margin-bottom base-font-size
+  ul, ol
+    margin-bottom: 0
+
+// BS3 override for radio buttons in forms
+input[type=radio].form-control
+  display: inline-block
+  height: auto
+  width: auto
+
+.form-control
+  +placeholder()
+    font-size 80%
+    line-height auto

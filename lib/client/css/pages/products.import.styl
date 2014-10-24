@@ -1,0 +1,104 @@
+.pg-products-hero
+  background-image url('/hero-bg-products.jpg')
+  text-align center
+  height 30rem
+
+  @media mq-med
+    height 40rem
+
+  > *
+    inline-block()
+    width: 100%;
+
+.pg-products
+  height: 100%
+  background-color: color-grey-xlight
+
+  .info-text
+    position relative
+    display table
+    background-color white
+    box-shadow 0 0.1rem 1rem rgba(color-black, 0.15)
+    padding pg-products-padding
+    width 100%
+
+    @media mq-lg
+      min-height pg-products-product-height
+
+    ul
+      margin-left 0
+      padding-left 0
+      list-style disc
+      list-style-position inside
+
+    li
+      margin-bottom 2rem
+
+    // `display: table-cell` is the cleanest way I know to get the button to
+    // hang out on the bottom.
+    .text-row, .button-row
+      display table-row
+    .text-cell
+      display table-cell
+      height 100%
+    .button-cell
+      display table-cell
+
+  .most-popular
+    type-sans-uppercase()
+    background-color color-green
+    color color-white
+    padding (pg-products-padding/2) pg-products-padding
+
+    span
+      line-height 1.75em
+
+    @media mq-lg
+      position absolute
+      bottom 100%
+      width 100%
+
+  .price
+    color color-green
+    margin-bottom 2rem
+    type-size 36
+    type-sans-bold()
+
+  .purchase
+    display block
+    width 100%
+    border-radius 5rem
+
+  .asterisk
+    margin-top 1.5rem
+    text-align center
+    type-small()
+
+.pg-product-info
+  position relative
+
+.pg-product-title
+  type-xlarge()
+  type-serif-bold()
+  margin-bottom 1rem
+
+.pg-product-audience
+  type-sans-bold()
+  type-medium()
+  margin-bottom 1rem
+
+.pg-product-desc
+  margin-bottom 3rem
+  type-medium()
+
+.pg-products-contact
+  text-align center
+  margin-bottom 6rem
+
+  h2
+    margin-bottom 1.5rem
+
+  a
+    background-color color-grey-dark
+    color white
+    border-radius 5rem

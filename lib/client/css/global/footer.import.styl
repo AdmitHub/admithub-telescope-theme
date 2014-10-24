@@ -1,0 +1,29 @@
+.g-footer
+  padding grid-gutter 0
+  clearfix()
+  type-small()
+
+.g-footer-copyright
+  margin-bottom (grid-gutter/4)
+
+  @media mq-med
+    float left
+    margin-bottom 0
+
+.g-footer-nav
+  margin-bottom 0
+
+  @media mq-med
+    float right
+
+  li 
+    inline-block()
+    margin-right (grid-gutter/2)
+
+    @media mq-med
+      margin-right 0
+      margin-left (grid-gutter/2)
+
+  a
+    type-sans-bold()
+

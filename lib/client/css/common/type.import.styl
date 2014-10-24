@@ -1,0 +1,105 @@
+body
+  serif()
+  type-regular()
+  color color-type
+
+body,
+input,
+button
+  -webkit-font-smoothing antialiased
+  type-regular()
+
+// Placeholder styles can't be stacked with any other selector, or browsers
+// ignore them.
+input
+  +placeholder()
+    // Careful setting sizes without checking line-heights in firefox and chrome
+    type-secondary()
+
+h1, h2, h3, h4, h5, h6
+  color color-type
+
+
+.mod-section-dark
+  h1, h2, h3, h4, h5, h6
+    color color-white
+
+heading-size(font)
+  font-size: font
+  line-height: (0.666 * font)
+  margin-top: 0
+  margin-bottom: (0.666 * font)
+  margin-top: (0.5 * font)
+
+h1
+  heading-size(4rem)
+h2
+  heading-size(3rem)
+h3
+  heading-size(2.4rem)
+h4
+  heading-size(2rem)
+h5
+  heading-size(1.6rem)
+h6
+  heading-size(1.2rem)
+
+a
+  color color-green
+  transition color 0.2s
+
+  &:hover
+    color darken(color-green, 12)
+    text-decoration none
+
+.alt-on-dark
+  color color-white
+
+  a
+    color color-white
+
+.type-serif-bold
+  type-serif-bold()
+
+.type-sans-bold
+  type-sans-bold
+
+.type-sans-uppercase
+  type-sans-uppercase()
+
+.type-small
+  type-small()
+
+.type-medium
+  type-medium()
+
+.type-regular
+  type-regular()
+
+.type-large
+  type-large()
+
+.type-xlarge
+  type-xlarge()
+
+.type-huge
+  type-huge()
+
+.type-xhuge
+  type-xhuge()
+
+.type-left
+  text-align left
+
+.type-center
+  text-align center
+
+.type-secondary
+  type-secondary()
+
+.type-color-white
+  color color-white !important
+
+.type-capitalize
+  text-transform capitalize
+
