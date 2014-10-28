@@ -1,0 +1,43 @@
+<template name="ah_header">
+  <div class="g-header-wrap">
+    <div class="grid-wrap">
+      <div class="grid-row">
+        <div class="grid-space">
+          <header class="g-header">
+            <button type="button" class="g-header-hamburger js-hamburger">
+              <span class="g-header-hamburger-bar"></span>
+              <span class="g-header-hamburger-bar"></span>
+              <span class="g-header-hamburger-bar"></span>
+            </button>
+            {{#if logo_url}}
+              <a class="g-header-logo" href="/">
+                <img src="{{logo_url}}" alt="{{site_title}}"/>
+              </a>
+            {{else}}
+              <a class="g-header-logo" href="/">{{site_title}}</a>
+            {{/if}}
+
+            <ul class="g-header-nav js-header-nav">
+              {{#if hasPrimaryNav}}
+                {{#each primaryNav}}
+                  <li>
+                    {{> UI.dynamic template=getTemplate}}
+                  </li>
+                {{/each}}
+              {{/if}}
+
+              {{#if hasSecondaryNav}}
+                {{#each secondaryNav}}
+                  <li>
+                    {{> UI.dynamic template=getTemplate}}
+                  </li>
+                {{/each}}
+              {{/if}}
+            </ul>
+            {{> ah_header_cta}}
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

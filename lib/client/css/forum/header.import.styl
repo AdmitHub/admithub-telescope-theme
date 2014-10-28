@@ -1,0 +1,56 @@
+.g-header
+  border-bottom border-grey-light
+
+  .mod-dropdown
+    display block
+    position static
+
+    @media mq-med
+      position absolute
+      display none
+
+.g-header-wrap
+  background-color color-white
+
+  a:not(.ui-btn)
+    color color-type
+    line-height g-header-height
+
+.g-header-nav,
+.g-header-nav .dropdown-menu
+  background-color color-white
+
+  @media mq-med
+    background-color transparent
+
+.g-header-logo
+  z-index 10
+  position relative
+  type-medium()
+
+.g-header-nav
+  a
+    border-bottom border-grey-light
+    type-medium()
+
+    @media mq-med
+      &:not(.ui-btn)
+        type-small()
+        line-height g-header-height
+
+      border-bottom 0
+
+.g-header-hamburger
+  float left
+  padding-left 0
+
+.g-header-hamburger-bar
+  background-color color-type
+
+.g-header-cta-wrap
+  pos-y-center-companion()
+  inline-block()
+  height g-header-height
+
+.g-header-cta
+  margin-left (grid-gutter/2)

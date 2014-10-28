@@ -1,0 +1,24 @@
+<template name="ah_layout">
+
+{{> UI.dynamic template=css}}
+  <div class="outer-wrapper {{currentPage}}">
+    {{> UI.dynamic template=mobile_nav}}
+    <div class="inner-wrapper template-{{pageName}}">
+      {{> UI.dynamic template=nav}}
+      <div class="grid-wrap g-content">
+        <div class="grid-row">
+          <div class="grid-space">
+            {{> UI.dynamic template=error}}
+            {{#each heroModules}}
+            {{> UI.dynamic template=getTemplate}}
+            {{/each}}
+            {{> yield}}
+            {{> UI.dynamic template=footer}}
+          </div>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+    </div>
+    {{{extraCode}}}
+  </div>
+</template>

@@ -1,0 +1,12 @@
+<template name="ah_posts_list">
+  {{> UI.dynamic template=postsListIncoming data=incoming}}
+
+  <div class="posts list">
+    {{#each posts}}
+      {{> UI.dynamic template=post_item}}
+    {{/each}}
+  </div>
+
+  {{> UI.dynamic template=postsLoadMore}}
+</template>
+

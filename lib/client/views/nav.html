@@ -1,0 +1,40 @@
+<template name="ah_nav_new_questions">
+  <a href="posts_new">New Questions</a>
+</template>
+
+<template name="ah_nav_top_questions">
+  <a href="posts_top">Top Questions</a>
+</template>
+
+<template name="ah_nav_user">
+  {{#if isLoggedIn}}
+    <div class="mod-dropdown-trigger user-menu">
+      <a href="/">{{name}}</a>
+      <div class="mod-dropdown dropdown-menu">
+        <ul role="menu" aria-labelledby="dLabel">
+          <li><a href="{{profileUrl}}">{{i18n "Profile"}}</a></li>
+          <li><a href="/account">{{i18n "Edit Account"}}</a></li> 
+          <li><a href="/sign-out">{{i18n "Sign Out"}}</a></li>
+        </ul>
+      </div>
+    </div>
+  {{else}}
+    <a class="account-link sign-in" href="/sign-in">{{i18n "Sign In"}}</a>
+    <a class="account-link sign-up" href="/sign-up">{{i18n "Sign Up"}}</a>
+  {{/if}}
+</template>
+
+<template name="ah_nav_admin">
+  {{#if isAdmin}}
+    <div class="mod-dropdown-trigger g-header-nav-admin admin-menu">
+      <a class="admin dropdown-top-level" href="/">{{i18n "Admin"}}</a>
+      <div class="mod-dropdown">
+        <ul role="menu" aria-labelledby="dLabel">
+          {{#each menu}}
+            {{> UI.dynamic template=menuItem data=this}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  {{/if}}
+</template>
