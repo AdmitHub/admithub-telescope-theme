@@ -12,7 +12,6 @@
     color white
     sans 600
     line-height g-header-height
-    inline-block()
 
 .g-header-logo
   float left
@@ -73,6 +72,9 @@ input.g-header-search-input
   padding  g-header-height grid-gutter (grid-page-gutter/2)
   background-color color-purple
   box-shadow 0 0.1rem 2rem rgba(color-black, 0.75)
+
+  > *
+    inline-block()
 
   @media mq-med
     inline-block(true)
