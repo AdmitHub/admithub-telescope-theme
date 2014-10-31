@@ -5,6 +5,7 @@
     {{#each postAuthor}}
       {{> UI.dynamic template=getTemplate data=..}}
     {{/each}}
+
     {{#if can_edit}}
       | <a href="/posts/{{_id}}/edit" class="edit-link goto-edit">Edit</a>
     {{/if}}

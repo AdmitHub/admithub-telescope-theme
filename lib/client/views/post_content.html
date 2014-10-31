@@ -1,12 +1,17 @@
 <template name="ah_post_content">
   <div class="post-info">
     <h3 class="post-heading">
-      {{#each postHeading}}
+      {{#each justTitle}}
         {{> UI.dynamic template=getTemplate data=..}}
       {{/each}}
     </h3>
+
     <div class="post-meta">
       {{#each postMeta}}
+        {{> UI.dynamic template=getTemplate data=..}}
+      {{/each}}
+
+      {{#each allButTitle}}
         {{> UI.dynamic template=getTemplate data=..}}
       {{/each}}
     </div>

@@ -46,7 +46,7 @@ remove-button()
   border 0
   padding 0
 
-type-size(font line = 1.2)
+type-size(font line = 1.5)
   font-size unit(font 'px')
   font-size unit(font/10 'rem')
   line-height unit(line 'em')
@@ -113,15 +113,50 @@ type-sans-uppercase()
   type-sans-bold()
   text-transform uppercase
 
+type-ui()
+  type-sans-bold()
+
 ui-height(height)
   height height
   line-height height !important
 
-ui-btn-color(color)
-  background-color color
+ui-unbtn()
+  font-size inherit
+  line-height inherit
+  font-weight inherit
+  color inherit
+  background-color transparent
+  margin 0 
+  padding 0
+  border-radius 0
+  border 0
+  vertical-align inherit
+
+ui-btn(background-color, type-color = color-white)
+  @extend .ui-base
+  type-ui()
+  padding 0 1em
+  border-radius 0.2rem
+  inline-block()
+  border-radius 10rem
+
+  if background-color
+    background-color background-color
+
+  color type-color
+
+  a
+    color type-color
+
+  > *
+    inline-block()
+    vertical-align top
 
   &:hover
-    background-color darken(color, 8)
+    if background-color
+      background-color darken(background-color, 8)
+    color type-color
+    text-decoration none
 
 grid-col(num)
   margin-bottom grid-gutter

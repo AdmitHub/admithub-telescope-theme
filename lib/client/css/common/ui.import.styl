@@ -1,46 +1,58 @@
 .ui-base
   ui-height 4.5rem
-  padding 0 1em
+  padding 0 ui-padding
   border-radius 0.2rem
+
+  > *
+    line-height 4.5rem
 
 .ui-large
   @media mq-med
     type-large()
     ui-height 5.5rem
 
+  > *
+    line-height 5.5rem
+
 .ui-small
   type-medium()
-  ui-height 3rem
+  ui-height ui-small-height
+
+  > *
+    line-height ui-small-height
+
+.ui-unbtn
+  ui-unbtn()
 
 .ui-btn
-  @extend .ui-base
-  inline-block()
-  sans()
-  padding 0 1.5em
-  inline-block()
   background-color color-green
   border 0
   color white !important
   transition background-color 0.15s
   text-align center
   cursor pointer
-  border-radius 10rem
-  ui-btn-color color-green
-
+  ui-btn color-green
+  
   .icon-carat-right
     type-size 15
 
-  &:hover
-    color color-white
-    text-decoration none
+.ui-btn-checked
+  ui-btn false, color-type-secondary
+  border border-secondary
+
+  &.ui-small
+    ui-height 3.4rem
+
+  .icon-check
+    color color-green
 
 .ui-btn-secondary
   @extend .ui-btn
-  ui-btn-color color-grey-dark
+  ui-btn color-grey-dark
 
 .ui-btn-on-green
   @extend .ui-btn
-  ui-btn-color darken(color-green, 8)
+  ui-btn darken(color-green, 8)
   box-shadow 0 0 0 color-white
 
 .ui-btn-small
@@ -53,7 +65,6 @@
 
   .icon-carat-right
     type-size 20
-
 
 .ui-btn-icon-right
   margin-left 1em

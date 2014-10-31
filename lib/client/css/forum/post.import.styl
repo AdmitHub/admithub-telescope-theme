@@ -2,19 +2,17 @@
   display block
   margin-bottom grid-gutter
   padding-bottom grid-gutter
-  border-bottom border-secondary
+  border-bottom border-tertiary
 
   .center-modules
     width 100%
     display block
 
   .user-tag
-    color inherit
-    background none
-    font-weight inherit
-    padding 0
-    font-size inherit
-    border-radius 0
+    ui-unbtn()
+
+  .post-upvote
+    ui-unbtn()
 
 .post-heading
   type-large()
@@ -23,3 +21,32 @@
   type-medium()
   color color-type-secondary
   line-height inherit
+
+.post-upvote
+  type-medium()
+
+.post-upvoted
+  &:hover
+    .post-upvoted
+      display none
+    .post-unupvote
+      inline-block()
+
+  .post-rank
+    border-left border-secondary-light
+
+.post-rank
+  border-left border-style-primary rgba(color-white, 0.25)
+  margin-left (ui-padding/1.5) - 0.4rem
+  padding-left (ui-padding/1.5)
+
+.post-unupvote
+  display none
+  line-height ui-small-height
+
+  &:hover
+    color color-green
+
+.post-share,
+.post-discuss
+  type-ui()
