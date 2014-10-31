@@ -9,13 +9,13 @@
     ui-height 5.5rem
 
 .ui-small
-  type-small()
+  type-medium()
   ui-height 3rem
 
 .ui-btn
   @extend .ui-base
   inline-block()
-  type-sans-uppercase()
+  sans()
   padding 0 1.5em
   inline-block()
   background-color color-green
@@ -23,7 +23,6 @@
   color white !important
   transition background-color 0.15s
   text-align center
-  box-shadow 0 0.1rem 0.25rem rgba(color-black, 0.25)
   cursor pointer
   border-radius 10rem
   ui-btn-color color-green

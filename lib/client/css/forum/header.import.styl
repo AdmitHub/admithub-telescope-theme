@@ -1,5 +1,5 @@
 .g-header
-  border-bottom border-grey-light
+  border-bottom border-secondary
 
   .mod-dropdown
     display block
@@ -12,9 +12,11 @@
 .g-header-wrap
   background-color color-white
 
-  a:not(.ui-btn)
+  a
     color color-type
-    line-height g-header-height
+
+    @media mq-med
+      line-height g-header-height
 
 .g-header-nav,
 .g-header-nav .dropdown-menu
@@ -30,22 +32,28 @@
 
 .g-header-nav
   a
-    border-bottom border-grey-light
     type-medium()
 
     @media mq-med
-      &:not(.ui-btn)
-        type-small()
-        line-height g-header-height
-
-      border-bottom 0
+      type-small()
 
 .g-header-hamburger
   float left
   padding-left 0
+  color color-link
 
-.g-header-hamburger-bar
-  background-color color-type
+  .icon-x
+    position absolute
+    opacity 0
+
+  &.open
+    .icon-x
+      position static
+      opacity 1
+
+    .icon-hamburger
+      position absolute
+      opacity 0
 
 .g-header-cta-wrap
   pos-y-center-companion()
@@ -54,3 +62,7 @@
 
 .g-header-cta
   margin-left (grid-gutter/2)
+
+.g-header-nav-admin
+  > a
+    border-bottom 0

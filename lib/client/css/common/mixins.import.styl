@@ -33,7 +33,6 @@ pos-y-center-companion()
 dim(size)
   height size
   width size
-  
 
 inline-block(important = false)
   if important is true
@@ -77,11 +76,20 @@ type-small()
 type-medium()
   type-size 16
 
+  @media mq-med
+    type-size 18
+
 type-regular()
   type-size 18
+    
+  @media mq-med
+    type-size 20
 
 type-large()
   type-size 24
+
+  @media mq-med
+    type-size 30
 
 type-xlarge()
   type-size 30
@@ -107,7 +115,7 @@ type-sans-uppercase()
 
 ui-height(height)
   height height
-  line-height height
+  line-height height !important
 
 ui-btn-color(color)
   background-color color
@@ -119,7 +127,7 @@ grid-col(num)
   margin-bottom grid-gutter
   padding-bottom grid-gutter
   width 100%
-  border-bottom border-grey-light
+  border-bottom border-secondary
 
   &:last-child
     border-bottom 0
@@ -163,3 +171,17 @@ placeholder()
   &::-webkit-input-placeholder
     {block}
   
+
+alt-on-dark(important = false)
+  if important
+    color color-white !important
+
+    a
+      color color-white !important
+  else
+    color color-white
+
+    a
+      color color-white
+
+

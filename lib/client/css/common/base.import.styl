@@ -22,6 +22,12 @@ ul,ol
   ul, ol
     margin-bottom: 0
 
+a
+a:link
+a:visited
+a:active
+  font-weight inherit
+
 // BS3 override for radio buttons in forms
 input[type=radio].form-control
   display: inline-block
@@ -32,3 +38,22 @@ input[type=radio].form-control
   +placeholder()
     font-size 80%
     line-height auto
+
+input[type="submit"]:link
+input[type="submit"]:hover
+input[type="submit"]:active
+input[type="submit"]:visited
+button:link
+button:hover
+button:active
+button:visited
+.button:link
+.button:hover
+.button:active
+.button:visited
+.btn:link
+.btn:hover
+.btn:active
+.btn:visited
+  color inherit
+
