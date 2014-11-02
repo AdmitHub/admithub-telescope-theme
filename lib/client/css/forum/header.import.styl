@@ -12,12 +12,6 @@
 .g-header-wrap
   background-color color-white
 
-  a
-    color color-type
-
-    @media mq-med
-      line-height g-header-height
-
 .g-header-nav,
 .g-header-nav .dropdown-menu
   background-color color-white
@@ -28,7 +22,6 @@
 .g-header-logo
   z-index 10
   position relative
-  type-medium()
 
 .g-header-nav
   a
@@ -36,10 +29,12 @@
 
     @media mq-med
       type-small()
+      line-height g-header-height
 
 .g-header-hamburger
   float left
-  padding-left 0
+  padding 0 (grid-gutter/2)
+  margin-left -(grid-gutter/2)
   color color-link
 
   .icon-x
@@ -66,3 +61,6 @@
 .g-header-nav-admin
   > a
     border-bottom 0
+
+.g-header-nav-user-sign-up
+  margin-left g-header-nav-space

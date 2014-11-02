@@ -1,10 +1,46 @@
 .ui-base
-  ui-height 4.5rem
-  padding 0 ui-padding
-  border-radius 0.2rem
+  ui-base()
 
-  > *
-    line-height 4.5rem
+.ui-unbtn
+  ui-unbtn()
+
+.ui-btn
+a.ui-btn
+  ui-btn()
+
+  .icon-carat-right
+    type-size 15
+
+.ui-btn-alt
+a.ui-btn-alt
+  ui-btn color-purple
+
+.ui-pill-checked
+  ui-btn false, color-type-secondary
+  border border-secondary
+
+  &.ui-small
+    ui-height ui-small-height + 0.4rem false
+
+  .icon-check
+    color color-green
+
+.ui-btn-secondary
+  @extend .ui-btn
+  ui-btn color-grey-xdark color-white
+
+.ui-btn-circle
+  padding 0
+  border-radius 100px
+  pos-y-center-companion()
+  line-height inherit
+  width ui-height-default
+
+  &.ui-small
+    width ui-small-height
+
+  .icon-x
+    type-size 12
 
 .ui-large
   @media mq-med
@@ -14,50 +50,15 @@
   > *
     line-height 5.5rem
 
+
 .ui-small
-  type-medium()
-  ui-height ui-small-height
-
-  > *
-    line-height ui-small-height
-
-.ui-unbtn
-  ui-unbtn()
-
-.ui-btn
-  background-color color-green
-  border 0
-  color white !important
-  transition background-color 0.15s
-  text-align center
-  cursor pointer
-  ui-btn color-green
-  
-  .icon-carat-right
-    type-size 15
-
-.ui-btn-checked
-  ui-btn false, color-type-secondary
-  border border-secondary
-
-  &.ui-small
-    ui-height 3.4rem
-
-  .icon-check
-    color color-green
-
-.ui-btn-secondary
-  @extend .ui-btn
-  ui-btn color-grey-dark
+a.ui-small
+  ui-small()
 
 .ui-btn-on-green
   @extend .ui-btn
   ui-btn darken(color-green, 8)
   box-shadow 0 0 0 color-white
-
-.ui-btn-small
-  @extend .ui-btn
-  @extend .ui-small
 
 .ui-btn-large
   @extend .ui-btn
@@ -69,5 +70,6 @@
 .ui-btn-icon-right
   margin-left 1em
 
-ul.disc
-  list-style: disc
+.ui-stretch
+  width 100%
+  display block

@@ -5,9 +5,16 @@ html
 body,
 input,
 button
-  serif()
   -webkit-font-smoothing antialiased
   type-regular()
+
+body,
+input
+  serif()
+
+form
+  +ui-form-inputs()
+    type-regular()
 
 // Placeholder styles can't be stacked with any other selector, or browsers
 // ignore them.
@@ -97,3 +104,6 @@ a
 .type-capitalize
   text-transform capitalize
 
+.type-ui
+a.type-ui
+  type-ui()

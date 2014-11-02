@@ -1,23 +1,23 @@
-.notifications-menu
-  @extend .mod-dropdown-trigger
-  display block
-  margin-left -(grid-page-gutter)
-  margin-right -(grid-page-gutter)
-  padding 0 grid-page-gutter
+.g-header-nav
+  .notifications-menu
+    @extend .mod-dropdown-trigger
+    display block
+    margin-right 0 
 
-  a
-    @mq-med-desk
-      padding (grid-gutter/2) 0
+    @media mq-med-desk
+      ui-border-radius()
+      a
+        padding (grid-gutter/2)
 
-  @media mq-med-desk
-    margin-bottom 0.75rem
+    @media mq-med-desk
+      margin-bottom 0.75rem
 
-  @media mq-med-desk
-    alt-on-dark true
-    background-color color-grey-xdark
+    @media mq-med-desk
+      alt-on-dark true
+      background-color color-grey-xdark
 
-  @media mq-med
-    inline-block()
+    @media mq-med
+      inline-block()
 
-  .dropdown-menu
-    @extend .mod-dropdown
+    .dropdown-menu
+      @extend .mod-dropdown

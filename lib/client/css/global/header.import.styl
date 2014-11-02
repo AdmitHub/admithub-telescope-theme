@@ -3,19 +3,16 @@
   top 0
   left 0
   background-color color-purple
+  margin-bottom (grid-gutter/2)
 
 .g-header
   height g-header-height
   text-align right
-
-  a
-    color white
-    sans 600
-    line-height g-header-height
+  sans 600
 
 .g-header-logo
   float left
-  type-large()
+  line-height g-header-height
 
 .g-header-search
   position relative
@@ -75,6 +72,9 @@ input.g-header-search-input
   background-color color-purple
   box-shadow 0 0.1rem 0.5rem rgba(color-black, 0.15)
 
+  @media mq-med-desk
+    max-width 40rem
+
   @media mq-med
     inline-block(true)
     position relative
@@ -86,7 +86,7 @@ input.g-header-search-input
 
     > *
       inline-block()
-      margin-left 1.5rem
+      margin-left g-header-nav-space
 
   a
     text-transform capitalize
@@ -112,15 +112,14 @@ input.g-header-search-input
       margin-top 1rem
       border-top border-secondary
 
-  .mod-dropdown
-    li:last-child
-      a
-        border-bottom 0
+  @media mq-med-desk
+    .mod-dropdown
+      box-shadow none 
 
-    a
-      margin-bottom 0
-      padding 0.5rem 1.5rem
-      color color-type-secondary
+      a
+        margin-bottom 0
+        padding 0.5rem 1.5rem
+        color color-type-secondary
 
   .credit-badge
     color orange
@@ -216,3 +215,40 @@ input.g-header-search-input
   height 0.35rem
   margin 0.35rem 0
   background-color color-white
+
+.g-header-touts
+  background-color color-purple
+  margin-top -(border-thickness)
+
+.g-header-touts-section
+  padding (grid-gutter/2) 0 
+  border-bottom border-secondary-on-dark
+  position relative
+
+  &:last-child
+    border-bottom 0
+
+.g-header-touts-section-close
+  position absolute
+  right 0
+  top 50%
+  margin-top -0.5em
+  type-small()
+
+.g-header-touts-sponsor-img
+  inline-block()
+  padding 0.5rem
+  background-color color-white
+  border-radius 0.4rem
+  position absolute
+  left 0
+  top 50%
+  height g-header-touts-sponsor-height
+  width g-header-touts-sponsor-height
+  margin-top -(g-header-touts-sponsor-height/2)
+
+  img
+    display block
+
+.g-header-touts-sponsor-text
+  margin-left g-header-touts-sponsor-height + 1rem

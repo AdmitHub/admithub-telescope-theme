@@ -1,8 +1,32 @@
 .mod-dropdown-trigger
+  position relative
   &:hover
     .mod-dropdown
       display block
 
+.g-header-nav .mod-dropdown 
 .mod-dropdown
-  position absolute
   display none
+  position absolute
+  right 0
+  top 100%
+  background-color color-white
+  min-width 17.5rem
+  ui-border-radius()
+  text-align left
+  box-shadow 0 0.1rem 1.5rem rgba(color-black, 0.25)
+
+  li:last-child
+    a
+      border-bottom 0
+
+  a
+    display block
+    padding 1rem
+    type-small()
+    border-bottom border-tertiary-light
+    transition-property none
+
+    &:hover
+      background-color rgba(color-green, 0.15)
+      color color-type

@@ -1,8 +1,13 @@
+.posts
+  max-width 75rem
+  margin 0 auto
+
 .post
   display block
-  margin-bottom grid-gutter
-  padding-bottom grid-gutter
-  border-bottom border-tertiary
+  margin-bottom (grid-gutter/2)
+  padding-bottom (grid-gutter/2)
+  border-bottom border-tertiary-light
+  clearfix()
 
   .center-modules
     width 100%
@@ -17,10 +22,15 @@
 .post-heading
   type-large()
 
+.post-title
+  display block
+  margin-bottom 0.5rem
+
 .post-meta
   type-medium()
   color color-type-secondary
   line-height inherit
+  margin-bottom 0.5rem
 
 .post-upvote
   type-medium()
@@ -31,14 +41,15 @@
       display none
     .post-unupvote
       inline-block()
+      vertical-align top
 
   .post-rank
     border-left border-secondary-light
 
 .post-rank
   border-left border-style-primary rgba(color-white, 0.25)
-  margin-left (ui-padding/1.5) - 0.4rem
-  padding-left (ui-padding/1.5)
+  margin-left ui-padding - 0.4rem
+  padding-left ui-padding
 
 .post-unupvote
   display none
@@ -47,6 +58,9 @@
   &:hover
     color color-green
 
-.post-share,
-.post-discuss
-  type-ui()
+.post-link
+a.post-link
+  margin-left 0.5rem
+  type-secondary()
+  type-small()
+  inline-block()

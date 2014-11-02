@@ -1,33 +1,22 @@
 <template name="ah_post_item">
   <div class="post {{rankClass}} {{#if sticky}}sticky{{/if}} {{inactiveClass}}" id="{{_id}}">
-    <div class="modules-group center-modules">
-      <div class="inner">
-      {{#each centerPostModules}}
-        <div class="{{moduleClass}}">
-          {{> UI.dynamic template=getTemplate data=..}}
-        </div>
-      {{/each}}
-      </div>
-    </div>
+  <div class="modules-group center-modules">
+  <div class="inner">
+  <div class="post-content">
+    <h4 class="type-large type-serif-bold">
+      {{> UI.dynamic template=postTitle data=. }}
+    </h4>
+    {{> UI.dynamic template=postDomain data=. }}
+    {{> UI.dynamic template=postInfo data=. }}
+  </div>
 
-    <div class="modules-group left-modules">
-      <div class="inner">
-      {{#each leftPostModules}}
-        <div class="{{moduleClass}}">
-          {{> UI.dynamic template=getTemplate data=..}}
-        </div>
-      {{/each}}
-      </div>
-    </div>
+  <div class="post-actions">
+    {{> UI.dynamic template=postUpvote data=. }}
 
-    <div class="modules-group right-modules">
-      <div class="inner">
-      {{#each rightPostModules}}
-        <div class="{{moduleClass}}">
-          {{> UI.dynamic template=getTemplate data=..}}
-        </div>
-      {{/each}}
-      </div>
-    </div>
+    {{> UI.dynamic template=postCommentsLink data=. }}
+    {{> UI.dynamic template=postDiscuss data=. }}
+  </div>
+  </div>
+  </div>
   </div>
 </template>

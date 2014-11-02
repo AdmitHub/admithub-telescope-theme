@@ -1,5 +1,5 @@
 <template name="ah_post_info">
-  <div class="post-meta-item">
+  <div class="post-meta-item post-meta">
     <!--span class="points">{{baseScore}} <span class="unit">{{pointsUnitDisplayText}}</span></span-->
     <span class="post-time">Posted {{ago}}</span>
     {{#each postAuthor}}
@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<template name="postAuthorName">
+<template name="ah_post_author_name">
   by <a class="post-author" href="{{profileUrl}}">{{authorName}}</a>
 </template>
 
