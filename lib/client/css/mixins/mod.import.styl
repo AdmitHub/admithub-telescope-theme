@@ -1,2 +1,12 @@
-mod-space()
-  margin-bottom (grid-gutter/2)
+mod-space(mult = 1)
+  margin-top (grid-gutter/2*mult)
+  margin-bottom (grid-gutter/2*mult)
+
+mod-space-bottom(mult = 1)
+  margin-bottom (grid-gutter/2*mult)
+
+mod-space-top(mult = 1)
+  margin-top (grid-gutter/2*mult)
+  
+mod-section()
+  mod-space 5
