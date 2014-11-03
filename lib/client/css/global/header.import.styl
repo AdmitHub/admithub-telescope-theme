@@ -221,9 +221,12 @@ input.g-header-search-input
   margin-top -(border-thickness)
 
 .g-header-touts-section
-  padding (grid-gutter/2) 0 
+  padding (grid-gutter/3) 0 
   border-bottom border-secondary-on-dark
   position relative
+
+  .icon-carat-right
+    type-small()
 
   &:last-child
     border-bottom 0
@@ -237,7 +240,7 @@ input.g-header-search-input
 
 .g-header-touts-sponsor-img
   inline-block()
-  padding 0.5rem
+  padding 0.25rem
   background-color color-white
   border-radius 0.4rem
   position absolute

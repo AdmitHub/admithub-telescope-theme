@@ -1,0 +1,116 @@
+vendor-prefixes = webkit, ms, moz, o
+
+vendor(prop, arg)
+  for prefix in vendor-prefixes
+    -{prefix}-{prop} arg
+    -{prop} arg
+
+flex-container(dir = row)
+  display -webkit-flex
+  display flex
+
+  vendor flex-direction dir
+
+flex(val)
+  -webkit-box-ordinal-group val
+  -moz-box-ordinal-group val
+  -ms-flex-order val
+  -webkit-order val
+  order val
+
+ul-reset()
+  list-style none
+  margin 0
+  padding 0
+
+pos-y-center-companion()
+  &:before
+    content ''
+    inline-block()
+    vertical-align middle
+    height 100%
+
+dim(width, height = width)
+  height width
+  width height
+
+inline-block(important = false)
+  if important is true
+    display inline-block !important
+  else
+    display inline-block
+  vertical-align: middle
+
+remove-button()
+  background none
+  border 0
+  padding 0
+
+grid-col(num)
+  margin-bottom grid-gutter
+  width 100%
+
+  &:last-child
+    border-bottom 0
+
+  &.grid-no-y-space
+    margin-bottom 0
+    padding-bottom 0
+    border-bottom 0
+
+  @media mq-med
+    float left
+    border 0
+    width (100%/num)
+
+    if num is 4
+      width 50%
+      &:nth-of-type(odd)
+        clear both
+
+    if num is 2
+      &:nth-of-type(odd)
+        clear both
+
+  @media mq-lg
+    border-bottom 0
+    width (100%/num)
+
+    if num is 3 or num is 4
+      &:nth-of-type(odd)
+        clear none
+
+placeholder()
+  &:-moz-placeholder
+    {block}
+
+  &::-moz-placeholder
+    {block}
+
+  &:-ms-input-placeholder
+    {block}
+
+  &::-webkit-input-placeholder
+    {block}
+  
+
+alt-on-dark(important = false)
+  +ui-form-inputs()
+    border 0
+
+  .type-secondary
+    opacity 0.5
+    color color-white
+
+  if important
+    color color-white !important
+
+    h1, h2, h3, h4, h5, h6, a
+      color color-white !important
+  else
+    color color-white
+
+    h1, h2, h3, h4, h5, h6, a
+      color color-white
+
+

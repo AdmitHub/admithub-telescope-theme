@@ -1,0 +1,58 @@
+type-size(font line = 1.4)
+  font-size unit(font 'px')
+  font-size unit(font/10 'rem')
+  line-height unit(line 'em')
+
+type-secondary()
+  color color-type-secondary
+
+remify(value)
+    u = unit(value)
+
+    if u is 'px'
+      return unit(value/10 'rem')
+    else
+      return unit(value u)
+
+serif(weight = 300)
+  font-family "grad", "georgia", serif
+  font-weight weight
+
+sans(weight = 300)
+  font-family "ff-tisa-sans-web-pro", "helvetica neue", "helvetica", "arial", sans-serif
+  font-weight weight
+
+type-small()
+  type-size 13
+
+type-medium()
+  type-size 16
+
+type-regular()
+  type-size 18
+
+type-large()
+  type-size 24 1.25
+
+type-xlarge()
+  type-size 30 1.25
+
+type-huge()
+  type-size 48 1.2
+
+type-xhuge()
+  type-size 70 1
+
+type-serif-bold()
+  serif 600
+
+type-sans-bold()
+  sans 600
+
+type-sans-uppercase()
+  type-sans-bold()
+  text-transform uppercase
+
+type-ui()
+  type-sans-bold()
+
