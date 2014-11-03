@@ -25,7 +25,6 @@ Package.onUse(function (api) {
   api.addFiles('lib/admithub.js', ['client', 'server']);
 
   api.addFiles('lib/client/css/screen.styl', 'client');
-  api.addFiles('lib/client/js/base.js', 'client');
   api.addFiles('lib/client/views/header_cta.html', 'client');
   api.addFiles('lib/client/views/header_cta.js', 'client');
   api.addFiles('lib/client/views/header.html', 'client');
@@ -56,5 +55,5 @@ Package.onUse(function (api) {
   // Make sure this is added *after* screen.styl above.
   api.addFiles('lib/client/css/asset_path_overrides.styl', 'client');
 
-  api.export(['templates', 'themeSettings']);
+  api.export(['templates', 'themeSettings', 'primaryNav', 'secondaryNav']);
 });
