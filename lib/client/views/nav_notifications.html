@@ -1,20 +1,18 @@
 <template name="ah_nav_notifications">
-  {{#if isLoggedIn}}
+{{#if isLoggedIn }}
+  {{#if hasNotifications }}
     <div class="dropdown notifications-menu">
       <a class="view  dropdown-top-level" href="/">{{notification_count}}</a>
       <div class="dropdown-menu">
         <ul role="menu" aria-labelledby="dLabel">
-          {{#if hasNotifications}}
-            <li><a href="#" class="button mark-as-read">{{i18n "Mark as read"}}</a></li>  
-            {{#each notifications}}
-              {{> UI.dynamic template=notificationItem}}
-            {{/each}}
-          {{else}}
-            <li>No notifications</li>
-          {{/if}}
+          <li><a href="#" class="button mark-as-read">{{i18n "Mark as read"}}</a></li>  
+          {{#each notifications}}
+            {{> UI.dynamic template=notificationItem}}
+          {{/each}}
         </ul>
       </div>
     </div>
   {{/if}}
+{{/if}}
 </template>
 
