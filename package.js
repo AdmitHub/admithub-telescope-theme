@@ -37,6 +37,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/nav_notifications.html', 'client');
   api.addFiles('lib/client/views/newsletter_banner.html', 'client');
   api.addFiles('lib/client/views/post_admin.html', 'client');
+  api.addFiles('lib/client/views/post_categories.html', 'client');
   api.addFiles('lib/client/views/post_comments_link.html', 'client');
   api.addFiles('lib/client/views/post_content.html', 'client');
   api.addFiles('lib/client/views/post_content.js', 'client');
