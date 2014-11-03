@@ -9,15 +9,15 @@
         <i class="icon-x"></i>
       </span>
 
-      <span class="post-rank">{{oneBasedRank}}</span>
+      <span class="post-rank">{{voteCount}}</span>
     {{else}}
 
       <a class="upvote-link not-voted" href="#">
       <span>{{i18n "Vote Up"}}</span></a>
 
-      {{#if oneBasedRank}}
+      {{#if voteCount}}
         <div class="post-rank">
-          <span>{{oneBasedRank}}</span>
+          <span>{{voteCount}}</span>
         </div>
       {{/if}}
     {{/if}}
