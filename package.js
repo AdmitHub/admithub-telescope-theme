@@ -47,10 +47,13 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/post_upvote.js', 'client');
   api.addFiles('lib/client/views/search.html', 'client');
   api.addFiles('lib/client/views/typekit.html', 'client');
+
   api.addFiles('public/icons/admithub.eot', 'client');
   api.addFiles('public/icons/admithub.svg', 'client');
   api.addFiles('public/icons/admithub.ttf', 'client');
   api.addFiles('public/icons/admithub.woff', 'client');
+
+  api.addFiles('public/img/st-anselm-crest.png', 'client');
   
   // Make sure this is added *after* screen.styl above.
   api.addFiles('lib/client/css/asset_path_overrides.styl', 'client');
