@@ -27,6 +27,8 @@ Package.onUse(function (api) {
   api.addFiles('lib/admithub.js', ['client', 'server']);
 
   api.addFiles('lib/client/css/screen.styl', 'client');
+  api.addFiles('lib/client/views/error_item.html', 'client');
+  api.addFiles('lib/client/views/error_item.js', 'client');
   api.addFiles('lib/client/views/header_cta.html', 'client');
   api.addFiles('lib/client/views/header_cta.js', 'client');
   api.addFiles('lib/client/views/header.html', 'client');
