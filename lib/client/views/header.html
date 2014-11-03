@@ -1,3 +1,4 @@
+<!-- Originally called <template name='nav'> -->
 <template name="ah_header">
   <div class="g-header-wrap">
     <div class="grid-wrap">
@@ -42,23 +43,7 @@
       </div>
     </div>
 
-      <div class="g-header-touts alt-on-dark">
-        <div class="grid-wrap">
-          <div class="grid-row">
-            <div class="grid-space">
-              <div class="g-header-touts-section">
-                <div class="g-header-touts-sponsor-img"><img src="{{ahAssetPath}}img/st-anselm-crest.png" /></div>
-                <span class="type-medium g-header-touts-sponsor-text"><span class="type-secondary">Thanks to our partner</span> <span>St. Anselm</span></span>
-              </div>
-              {{#unless sectionIsClosed "admissions-help-from-admithub"}}
-                <div class="g-header-touts-section js-closable" id='admissions-help-from-admithub'>
-                  <a class="type-medium type-ui" href='https://www.admithub.com'>Get admissions help from AdmitHub <i class="icon-carat-right"></i></a>
-                  <button class="g-header-touts-section-close js-close-section"><i class="icon-x"></i></button>
-                </div>
-              {{/unless}}
-            </div>
-          </div>
-        </div>
-      </div>
+    {{> yield region='touts' }}
+
   </div>
 </template>

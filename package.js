@@ -9,6 +9,7 @@ Package.onUse(function (api) {
 
   api.use([
       'underscore',
+      'iron:router',
       'telescope-lib',
       'telescope-base',
       'telescope-daily',
@@ -46,6 +47,8 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/post_upvote.html', 'client');
   api.addFiles('lib/client/views/post_upvote.js', 'client');
   api.addFiles('lib/client/views/search.html', 'client');
+  api.addFiles('lib/client/views/touts.html', 'client');
+  api.addFiles('lib/client/views/touts.js', 'client');
   api.addFiles('lib/client/views/typekit.html', 'client');
 
   api.addFiles('public/icons/admithub.eot', 'client');
@@ -58,5 +61,5 @@ Package.onUse(function (api) {
   // Make sure this is added *after* screen.styl above.
   api.addFiles('lib/client/css/asset_path_overrides.styl', 'client');
 
-  api.export(['templates', 'themeSettings', 'primaryNav', 'secondaryNav']);
+  api.export(['templates', 'themeSettings', 'primaryNav', 'secondaryNav', 'PostsListController']);
 });
