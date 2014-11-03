@@ -117,14 +117,6 @@
       "1.0.0"
     ],
     [
-      "kestanous:herald",
-      "0.6.0"
-    ],
-    [
-      "kestanous:herald-email",
-      "0.2.1"
-    ],
-    [
       "livedata",
       "1.0.10"
     ],
