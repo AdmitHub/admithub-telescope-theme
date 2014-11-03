@@ -21,6 +21,7 @@ Package.onUse(function (api) {
       'telescope-theme-base',
       'standard-app-packages',
       'stylus',
+      'naxio:flash'
   ]);
 
   api.addFiles('lib/admithub.js', ['client', 'server']);
@@ -31,6 +32,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/header.html', 'client');
   api.addFiles('lib/client/views/header.js', 'client');
   api.addFiles('lib/client/views/layout.html', 'client');
+  api.addFiles('lib/client/views/layout.js', 'client');
   api.addFiles('lib/client/views/nav.html', 'client');
   api.addFiles('lib/client/views/nav_notifications.html', 'client');
   api.addFiles('lib/client/views/newsletter_banner.html', 'client');
@@ -61,5 +63,11 @@ Package.onUse(function (api) {
   // Make sure this is added *after* screen.styl above.
   api.addFiles('lib/client/css/asset_path_overrides.styl', 'client');
 
-  api.export(['templates', 'themeSettings', 'primaryNav', 'secondaryNav', 'PostsListController']);
+  api.export([
+       'templates',
+       'themeSettings',
+       'primaryNav',
+       'secondaryNav',
+       'Flash'
+  ]);
 });
