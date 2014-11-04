@@ -18,7 +18,11 @@
     <div class="modules-group center-modules">
       <div class="inner">
         {{> UI.dynamic template=ah_post_title_content }}
+        {{> UI.dynamic template=ah_post_teaser }}
       </div>
     </div>
   </div>
+</template>
+<template name="ah_post_teaser">
+  <div class="post-body markdown post-teaser">{{{ htmlBody }}}</div>
 </template>
