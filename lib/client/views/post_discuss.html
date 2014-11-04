@@ -2,6 +2,6 @@
   <a class="discuss-link type-ui go-to-comments post-link post-discuss" href="/posts/{{_id}}">
     <i class="icon-comment"></i>
     <span class="count">{{commentsCount}}</span>
-    <span class="action">{{i18n 'Responses'}}</span>
+    <span class="action">Response{{#unless equals commentsCount 1 }}s{{/unless}}</span>
   </a>
 </template>
