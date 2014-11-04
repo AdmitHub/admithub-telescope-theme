@@ -1,19 +1,19 @@
 <template name="ah_newsletter_banner">
   {{#if showBanner}}
-  <div class="newsletter-banner-wrap">
+  <div class="newsletter-banner-wrap js-newsletter-banner">
     <form class="newsletter-banner-form">
       <h4 class="mod-space type-center type-medium">Get the latest college admission tips</h4>
       <div class="grid-inner-row">
         {{#if isNotConnected}}
         <div class="grid-2">
           <div class="grid-space">
-            <input type="email" class="ui-small" placeholder="example@email.com">
+            <input type="email" class="ui-small js-newsletter-email" placeholder="example@email.com">
           </div>
         </div>
         {{/if}}
         <div class="grid-2">
           <div class="grid-space newsletter-submit-wrap">
-            <button class="ui-btn ui-small newsletter-button">Get Newsletter<span class="button-loader"><img src="/img/loading-balls.svg"/></span></button>
+            <button class="ui-btn ui-small ah-newsletter-button js-newsletter-button">Get Newsletter<span class="button-loader"><img src="/img/loading-balls.svg"/></span></button>
           </div>
         </div>
       </div>

@@ -1,7 +1,4 @@
-<template name="ah_post_item">
-  <div class="post {{rankClass}} {{#if sticky}}sticky{{/if}} {{inactiveClass}}" id="{{_id}}">
-  <div class="modules-group center-modules">
-  <div class="inner">
+<template name="ah_post_title_content">
   <div class="post-content">
     <h4 class="type-large type-serif-bold">
       {{> UI.dynamic template=postTitle data=. }}
@@ -12,10 +9,16 @@
   </div>
 
   <div class="post-actions">
-    {{> UI.dynamic template=postUpvote data=. }}
-    {{> UI.dynamic template=postDiscuss data=. }}
+    {{> UI.dynamic template=postUpvote }}
+    {{> UI.dynamic template=postDiscuss }}
   </div>
-  </div>
-  </div>
+</template>
+<template name="ah_post_item">
+  <div class="post {{rankClass}} {{#if sticky}}sticky{{/if}} {{inactiveClass}}" id="{{_id}}">
+    <div class="modules-group center-modules">
+      <div class="inner">
+        {{> UI.dynamic template=ah_post_title_content }}
+      </div>
+    </div>
   </div>
 </template>

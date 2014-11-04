@@ -1,7 +1,7 @@
 Package.describe({
   name: "admithub:admithub-telescope-theme",
   summary: "AdmitHub theme for Telescope",
-  version: "0.0.0",
+  version: "0.0.1",
   git: "https://github.com/AdmitHub/admithub-telescope-theme.git"
 });
 
@@ -38,6 +38,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/nav.html', 'client');
   api.addFiles('lib/client/views/nav_notifications.html', 'client');
   api.addFiles('lib/client/views/newsletter_banner.html', 'client');
+  api.addFiles('lib/client/views/newsletter_banner.js', 'client');
   api.addFiles('lib/client/views/post_admin.html', 'client');
   api.addFiles('lib/client/views/post_categories.html', 'client');
   api.addFiles('lib/client/views/post_comments_link.html', 'client');
@@ -47,11 +48,12 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/post_info.html', 'client');
   api.addFiles('lib/client/views/post_item.html', 'client');
   api.addFiles('lib/client/views/post_item.js', 'client');
+  api.addFiles('lib/client/views/post_page.html', 'client');
+  api.addFiles('lib/client/views/post_upvote.html', 'client');
+  api.addFiles('lib/client/views/post_upvote.js', 'client');
   api.addFiles('lib/client/views/posts_list.html', 'client');
   api.addFiles('lib/client/views/posts_list.js', 'client');
   api.addFiles('lib/client/views/posts_load_more.html', 'client');
-  api.addFiles('lib/client/views/post_upvote.html', 'client');
-  api.addFiles('lib/client/views/post_upvote.js', 'client');
   api.addFiles('lib/client/views/search.html', 'client');
   api.addFiles('lib/client/views/touts.html', 'client');
   api.addFiles('lib/client/views/touts.js', 'client');
