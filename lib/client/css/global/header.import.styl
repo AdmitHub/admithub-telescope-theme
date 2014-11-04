@@ -72,9 +72,6 @@ input.g-header-search-input
   background-color color-purple
   box-shadow 0 0.1rem 0.5rem rgba(color-black, 0.15)
 
-  @media mq-med-desk
-    max-width 40rem
-
   @media mq-med
     inline-block(true)
     position relative
@@ -222,7 +219,7 @@ input.g-header-search-input
 
 .g-header-touts-section
   padding (grid-gutter/3) 0 
-  border-bottom border-secondary-on-dark
+  border-bottom border-tertiary-on-dark
   position relative
 
   .icon-carat-right
@@ -255,3 +252,20 @@ input.g-header-search-input
 
 .g-header-touts-sponsor-text
   margin-left g-header-touts-sponsor-height + 1rem
+
+.g-header-search-wrap
+  position relative
+  inline-block()
+
+  .g-header-search
+    max-width 20rem
+    padding-left 2.5rem
+
+  .g-header-search-magnifying-glass
+    position absolute
+    left 1em
+    top 50%
+    margin-top -0.7em
+    color color-type-secondary
+    type-small()
+

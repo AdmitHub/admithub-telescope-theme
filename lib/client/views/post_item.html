@@ -3,9 +3,16 @@
     <h4 class="type-large type-serif-bold">
       {{> UI.dynamic template=postTitle data=. }}
     </h4>
-    {{> UI.dynamic template=postDomain data=. }}
-    {{> UI.dynamic template=postInfo data=. }}
-    {{> UI.dynamic template=postCategories data=. }}
+
+    <p class="mod-space-bottom-half">
+      {{> UI.dynamic template=ah_post_teaser }}
+    </p>
+
+    <div class="mod-space-bottom">
+      {{> UI.dynamic template=postDomain data=. }}
+      {{> UI.dynamic template=postInfo data=. }}
+      {{> UI.dynamic template=postCategories data=. }}
+    </div>
   </div>
 
   <div class="post-actions">
@@ -18,7 +25,6 @@
     <div class="modules-group center-modules">
       <div class="inner">
         {{> UI.dynamic template=ah_post_title_content }}
-        {{> UI.dynamic template=ah_post_teaser }}
       </div>
     </div>
   </div>
