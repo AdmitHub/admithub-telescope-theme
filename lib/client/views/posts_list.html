@@ -1,4 +1,6 @@
 <template name="ah_posts_list">
+  <h1 class='post-list-title'>{{ postListTitle }}</h1>
+
   {{> UI.dynamic template=postsListIncoming data=incoming}}
 
   <div class="posts list">
