@@ -1,7 +1,7 @@
 Package.describe({
   name: "admithub:admithub-telescope-theme",
   summary: "AdmitHub theme for Telescope",
-  version: "0.0.1",
+  version: "0.0.0",
   git: "https://github.com/AdmitHub/admithub-telescope-theme.git"
 });
 
@@ -37,8 +37,11 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/layout.js', 'client');
   api.addFiles('lib/client/views/nav.html', 'client');
   api.addFiles('lib/client/views/nav_notifications.html', 'client');
+  api.addFiles('lib/client/views/nav_notifications.js', 'client');
   api.addFiles('lib/client/views/newsletter_banner.html', 'client');
   api.addFiles('lib/client/views/newsletter_banner.js', 'client');
+  api.addFiles('lib/client/views/notification_item.html', 'client');
+  api.addFiles('lib/client/views/notification_item.js', 'client');
   api.addFiles('lib/client/views/post_admin.html', 'client');
   api.addFiles('lib/client/views/post_categories.html', 'client');
   api.addFiles('lib/client/views/post_comments_link.html', 'client');

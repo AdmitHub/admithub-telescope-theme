@@ -1,9 +1,8 @@
-<template name="ah_nav_notifications">
-{{#if isLoggedIn }}
+<template name="ah_nav_notifications_menu">
   {{#if hasNotifications }}
-    <div class="dropdown notifications-menu">
-      <a class="view  dropdown-top-level" href="/">{{notification_count}}</a>
-      <div class="dropdown-menu">
+    <div class="mod-dropdown-trigger notifications-menu">
+      <a href="/">{{notification_count}}</a>
+      <div class="mod-dropdown">
         <ul role="menu" aria-labelledby="dLabel">
           <li><a href="#" class="button mark-as-read">{{i18n "Mark as read"}}</a></li>  
           {{#each notifications}}
@@ -13,6 +12,4 @@
       </div>
     </div>
   {{/if}}
-{{/if}}
 </template>
-
