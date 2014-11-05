@@ -28,8 +28,10 @@
             {{/if}}
           </div>
           <div class='signature'>{{{authorSignature}}}</div>
-          {{#if getSetting "nestedComments" true}}
-            <a href="/comments/{{_id}}" class="comment-reply goto-comment">{{i18n "Reply"}}</a>
+          {{#if canComment}}
+            {{#if getSetting "nestedComments" true}}
+              <a href="/comments/{{_id}}" class="comment-reply goto-comment">{{i18n "Reply"}}</a>
+            {{/if}}
           {{/if}}
         </div>
       </div>
