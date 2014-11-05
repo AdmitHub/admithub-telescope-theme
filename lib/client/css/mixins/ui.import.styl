@@ -17,6 +17,13 @@ ui-small()
   .icon-check
     type-size 14
 
+ui-xsmall()
+  type-small()
+  ui-height ui-xsmall-height
+
+  > *
+    line-height ui-xsmall-height
+
 ui-base()
   ui-height ui-height-default
   padding 0 ui-padding

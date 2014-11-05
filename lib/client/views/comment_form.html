@@ -1,0 +1,15 @@
+<template name="ah_comment_form">
+  {{#if canComment}}
+    <div class="comment-new module">
+      <form>
+        <div class="comment-field" id="editor">
+          <textarea id="comment" rows="3" autofocus="autofocus"></textarea>
+        </div>
+        <div class="comment-submit">
+          <button type="submit" class="ui-btn pos-right" title="(⌘+enter)">{{i18n "Add Comment"}}</button>
+        </div>
+      </form>
+    </div>
+  {{/if}}  
+</template>
+
