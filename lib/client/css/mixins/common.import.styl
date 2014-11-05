@@ -121,14 +121,15 @@ icon()
 	-moz-osx-font-smoothing: grayscale;
 
 
-row()
+row(mult = 1)
   display block
-  margin-bottom grid-gutter
-  padding-bottom grid-gutter
+  margin-bottom grid-gutter*mult
+  padding-bottom grid-gutter*mult
   border-bottom border-tertiary-light
   clearfix()
 
   &:last-child
     border-bottom 0
     margin-bottom 0
+    padding-bottom 0
 

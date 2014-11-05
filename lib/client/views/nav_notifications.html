@@ -4,7 +4,7 @@
       <a href="/">{{notification_count}}</a>
       <div class="mod-dropdown">
         <ul role="menu" aria-labelledby="dLabel">
-          <li><a href="#" class="button mark-as-read">{{i18n "Mark as read"}}</a></li>  
+          <li><button class="ui-btn ui-small ui-stretch mark-as-read">{{i18n "Mark All As Read"}}</button></li>
           {{#each notifications}}
             {{> UI.dynamic template=notificationItem}}
           {{/each}}

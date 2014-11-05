@@ -12,12 +12,24 @@
     @media mq-med-desk
       margin-bottom 0.75rem
 
-    @media mq-med-desk
-      alt-on-dark true
-      background-color color-grey-xdark
-
     @media mq-med
       inline-block()
 
-    .dropdown-menu
-      @extend .mod-dropdown
+    .mod-dropdown
+      width 25rem
+      type-small()
+      type-serif()
+
+      @media mq-med-desk
+        background-color transparent
+
+      li
+        padding (grid-gutter/2)
+        border-bottom border-tertiary-light
+
+        &:last-child
+          border-bottom 0
+
+      a
+        border-bottom 0
+        padding 0
