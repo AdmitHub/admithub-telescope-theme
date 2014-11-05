@@ -1,7 +1,7 @@
 <template name="ah_error_item">
   {{#if show}}
     <div class='flash-messages'>
-      <div class="alert alert-danger">
+      <div class="alert alert-{{ getLevel type }}">
         {{message}}
         <button type="button" class='close'>&times;</button>
       </div>
