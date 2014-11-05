@@ -61,6 +61,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/comment_form.html', 'client');
   api.addFiles('lib/client/views/comment_item.html', 'client');
   api.addFiles('lib/client/views/search.html', 'client');
+  api.addFiles('lib/client/views/search.js', 'client');
   api.addFiles('lib/client/views/touts.html', 'client');
   api.addFiles('lib/client/views/touts.js', 'client');
   api.addFiles('lib/client/views/typekit.html', 'client');
