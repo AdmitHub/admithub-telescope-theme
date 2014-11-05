@@ -7,13 +7,13 @@
       <div class="comment-content">
         <div class="comment-text markdown">{{{htmlBody}}}</div>
         <div class="comment-actions {{#if upvoted}}upvoted{{else}}not-upvoted{{/if}} {{#if downvoted}}downvoted{{else}}not-downvoted{{/if}}">
-          <button class="ui-btn ui-xsmall upvote">
+          <button class="{{#if upvoted}}ui-btn{{else}}ui-btn-secondary{{/if}} ui-xsmall upvote">
             <i class="icon-up"></i>
-            <span>{{i18n "Vote Up"}}</span>
+            <span>{{#if upvoted}}{{i18n "Voted Up"}}{{else}}{{i18n "Vote Up"}}{{/if}}</span>
           </button>
-          <button class="ui-btn-secondary ui-xsmall downvote" href="#">
+          <button class="{{#if downvoted}}ui-btn{{else}}ui-btn-secondary{{/if}} ui-xsmall downvote" href="#">
             <i class="icon-down"></i>
-            <span>{{i18n "Vote Down"}}</span>
+            <span>{{#if downvoted}}{{i18n "Voted Down"}}{{else}}{{i18n "Vote Down"}}{{/if}}</span>
           </button>
         </div>
         <div class="user-avatar">{{>avatar userId=userId class="circle"}}</div>
