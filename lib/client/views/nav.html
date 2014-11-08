@@ -9,7 +9,7 @@
 <template name="ah_nav_user">
   {{#if isLoggedIn}}
     <div class="mod-dropdown-trigger user-menu">
-      <a href="/">{{name}}</a>
+      <a class="user-name" href="/">{{name}}</a>
       <div class="mod-dropdown">
         <ul role="menu" aria-labelledby="dLabel">
           <li><a href="{{profileUrl}}">{{i18n "Profile"}}</a></li>
