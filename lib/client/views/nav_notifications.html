@@ -1,7 +1,7 @@
 <template name="ah_nav_notifications_menu">
   {{#if hasNotifications }}
     <div class="mod-dropdown-trigger notifications-menu">
-      <a href="/">{{notification_count}}</a>
+      <a href="/" class='notification-count-badge'>{{countNotifications}}</a>
       <div class="mod-dropdown">
         <ul role="menu" aria-labelledby="dLabel">
           <li><button class="ui-btn ui-small ui-stretch mark-as-read">{{i18n "Mark All As Read"}}</button></li>

@@ -1,7 +1,7 @@
 Package.describe({
   name: "admithub:admithub-telescope-theme",
   summary: "AdmitHub theme for Telescope",
-  version: "0.0.1",
+  version: "0.0.2",
   git: "https://github.com/AdmitHub/admithub-telescope-theme.git"
 });
 
