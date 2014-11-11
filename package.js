@@ -21,7 +21,7 @@ Package.onUse(function (api) {
       'telescope-theme-base',
       'standard-app-packages',
       'stylus',
-      'naxio:flash'
+      'naxio:flash@0.2.3'
   ]);
 
   api.addFiles('lib/admithub.js', ['client', 'server']);
