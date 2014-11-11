@@ -24,12 +24,68 @@
   position relative
 
 .g-header-nav
-  a
+  {class-list-header-links}
     type-medium()
 
     @media mq-med
       type-small()
       line-height g-header-height
+
+  .notifications-menu
+    @extend .mod-dropdown-trigger
+    display block
+
+    @media mq-med-desk
+      ui-border-radius()
+      a
+        padding (grid-gutter/2)
+
+    @media mq-med-desk
+      margin-bottom 0.75rem
+
+    @media mq-med
+      inline-block()
+
+    .mod-dropdown
+      position static
+      width 25rem
+      pos-x-center 25rem
+      type-small()
+      type-serif()
+
+      @media mq-med-desk
+        position static
+        background-color transparent
+
+      li
+        border-bottom border-tertiary-light
+        padding (grid-gutter/2) 0
+
+        @media mq-med
+          padding (grid-gutter/2)
+
+        &:last-child
+          border-bottom 0
+
+      {class-list-header-links}
+        border-bottom 0
+        padding 0
+
+  .notification-item
+    margin-bottom 0
+
+  a.notifications-count
+    display none
+
+    @media mq-med
+      inline-block()
+
+  .notifications-title
+    type-large()
+    mod-space-top()
+
+    @media mq-med
+      padding 0 (grid-gutter/2)
 
 .g-header-hamburger
   float left

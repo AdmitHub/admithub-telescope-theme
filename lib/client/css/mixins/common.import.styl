@@ -1,7 +1,6 @@
 flex-container(dir = row)
   display -webkit-flex
   display flex
-
   flex-direction dir
 
 flex(val)
@@ -18,6 +17,11 @@ pos-y-center-companion()
     inline-block()
     vertical-align middle
     height 100%
+
+pos-x-center(width)
+  position absolute
+  right 50%
+  margin-right (width / -2)
 
 dim(width, height = width)
   height width

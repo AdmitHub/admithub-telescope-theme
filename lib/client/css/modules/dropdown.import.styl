@@ -11,16 +11,16 @@
   right 0
   top 100%
   background-color color-white
-  min-width 17.5rem
+  min-width mod-dropdown-width
   ui-border-radius()
   text-align left
   box-shadow 0 0.1rem 1.5rem rgba(color-black, 0.25)
 
   li:last-child
-    a
+    {class-list-header-links}
       border-bottom 0
 
-  a
+  {class-list-header-links}
     display block
     padding 1rem
     type-small()
@@ -30,3 +30,8 @@
     &:hover
       background-color rgba(color-green, 0.15)
       color color-type
+
+.mod-dropdown-center
+  @extend .mod-dropdown
+  pos-x-center mod-dropdown-width
+

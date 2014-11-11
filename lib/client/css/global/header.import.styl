@@ -74,7 +74,9 @@ input.g-header-search-input
 
   .user-name
     ellipsis()
-    max-width 13rem
+
+    @media mq-med
+      max-width 13rem
 
   @media mq-med
     inline-block(true)
@@ -89,7 +91,7 @@ input.g-header-search-input
       inline-block()
       margin-left g-header-nav-space
 
-  a
+  {class-list-header-links}
     text-transform capitalize
     display block
     padding 0.75rem 0
@@ -253,11 +255,17 @@ input.g-header-search-input
 
 .g-header-search-wrap
   position relative
-  inline-block()
+  mod-space()
+
+  @media mq-med
+    margin 0
+    inline-block()
 
   .g-header-search
-    max-width 20rem
     padding-left 2.5rem
+
+    @media mq-med
+      max-width 20rem
 
   .g-header-search-magnifying-glass
     position absolute
