@@ -20,8 +20,7 @@ Package.onUse(function (api) {
       'telescope-tags',
       'telescope-theme-base',
       'standard-app-packages',
-      'stylus',
-      'naxio:flash@0.2.3'
+      'stylus'
   ]);
 
   api.addFiles('lib/admithub.js', ['client', 'server']);
@@ -83,6 +82,5 @@ Package.onUse(function (api) {
        'themeSettings',
        'primaryNav',
        'secondaryNav',
-       'Flash'
   ]);
 });
