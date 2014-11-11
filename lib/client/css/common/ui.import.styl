@@ -47,12 +47,16 @@ a.ui-btn-alt
     type-size 12
 
 .ui-large
+a.ui-large
   @media mq-med
     type-large()
     ui-height 5.5rem
 
   > *
     line-height 5.5rem
+
+  .icon-carat-right
+    type-size 20
 
 
 .ui-small
@@ -70,13 +74,6 @@ a.ui-xsmall
   @extend .ui-btn
   ui-btn darken(color-green, 8)
   box-shadow 0 0 0 color-white
-
-.ui-btn-large
-  @extend .ui-btn
-  @extend .ui-large
-
-  .icon-carat-right
-    type-size 20
 
 .ui-btn-icon-right
   margin-left 1em

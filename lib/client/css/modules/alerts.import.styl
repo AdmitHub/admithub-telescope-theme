@@ -1,27 +1,32 @@
 .flash-messages
-  > *
-    position relative
+  position fixed
+  width 100%
+  top (grid-gutter/2)
+  left 0
+
+  .alert
     max-width 40rem
+    margin 0 auto
+    position relative
     type-serif()
     type-regular
-    box-shadow 0 0.1rem 0.1rem rgba(color-black, 0.25)
+    box-shadow 0 0.1rem 0.25rem rgba(color-black, 0.35)
     color color-white
-    padding 1rem
+    padding 1rem 1.5rem
+    padding-right 3rem
 
   .close
     position absolute
     top 50% 
-    right 1em
+    right 1rem
     margin-top -0.8em
+    type-xlarge()
+    color color-white
 
   .alert-danger
-    background-color #D9534F
-
   .alert-warning
-    background-color #E68A22
+    background-color color-red
 
   .alert-success
-    background-color #4FCFA2
-
   .alert-info
-    background-color #4FCECF
+    background-color color-purple
