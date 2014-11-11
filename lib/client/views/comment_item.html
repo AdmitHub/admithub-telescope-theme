@@ -27,7 +27,7 @@
               | <a class="edit-link" href="/comments/{{_id}}/edit">{{i18n "Edit"}}</a>
             {{/if}}
           </div>
-          <div class='signature'>{{{authorSignature}}}</div>
+          <div class='signature'>{{> userSignature profile=author.profile }}</div>
           {{#if canComment}}
             {{#if getSetting "nestedComments" true}}
               <a href="/comments/{{_id}}" class="comment-reply goto-comment">{{i18n "Reply"}}</a>
