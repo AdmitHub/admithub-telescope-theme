@@ -17,8 +17,12 @@
 
   <div class="post-actions">
     {{> UI.dynamic template=postUpvote }}
+    {{#if can_edit}}
+      <a href='/posts/{{_id}}/edit' class="edit-link ui-btn ui-small ">Edit</a>
+    {{/if}}
     {{> UI.dynamic template=postDiscuss }}
     {{> UI.dynamic template=postAdmin }}
+
   </div>
 </template>
 <template name="ah_post_item">
