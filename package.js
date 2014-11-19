@@ -9,6 +9,8 @@ Package.onUse(function (api) {
 
   api.use([
       'underscore',
+      'alanning:roles',
+      'bengott:avatar',
       'iron:router',
       'telescope-lib',
       'telescope-base',
@@ -25,7 +27,10 @@ Package.onUse(function (api) {
 
   api.addFiles('lib/admithub.js', ['client', 'server']);
 
+  api.addFiles('lib/client/partners.js', 'client');
   api.addFiles('lib/client/css/screen.styl', 'client');
+  api.addFiles('lib/client/views/contributors.html', 'client');
+  api.addFiles('lib/client/views/contributors.js', 'client');
   api.addFiles('lib/client/views/error_item.html', 'client');
   api.addFiles('lib/client/views/error_item.js', 'client');
   api.addFiles('lib/client/views/header_cta.html', 'client');
@@ -73,6 +78,7 @@ Package.onUse(function (api) {
   api.addFiles('public/icons/admithub.woff', 'client');
 
   api.addFiles('public/img/st-anselm-crest.png', 'client');
+  api.addFiles('public/img/owlAvatar.png', 'client');
   
   // Make sure this is added *after* screen.styl above.
   api.addFiles('lib/client/css/asset_path_overrides.styl', 'client');

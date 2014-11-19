@@ -1,0 +1,67 @@
+.pg-contributors
+  .sponsors, .contributors, .sponsor, .contributor
+    clearfix()
+  .sponsors
+    margin-bottom 4rem
+
+  h2
+    margin-top 2rem
+    margin-bottom 2rem
+    clear both
+
+  p
+    type-medium()
+
+  .sponsor
+    padding 1rem
+    border-bottom 1px solid #eee
+    &:last-child
+      border-bottom none
+
+  .sponsor-img
+    max-width 100px
+    max-height 100px
+    float left
+    margin-right 2rem
+
+  .contributor
+    padding 1rem
+    margin-left 1rem
+    margin-right 1rem
+    border-bottom 1px solid #eee
+
+  .contributor-grid:last-of-type .contributor
+    border-bottom none
+
+  .user-avatar
+    float left
+    display inline-block
+    .avatar
+      margin-right 1rem
+    position relative
+  .comment-count
+    sans(300)
+    type-small()
+    padding-left 1rem
+    padding-right 1rem
+    position absolute
+    bottom -2px 
+    left -2px
+    color white
+    background-color color-green
+    border-radius 5px
+    // css triangle arrow
+    &:after
+      content: ' '
+      height: 0
+      position: absolute
+      width: 0
+      border: 4px solid transparent
+      border-top-color color-green
+      top 97%
+      right 5px
+
+  .name, .sponsor-title
+    type-serif-bold()
+    heading-size(2rem)
+    margin-bottom 1rem

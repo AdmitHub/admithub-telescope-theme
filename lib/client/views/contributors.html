@@ -1,0 +1,39 @@
+<template name="contributors">
+  <div class='pg-contributors'>
+    <div class='grid-wrap'>
+      <div class='grid-row'>
+        <div class='grid-space'>
+          <h2>Our Partners</h2>
+          <div class='sponsors'>
+            {{#each aboutAdmissionsPartners}}
+              <div class='sponsor'>
+                <div class='sponsor-img'>
+                  <a href='{{ url }}' target='_blank'><img src="{{ image }}"></a>
+                </div>
+                <div class='sponsor-text'>
+                  <a href='{{ url }}' class='sponsor-title' target='_blank'>{{ name }}</a>
+                  <p>{{ description }}</p>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+          <h2>Contributors</h2>
+          <div class='contributors'>
+            {{#each contributors}}
+              <div class='grid-2 contributor-grid'>
+                <div class='contributor'>
+                  <a href='/users/{{ profile.slug }}' class='user-avatar'>
+                    {{> avatar user=. size='large' shape='rounded' }}
+                    <span class='comment-count'>{{ commentCount }}</span>
+                  </a>
+                  <div class='name'><a href='/users/{{ profile.slug }}'>{{ getUserName }}</a></div>
+                  <div class='signature'>{{{ profile.signatureHTML }}}</div>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

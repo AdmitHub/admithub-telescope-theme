@@ -4,10 +4,12 @@
       <div class="grid-wrap">
         <div class="grid-row">
           <div class="grid-space">
-            <div class="g-header-touts-section">
-              <div class="g-header-touts-sponsor-img"><img src="{{ahAssetPath}}img/st-anselm-crest.png" /></div>
-              <span class="type-medium g-header-touts-sponsor-text"><span class="type-secondary">Thanks to our partner</span> <a href="http://www.anselm.edu/" target="_blank">Saint Anselm College</a></span>
-            </div>
+            {{#each aboutAdmissionsPartners}}
+              <div class="g-header-touts-section">
+                <div class="g-header-touts-sponsor-img"><img src="{{ image }}" /></div>
+                <span class="type-medium g-header-touts-sponsor-text"><span class="type-secondary">Thanks to our partner</span> <a href="{{ url }}" target="_blank">{{ name }}</a></span>
+              </div>
+            {{/each}}
             {{#unless sectionIsClosed "admissions-help-from-admithub"}}
               <div class="g-header-touts-section js-closable" id='admissions-help-from-admithub'>
                 <a class="type-medium type-ui" href='https://www.admithub.com'>Get admissions help from AdmitHub <i class="icon-carat-right"></i></a>
