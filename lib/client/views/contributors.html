@@ -22,11 +22,11 @@
             {{#each contributors}}
               <div class='grid-2 contributor-grid'>
                 <div class='contributor'>
-                  <a href='/users/{{ profile.slug }}' class='user-avatar'>
+                  <a href='/users/{{ slug }}' class='user-avatar'>
                     {{> avatar user=. size='large' shape='rounded' }}
                     <span class='comment-count'>{{ commentCount }}</span>
                   </a>
-                  <div class='name'><a href='/users/{{ profile.slug }}'>{{ getUserName }}</a></div>
+                  <div class='name'><a href='/users/{{ slug }}'>{{ getUserName }}</a></div>
                   <div class='signature'>{{{ profile.signatureHTML }}}</div>
                 </div>
               </div>
