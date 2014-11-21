@@ -2,14 +2,21 @@
   {{#if showTouts }} 
     <div class="g-header-touts">
       <div class="grid-wrap">
-        <div class="grid-row">
-          <div class="grid-space">
-            {{#each aboutAdmissionsPartners}}
-              <div class="g-header-touts-section">
-                <div class="g-header-touts-sponsor-img"><img src="{{ image }}" /></div>
-                <span class="type-medium g-header-touts-sponsor-text"><span class="type-secondary">Thanks to our partner</span> <a href="{{ url }}" target="_blank">{{ name }}</a></span>
+        <div class="grid-space">
+          <div class="grid-row">
+            <div class='g-flex-grid'>
+              {{#with randomPartner}}
+                <div class="g-header-touts-section g-flex-grow">
+                  <div class="g-header-touts-sponsor-img"><img src="{{ image }}" /></div>
+                  <span class="type-medium g-header-touts-sponsor-text"><span class="type-secondary">Thanks to our partner</span> <a href="{{ url }}" target="_blank">{{ name }}</a></span>
+                </div>
+              {{/with}}
+              <div class='g-header-touts-section'>
+                <a class='type-medium type-ui' href='{{ pathFor "contributors" }}'>Contributors</a>
               </div>
-            {{/each}}
+            </div>
+          </div>
+          <div class='grid-row'>
             {{#unless sectionIsClosed "admissions-help-from-admithub"}}
               <div class="g-header-touts-section js-closable" id='admissions-help-from-admithub'>
                 <a class="type-medium type-ui" href='https://www.admithub.com'>Get admissions help from AdmitHub <i class="icon-carat-right"></i></a>
