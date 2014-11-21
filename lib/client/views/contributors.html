@@ -26,7 +26,7 @@
                     {{> avatar user=. size='large' shape='rounded' }}
                     <span class='comment-count'>{{ commentCount }}</span>
                   </a>
-                  <div class='name'><a href='/users/{{ slug }}'>{{ getUserName }}</a></div>
+                  <div class='name'><a href='/users/{{ slug }}'>{{ getDisplayName }}</a></div>
                   <div class='signature'>{{{ profile.signatureHTML }}}</div>
                 </div>
               </div>
