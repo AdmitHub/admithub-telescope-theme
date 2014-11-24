@@ -125,15 +125,21 @@ icon()
 	-moz-osx-font-smoothing: grayscale;
 
 
-row(mult = 1)
+row(mult = 1, nested = false)
   display block
   margin-bottom grid-gutter*mult
   padding-bottom grid-gutter*mult
   border-bottom border-tertiary-light
   clearfix()
 
-  &:last-child
-    border-bottom 0
-    margin-bottom 0
-    padding-bottom 0
+  if nested
+    .last
+      border-bottom 0
+      margin-bottom 0
+      padding-bottom 0
+  else
+    &:last-child
+      border-bottom 0
+      margin-bottom 0
+      padding-bottom 0
 

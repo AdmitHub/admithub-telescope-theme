@@ -12,22 +12,7 @@
   background-color color-grey-xlight 
 
 .mod-section-header
-  margin-top 0
-  margin-bottom mod-section-header-divide-space
-  padding-bottom mod-section-header-divide-space
-  position relative
-
-  &:after
-    content ''
-    height mod-section-header-divide-height
-    width mod-section-header-divide-width
-    background-color color-green
-    position absolute
-    top 100%
-    left 0
-    margin-top -0.15em // arbitrary value, line height is adding to space
-    margin-left -(mod-section-header-divide-width/10)
-
+  mod-section-header()
 
 .mod-section-header-title
   type-huge()

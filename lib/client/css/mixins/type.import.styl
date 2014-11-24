@@ -3,8 +3,11 @@ type-size(font line = 1.4)
   font-size unit(font/10 'rem')
   line-height unit(line 'em')
 
-type-secondary()
-  color color-type-secondary
+type-secondary(important = false)
+  if important
+    color color-type-secondary !important
+  else
+    color color-type-secondary
 
 remify(value)
     u = unit(value)
@@ -14,34 +17,38 @@ remify(value)
     else
       return unit(value u)
 
-serif(weight = 300)
-  font-family "grad", "georgia", serif
-  font-weight weight
+serif(weight = 300, important = false)
+  if important
+    font-family "grad", "georgia", serif !important
+    font-weight weight !important
+  else
+    font-family "grad", "georgia", serif
+    font-weight weight
 
 sans(weight = 300)
   font-family "ff-tisa-sans-web-pro", "helvetica neue", "helvetica", "arial", sans-serif
   font-weight weight
 
 type-small()
-  type-size 13
+  type-size 14
 
 type-medium()
-  type-size 16
+  type-size 16 1.5
 
 type-regular()
-  type-size 18 1.6
+  type-size 18 1.5
 
 type-large()
-  type-size 24 1.25
+  type-size 24 1.5
 
 type-xlarge()
-  type-size 30 1.25
+  type-size 30 1.5
 
 type-huge()
-  type-size 48 1.2
+  type-size 40 1.2
 
 type-xhuge()
-  type-size 70 1
+  type-size 60 1
 
 type-serif()
   serif()

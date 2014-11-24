@@ -1,16 +1,20 @@
 font-family = ''
 base-font-size = 10px
+img-path = '/packages/admithub_admithub-telescope-theme/public/img/' 
 
-g-header-height = 5rem
+layout-space = 1.4rem
+
+g-header-height = 7rem
+g-header-row-height = g-header-height*0.65
 g-header-search-height = 3.5rem
 g-header-search-mobile-height = 5rem
 g-header-search-input-padding = 2rem
 g-header-nav-space = 1.5rem
 g-header-touts-sponsor-height = 3rem
 
-mod-section-header-divide-width = 10rem
-mod-section-header-divide-height =  0.3rem
-mod-section-header-divide-space = 3rem
+mod-section-header-divide-width = 7.5rem
+mod-section-header-divide-height =  0.2rem
+mod-section-header-divide-space = grid-gutter
 mod-dropdown-width = 17.5rem
 
 comment-avatar-width = 4.5rem
@@ -18,8 +22,8 @@ comment-width = 75rem
 
 color-white = #fff
 color-black = #000
-color-grey-xlight = #ebe8e9
-color-grey-light = #d9d4d7 
+color-grey-xlight = #ededf2
+color-grey-light = #d9d9de
 color-grey-med = #aaa
 color-grey-dark = #736D72
 color-grey-xdark = #111
@@ -36,20 +40,19 @@ color-github = #222
 
 color-link = color-green
 
-border-thickness = 0.2rem
+border-thickness = 0.1rem
 
-border-style-primary = border-thickness solid
-border-style-secondary = 0.1rem solid
+border-style = border-thickness solid
 
-border-grey-med = border-style-primary #d7d4d6
-border-secondary = border-style-primary color-grey-light
-border-secondary-light = border-style-primary color-grey-xlight
+border-grey-med = border-style #d7d4d6
+border-secondary = border-style color-grey-light
+border-secondary-light = border-style color-grey-xlight
 
-border-tertiary = border-style-secondary color-grey-light
-border-tertiary-light = border-style-secondary color-grey-xlight
+border-tertiary = border-style color-grey-light
+border-tertiary-light = border-style color-grey-xlight
 
-border-secondary-on-dark = border-style-primary rgba(color-white, 0.25)
-border-tertiary-on-dark = border-style-secondary rgba(color-white, 0.25)
+border-secondary-on-dark = border-style rgba(color-white, 0.25)
+border-tertiary-on-dark = border-style rgba(color-white, 0.25)
 
 ui-padding = 1em
 ui-border-radius = 0.2rem
@@ -63,8 +66,8 @@ class-list-buttons = '.button, .button:link, .button:active, .button:visited'
 class-list-a = 'a, a:link, a:visited, a:active'
 class-list-header-links = 'a:not(.ui-btn)'
 
-grid-gutter = 3rem
-grid-width = 110rem
+grid-gutter = layout-space*2
+grid-width = 105rem
 grid-page-gutter = 4.5rem
 grid-page-gutter-mobile = grid-page-gutter/2
 
@@ -77,6 +80,9 @@ pg-products-product-top = -1.5rem
 pg-products-featured-product-top = -3rem
 pg-products-product-height = 48rem
 pg-products-padding = 3rem
+
+pg-partners-img-width = 12.5rem
+pg-partners-contrib-avatar-width = 8.5rem
 
 mq-sm-width  = 400px
 mq-med-width = 895px
@@ -93,4 +99,4 @@ mq-xlg     = mq-text + mq-xlg-width + ")"
 mq-med-desk = mq-desktop-first-text + mq-med-width + ")"
 mq-sm-desk = mq-desktop-first-text + mq-sm-width + ")"
 
-at-sep-height = 0.2rem
+at-sep-height = 0.1rem

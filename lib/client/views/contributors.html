@@ -1,39 +1,55 @@
 <template name="contributors">
-  <div class='pg-contributors'>
-    <div class='grid-wrap'>
-      <div class='grid-row'>
-        <div class='grid-space'>
-          <h2>Our Partners</h2>
-          <div class='sponsors'>
-            {{#each aboutAdmissionsPartners}}
-              <div class='sponsor'>
-                <div class='sponsor-img'>
-                  <a href='{{ url }}' target='_blank'><img src="{{ image }}"></a>
-                </div>
-                <div class='sponsor-text'>
-                  <a href='{{ url }}' class='sponsor-title' target='_blank'>{{ name }}</a>
-                  <p>{{ description }}</p>
-                </div>
-              </div>
-            {{/each}}
-          </div>
-          <h2>Contributors</h2>
-          <div class='contributors'>
-            {{#each contributors}}
-              <div class='grid-2 contributor-grid'>
-                <div class='contributor'>
-                  <a href='/users/{{ slug }}' class='user-avatar'>
-                    {{> avatar user=. size='large' shape='rounded' }}
-                    <span class='comment-count'>{{ commentCount }}</span>
-                  </a>
-                  <div class='name'><a href='/users/{{ slug }}'>{{ getDisplayName }}</a></div>
+  <div class='pg-partners'>
+    <a href="https://www.admithub.com" class="g-header-admithub g-header-row">
+      <img class="g-header-admithub-owls" src="/packages/admithub_admithub-telescope-theme/public/img/owl-repeat@2x.png">
+      <span>Get Admissions Help from AdmitHub</span>
+    </a>
+
+    <header class="g-header-aa-description-wrap">
+      <div class="g-header-aa-description">
+      About Admissions is an industry-supported community of admission and counseling professionals offering free and open advice about college admissions.
+      </div>
+    </header>
+
+    <section class='mod-section sponsors'>
+      <h2 class="mod-section-header">Our Partners</h2>
+
+      {{#each aboutAdmissionsPartners}}
+        <div class='pg-partners-sponsor'>
+          <a href='{{ url }}' target='_blank' class="link-block">
+            <div href='{{ url }}' class="pg-partners-img-wrap link-block-hover" target='_blank'>
+              <img src="{{ image }}">
+            </div><div class='pg-partners-info'>
+              <h4 class="pg-partners-info-title" >{{ name }}</h4>
+              <p class="type-medium">{{ description }}</p>
+            </div>
+          </a>
+        </div>
+      {{/each}}
+    </section>
+
+    <section class="mod-section contributors">
+      <h2 class="mod-section-header">Contributors</h2>
+
+      <div class="grid-inner-row">
+        {{#each contributors}}
+        <div class='grid-2 no-margin'>
+          <div class="grid-space">
+            <div class='pg-partners-contrib'>
+              <a href='/users/{{ slug }}' class="link-block">
+                <div class="pg-partners-contrib-avatar">
+                  {{> avatar user=. size='large' shape='rounded' }}
+                  <span class='pg-partners-contrib-comment-count'><i class="icon-chat-triangle"></i><span class="count">{{ commentCount }}</span></span>
+                </div><div class="pg-partners-contrib-info">
+                  <div class='pg-partners-contrib-name link-block-hover'>{{ getDisplayName }}</div>
                   <div class='signature'>{{{ profile.signatureHTML }}}</div>
                 </div>
-              </div>
-            {{/each}}
+              </a>
+            </div>
           </div>
         </div>
+        {{/each}}
       </div>
-    </div>
+    </section>
   </div>
 </template>

@@ -1,5 +1,6 @@
 .g-header
-  border-bottom border-secondary
+  @media mq-med
+    position relative
 
   .mod-dropdown
     display block
@@ -8,6 +9,15 @@
     @media mq-med
       position absolute
       display none
+
+  &:after
+    position absolute
+    top 100%
+    left 0
+    content ''
+    background-image url(img-path + 'forum-header-shadow.png')
+    height 1rem 
+    width 100%
 
 .g-header-wrap
   background-color color-white
@@ -22,6 +32,7 @@
 .g-header-logo
   z-index 10
   position relative
+  serif 300 true
 
 .g-header-nav
   {class-list-header-links}
@@ -120,3 +131,42 @@
 
 .g-header-nav-user-sign-up
   margin-left g-header-nav-space
+
+.g-header-row
+  overflow hidden
+  position relative
+  background-color rgba(color-grey-xlight, 0.65)
+  padding-left layout-space
+  padding-right layout-space
+  height g-header-row-height
+  line-height g-header-row-height
+  
+  > *
+    line-height g-header-row-height
+
+.g-header-admithub
+  margin-bottom layout-space
+  display block
+  image img-path + 'owl-repeat-light.png' 9.1rem 5.15rem
+  background-position layout-space 0
+  type-sans-bold()
+  type-small()
+  cursor pointer
+
+  > *
+    display inline-block
+    vertical-align middle
+
+.g-header-admithub-owls
+  max-width 9.1rem
+  margin-right layout-space
+
+.g-header-aa-description-wrap
+  text-align center
+  mod-section()
+  row 2
+
+.g-header-aa-description
+  margin (0 auto)
+  type-xlarge()
+  max-width 75rem

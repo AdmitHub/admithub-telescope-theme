@@ -3,7 +3,6 @@
   top 0
   left 0
   background-color color-purple
-  margin-bottom (grid-gutter/2)
 
 .g-header
   height g-header-height
@@ -220,27 +219,26 @@ input.g-header-search-input
   background-color color-white
 
 .g-header-touts-section
-  padding (grid-gutter/2) 0
   position relative
-  border-bottom border-tertiary
+  border-bottom border-seconday-light
 
   .icon-carat-right
     type-small()
 
 .g-header-touts-section-close
   position absolute
-  right 0
+  right layout-space
   top 50%
   margin-top -0.5em
   type-small()
+  line-height 1em !important
 
 .g-header-touts-sponsor-img
-  inline-block()
   padding 0.25rem
   background-color color-white
   border-radius 0.4rem
   position absolute
-  left 0
+  left layout-space
   top 50%
   height g-header-touts-sponsor-height
   width g-header-touts-sponsor-height
@@ -250,6 +248,7 @@ input.g-header-search-input
     display block
 
 .g-header-touts-sponsor-text
+  float left
   display block
   margin-left g-header-touts-sponsor-height + 1rem
 
@@ -262,7 +261,7 @@ input.g-header-search-input
     inline-block()
 
   .g-header-search
-    padding-left 2.5rem
+    padding-left 3rem
 
     @media mq-med
       max-width 20rem

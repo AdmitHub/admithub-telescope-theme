@@ -1,7 +1,7 @@
 Package.describe({
   name: "admithub:admithub-telescope-theme",
   summary: "AdmitHub theme for Telescope",
-  version: "0.0.0",
+  version: "0.0.1",
   git: "https://github.com/AdmitHub/admithub-telescope-theme.git"
 });
 
@@ -78,7 +78,13 @@ Package.onUse(function (api) {
   api.addFiles('public/icons/admithub.woff', 'client');
 
   api.addFiles('public/img/st-anselm-crest.png', 'client');
+  api.addFiles('public/img/st-anselm-logo.png', 'client');
   api.addFiles('public/img/owlAvatar.png', 'client');
+  api.addFiles('public/img/owl-repeat.png', 'client');
+  api.addFiles('public/img/owl-repeat@2x.png', 'client');
+  api.addFiles('public/img/owl-repeat-light.png', 'client');
+  api.addFiles('public/img/owl-repeat-light@2x.png', 'client');
+  api.addFiles('public/img/forum-header-shadow.png', 'client');
   
   // Make sure this is added *after* screen.styl above.
   api.addFiles('lib/client/css/asset_path_overrides.styl', 'client');

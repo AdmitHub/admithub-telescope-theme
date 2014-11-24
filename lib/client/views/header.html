@@ -18,8 +18,6 @@
               <a class="g-header-logo" href="/">{{site_title}}</a>
             {{/if}}
 
-            {{> search}}
-
             <ul class="g-header-nav js-header-nav">
               {{#if hasPrimaryNav}}
                 {{#each primaryNav}}
@@ -37,6 +35,9 @@
                 {{/each}}
               {{/if}}
             </ul>
+
+            {{> search}}
+
             {{> ah_header_cta}}
           </header>
         </div>
