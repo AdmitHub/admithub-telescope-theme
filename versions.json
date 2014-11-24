@@ -10,11 +10,15 @@
     ],
     [
       "aldeed:simple-schema",
-      "1.0.3"
+      "1.1.0"
     ],
     [
       "application-configuration",
       "1.0.3"
+    ],
+    [
+      "artwells:queue",
+      "0.0.3"
     ],
     [
       "autoupdate",
@@ -26,7 +30,7 @@
     ],
     [
       "bengott:avatar",
-      "0.5.2"
+      "0.6.0"
     ],
     [
       "binary-heap",
@@ -53,8 +57,12 @@
       "1.0.2"
     ],
     [
+      "chuangbo:cookie",
+      "1.1.0"
+    ],
+    [
       "cmather:handlebars-server",
-      "0.2.0"
+      "2.0.0"
     ],
     [
       "ddp",
@@ -101,20 +109,36 @@
       "1.0.1"
     ],
     [
+      "iron:controller",
+      "1.0.3"
+    ],
+    [
       "iron:core",
-      "0.3.4"
+      "1.0.3"
     ],
     [
       "iron:dynamic-template",
-      "0.4.1"
+      "1.0.3"
     ],
     [
       "iron:layout",
-      "0.4.1"
+      "1.0.3"
+    ],
+    [
+      "iron:location",
+      "1.0.3"
+    ],
+    [
+      "iron:middleware-stack",
+      "1.0.3"
     ],
     [
       "iron:router",
-      "0.9.4"
+      "1.0.3"
+    ],
+    [
+      "iron:url",
+      "1.0.3"
     ],
     [
       "jparker:crypto-core",
@@ -138,11 +162,11 @@
     ],
     [
       "kestanous:herald",
-      "0.6.0"
+      "1.1.3"
     ],
     [
       "kestanous:herald-email",
-      "0.2.1"
+      "0.4.2"
     ],
     [
       "launch-screen",
@@ -174,15 +198,15 @@
     ],
     [
       "meteorhacks:fast-render",
-      "1.1.2"
+      "1.2.1"
     ],
     [
       "meteorhacks:npm",
-      "1.2.0"
+      "1.2.1"
     ],
     [
       "meteorhacks:subs-manager",
-      "1.1.0"
+      "1.2.0"
     ],
     [
       "minifiers",
@@ -222,7 +246,7 @@
     ],
     [
       "percolatestudio:synced-cron",
-      "0.3.0"
+      "1.0.0"
     ],
     [
       "random",
