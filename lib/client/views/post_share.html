@@ -1,0 +1,10 @@
+<template name="ah_post_share">
+  <a href="#" class="ah-share-link type-ui js-share-link">{{i18n 'Share'}}</a>
+  <div class="ah-share-options hidden js-share-options">
+    <a class="post-share-icon facebook" href="https://www.facebook.com/sharer/sharer.php?u={{sourceLink}}" target="_blank"><i class='icon-facebook'></i></a>
+    <a class="post-share-icon twitter" href="//twitter.com/intent/tweet?text={{title}}&url={{sourceLink}}&{{viaTwitter}}" target="_blank"><i class='icon-twitter-bird'></i></a>
+    <a class="post-share-icon linked-in" href="//www.linkedin.com/shareArticle?mini=true&url={{sourceLink}}&amp;summary={{title}}" target="_blank"><i class='icon-linked-in'></i></a>
+    <a class="post-share-icon google-plus" href="https://plus.google.com/share?url={{sourceLink}}" target="_blank"><i class='icon-google-plus'></i></a>
+  </div>
+</template>
+

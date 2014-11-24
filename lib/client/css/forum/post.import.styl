@@ -74,7 +74,58 @@ a.delete-link
 
 .post-link
 a.post-link
+.ah-share-link
+a.ah-share-link
   margin-left 0.5rem
   type-secondary()
   type-small()
   inline-block()
+
+.ah-share-options
+  position absolute
+  background-color color-white
+  box-shadow 0px 0px 2px rgba(0,0,0,0.5)
+  padding 2rem
+  // CSS left-pointing arrow with border
+  &:after, &:before
+    right 100%
+    top 50%
+    border solid transparent
+    content " "
+    height 0
+    width 0
+    position absolute
+  &:after
+    border-color rgba(255,255,255,0)
+    border-right-color color-white
+    border-width 10px
+    margin-top -10px
+  &:before
+    border-color rgba(255,255,255,0)
+    border-right-color rgba(0,0,0,0.2)
+    border-width 11px
+    margin-top -11px
+
+.post-share-icon
+a.post-share-icon
+  display inline-block
+  & i
+    margin-top 0.25em
+    display inline-block
+  text-align center
+  width 2em
+  height 2em
+  &:hover
+    color white
+    box-shadow 0px 0px 2px rgba(0,0,0,0.5)
+  &.facebook:hover
+    background-color #3B5998
+  &.twitter:hover
+    background-color #55acee
+  &.linked-in:hover
+    background-color #4875B4
+  &.google-plus:hover
+    background-color #C63D2D
+
+
+
