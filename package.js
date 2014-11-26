@@ -55,6 +55,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/post_content.html', 'client');
   api.addFiles('lib/client/views/post_content.js', 'client');
   api.addFiles('lib/client/views/post_discuss.html', 'client');
+  api.addFiles('lib/client/views/post_edit.html', 'client');
   api.addFiles('lib/client/views/post_info.html', 'client');
   api.addFiles('lib/client/views/post_item.html', 'client');
   api.addFiles('lib/client/views/post_item.js', 'client');
@@ -62,6 +63,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/post_page.js', 'client');
   api.addFiles('lib/client/views/post_share.html', 'client');
   api.addFiles('lib/client/views/post_share.js', 'client');
+  api.addFiles('lib/client/views/post_submit.html', 'client');
   api.addFiles('lib/client/views/post_upvote.html', 'client');
   api.addFiles('lib/client/views/post_upvote.js', 'client');
   api.addFiles('lib/client/views/posts_list.html', 'client');
