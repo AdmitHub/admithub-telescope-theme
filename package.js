@@ -79,6 +79,7 @@ Package.onUse(function (api) {
   api.addFiles('public/icons/admithub.ttf', 'client');
   api.addFiles('public/icons/admithub.woff', 'client');
 
+  api.addFiles('public/img/favicon.ico', 'client');
   api.addFiles('public/img/st-anselm-crest.png', 'client');
   api.addFiles('public/img/st-anselm-logo.png', 'client');
   api.addFiles('public/img/owlAvatar.png', 'client');
