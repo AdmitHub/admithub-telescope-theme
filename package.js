@@ -11,6 +11,7 @@ Package.onUse(function (api) {
       'underscore',
       'alanning:roles',
       'bengott:avatar',
+      'jparker:gravatar',
       'iron:router',
       'telescope-lib',
       'telescope-base',
