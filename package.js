@@ -85,6 +85,7 @@ Package.onUse(function (api) {
   api.addFiles('public/img/favicon.ico', 'client');
   api.addFiles('public/img/st-anselm-crest.png', 'client');
   api.addFiles('public/img/st-anselm-logo.png', 'client');
+  api.addFiles('public/img/the-cooper-union-128.png', 'client');
   api.addFiles('public/img/owlAvatar.png', 'client');
   api.addFiles('public/img/owl-repeat.png', 'client');
   api.addFiles('public/img/owl-repeat@2x.png', 'client');
