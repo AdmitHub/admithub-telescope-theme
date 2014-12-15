@@ -1,5 +1,7 @@
 .pg-partners-img-wrap
-  display inline-block
+  display block
+  @media mq-med
+    display inline-block
   width pg-partners-img-width
   padding layout-space
   border-radius ui-border-radius*4
@@ -11,8 +13,9 @@
 
 .pg-partners-info
   display inline-block
-  width 75%
-  width "calc(100% - %s)" % (pg-partners-img-width)
+  @media mq-med
+    width 75%
+    width "calc(100% - %s)" % (pg-partners-img-width)
   vertical-align middle
   padding-left layout-space*2
 

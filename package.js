@@ -29,6 +29,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/admithub.js', ['client', 'server']);
 
   api.addFiles('lib/client/partners.js', 'client');
+  api.addFiles("lib/client/css/forum/contributors.import.styl", "client");
   api.addFiles('lib/client/css/screen.styl', 'client');
   api.addFiles('lib/client/views/contributors.html', 'client');
   api.addFiles('lib/client/views/contributors.js', 'client');
