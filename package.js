@@ -91,6 +91,7 @@ Package.onUse(function (api) {
   api.addFiles('public/img/owl-repeat@2x.png', 'client');
   api.addFiles('public/img/owl-repeat-light.png', 'client');
   api.addFiles('public/img/owl-repeat-light@2x.png', 'client');
+  api.addFiles('public/img/OwlWeb-120x120.png', 'client');
   api.addFiles('public/img/forum-header-shadow.png', 'client');
   
   // Make sure this is added *after* screen.styl above.
