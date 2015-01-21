@@ -10,6 +10,8 @@ Package.onUse(function (api) {
   api.use([
       'underscore',
       'alanning:roles',
+      'aldeed:simple-schema',
+      'aldeed:autoform',
       'bengott:avatar',
       'jparker:gravatar',
       'iron:router',
@@ -27,6 +29,10 @@ Package.onUse(function (api) {
   ]);
 
   api.addFiles('lib/admithub.js', ['client', 'server']);
+  api.addFiles('lib/_fields.js', ['client', 'server']);
+  api.addFiles('lib/freeTrialBot.js', ['client', 'server']);
+  api.addFiles('lib/server/methods.js', ['server']);
+  api.addFiles('lib/server/publications.js', ['server']);
 
   api.addFiles('lib/client/partners.js', 'client');
   api.addFiles("lib/client/css/forum/contributors.import.styl", "client");
@@ -35,6 +41,8 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/contributors.js', 'client');
   api.addFiles('lib/client/views/error_item.html', 'client');
   api.addFiles('lib/client/views/error_item.js', 'client');
+  api.addFiles('lib/client/views/free_trial_bot.html', 'client');
+  api.addFiles('lib/client/views/free_trial_bot.js', 'client');
   api.addFiles('lib/client/views/header_cta.html', 'client');
   api.addFiles('lib/client/views/header_cta.js', 'client');
   api.addFiles('lib/client/views/header.html', 'client');
@@ -103,5 +111,7 @@ Package.onUse(function (api) {
        'themeSettings',
        'primaryNav',
        'secondaryNav',
+       'FreeTrialBots',
+       'FreeTrialBotSchema'
   ]);
 });

@@ -1,0 +1,83 @@
+<template name='freeTrialBot'>
+  <div class='pg-ftb'>
+    <div class='pg-ftb-header'>
+      <p>
+      Our Profile Survey can help you choose a college by asking you 20 simple questions.
+      </p>
+
+      <form>
+        You can also complete these questions via text message.
+        <input type='text' placeholder='123-456-7890'
+          name='phone'
+          value='{{ currentUser.profile.phone }}' />
+        <button type='submit'>Go</button>
+      </form>
+    </div>
+    <div class='pg-ftb-body'>
+      <div class='pg-ftb-answers'>
+      </div>
+      <div class='pg-ftb-question'>
+        {{#with currentQuestion step}}
+          <div class='question-count'>
+            Question {{ num }} of {{ totalNum }}
+          </div>
+          <div class='question'>
+            {{ question }}
+          </div>
+          <div class='answer'>
+            {{#autoForm collection="FreeTrialBots" id="freeTrialBot" doc=doc }}
+              <input type='hidden' value='{{ doc.userId }}' name='userId'
+                     data-schema-key='userId'/>
+              {{#if loopn}}
+                <table>
+                  <thead>
+                    <tr>
+                      {{#each loopn}}
+                      <th>{{ prompt }}</th>
+                      {{/each}}
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      {{#each loopn}}
+                        <td>
+                          {{> afQuickField name=field options="auto" label-style="display: none"  style='width: 100%;' }}
+                        </td>
+                      {{/each}}
+                      <td><button class='ui-btn js-add-multiple'>Add</button></td>
+                    </tr>
+                  {{#each table}}
+                    <tr>{{#each . }}<td>{{ . }}</td>{{/each}}</tr>
+                  {{/each}}
+                  </tbody>
+                </table>
+              {{/if}}
+              {{#if branch}}
+                {{#each branch}}
+                  {{ prompt }}
+                  {{> afQuickField name=field options="auto" label-style="display: none" }}
+                {{/each}}
+              {{/if}}
+              {{#if multipleBooleans }}
+                {{#each multipleBooleans}}
+                  {{> afQuickField name=field options="auto" label-style="display: none" }}
+                {{/each}}
+              {{/if}}
+              {{#if field}}
+                {{> afQuickField name=field options="auto" label-style="display: none" }}
+              {{/if}}
+            {{/autoForm}}
+          </div>
+          <div class='nav'>
+            <button class='js-nav-prev ui-btn' data-step='{{ ../step }}'
+              {{prevDisabled ../step}}>Prev</button>
+            <button class='js-nav-next ui-btn' data-step='{{ ../step }}'
+              {{nextDisabled ../step}}>Next</button>
+          </div>
+        {{/with}}
+      </div>
+    </div>
+  </div>
+
+</template>
