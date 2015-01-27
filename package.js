@@ -15,6 +15,7 @@ Package.onUse(function (api) {
       'bengott:avatar',
       'jparker:gravatar',
       'iron:router',
+      'richsilv:pikaday@1.0.0',
       'telescope-lib',
       'telescope-base',
       'telescope-daily',
@@ -31,6 +32,8 @@ Package.onUse(function (api) {
   api.addFiles('lib/admithub.js', ['client', 'server']);
   api.addFiles('lib/_fields.js', ['client', 'server']);
   api.addFiles('lib/freeTrialBot.js', ['client', 'server']);
+  api.addFiles("lib/smsvalidations.js", ['client', 'server']);
+
   api.addFiles('lib/server/methods.js', ['server']);
   api.addFiles('lib/server/publications.js', ['server']);
 
