@@ -23,6 +23,7 @@
 .g-header-logo
   float left
   line-height g-header-height
+
   img
     height 1.5em
     width 1.5em
@@ -238,7 +239,6 @@ input.g-header-search-input
 
 .g-header-touts
   clear both
-  background-color color-grey-xlight
 
 .g-header-touts-row
   padding space 0
@@ -264,7 +264,7 @@ input.g-header-search-input
   display inline-block
   vertical-align middle
   padding (space/3)
-  background-color color-white
+  border border
   border-radius 0.4rem
   height g-header-touts-sponsor-height
   width g-header-touts-sponsor-height
@@ -315,13 +315,6 @@ input.g-header-search-input
 .g-flex-grow
   flex-grow 1
 
-.g-header-nav,
-.g-header-nav .dropdown-menu
-  background-color color-white
-
-  @media mq-med
-    background-color transparent
-
 .g-header-logo
   z-index 10
   position relative
@@ -332,12 +325,16 @@ input.g-header-search-input
     margin-right: 0.75rem
 
 .g-header-logo-icon
-  type-size 37.5 
+  type-size 37.5 1
 
 .g-header-logo-type
-  type-size 28
+  type-size 28 1
   font-weight bold
   margin-bottom -3px
+  display none
+
+  @media mq-med
+    display inline-block
 
 .g-header-nav
   {class-list-header-links}
@@ -438,7 +435,6 @@ input.g-header-search-input
   margin-bottom layout-space
   display block
   image img-path + 'owl-repeat-light.png' 9.1rem 5.15rem
-  background-position layout-space 0
   type-small()
   cursor pointer
 
@@ -458,4 +454,3 @@ input.g-header-search-input
 .g-header-aa-description
   margin (0 auto)
   type-xlarge()
-  max-width 75rem
