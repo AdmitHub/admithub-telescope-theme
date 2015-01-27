@@ -1,6 +1,7 @@
+.single-post
 .posts
-  margin 0 auto
   mod-space-bottom()
+  max-width: 65rem
 
   .post-body
   .post-body p
@@ -9,11 +10,14 @@
 h1.post-list-title
 h1.post-edit-title
   type-huge()
+  type-header()
   mod-section-header()
   mod-space 2
 
 .post
-  row()
+  margin-bottom (space*2)
+  padding-bottom (space*2)
+  border-bottom border
 
   .center-modules
     width 100%
@@ -28,9 +32,10 @@ h1.post-edit-title
 .post-heading
   type-large()
 
-.post-title
+a.post-title
   display block
   margin-bottom 1rem
+  color color-type
 
 .post-meta
   type-small()
@@ -55,7 +60,7 @@ h1.post-edit-title
       vertical-align top
 
   .post-rank
-    border-left border-secondary-light
+    border-left border-secondary
 
 .post-rank
   border-left border-style rgba(color-white, 0.25)
@@ -72,15 +77,6 @@ h1.post-edit-title
 .delete-link
 a.delete-link
   color: rgb(216, 32, 32, 1)
-
-.post-link
-a.post-link
-.ah-share-link
-a.ah-share-link
-  margin-left 0.5rem
-  type-secondary()
-  type-small()
-  inline-block()
 
 .ah-share-options
   position absolute
@@ -133,3 +129,7 @@ input[type='text'].white-input
   background-color white
   border 1px solid #aaa
 
+
+.post-actions
+  > * 
+    margin-right (space/2)

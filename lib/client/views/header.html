@@ -1,6 +1,6 @@
 <!-- Originally called <template name='nav'> -->
 <template name="ah_header">
-  <div class="g-header-wrap">
+  <div class="g-header-wrap alt-on-dark">
     <div class="grid-wrap">
       <div class="grid-row">
         <div class="grid-space">
@@ -15,14 +15,12 @@
                 <img src="{{logo_url}}" alt="{{site_title}}"/>
               </a>
             {{/if}}
-            <a class="g-header-logo" href="/">{{site_title}}</a>
+            <a class="g-header-logo" href="/"><i class="g-header-logo-icon icon-logo"></i><span class="g-header-logo-type">{{site_title}}</span></a>
 
             <ul class="g-header-nav js-header-nav">
               {{#if hasPrimaryNav}}
                 {{#each primaryNav}}
-                  <li>
-                    {{> UI.dynamic template=getTemplate}}
-                  </li>
+                  {{> UI.dynamic template=getTemplate}}
                 {{/each}}
               {{/if}}
 
@@ -42,7 +40,7 @@
         </div>
       </div>
     </div>
-
-    {{> yield region='touts' }}
   </div>
+
+  {{> yield region='touts' }}
 </template>

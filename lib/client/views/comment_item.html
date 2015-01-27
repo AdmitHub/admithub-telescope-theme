@@ -5,24 +5,13 @@
         <div class="comment-deleted">This comment has been deleted.</div>
       {{else}}
       <div class="comment-content">
-        <div class="comment-text markdown">{{{htmlBody}}}</div>
-        <div class="comment-actions {{#if upvoted}}upvoted{{else}}not-upvoted{{/if}} {{#if downvoted}}downvoted{{else}}not-downvoted{{/if}}">
-          <button class="{{#if upvoted}}ui-btn{{else}}ui-btn-secondary{{/if}} ui-xsmall upvote">
-            <i class="icon-up"></i>
-            <span>{{#if upvoted}}{{i18n "Voted Up"}}{{else}}{{i18n "Vote Up"}}{{/if}}</span>
-          </button>
-          <button class="{{#if downvoted}}ui-btn{{else}}ui-btn-secondary{{/if}} ui-xsmall downvote" href="#">
-            <i class="icon-down"></i>
-            <span>{{#if downvoted}}{{i18n "Voted Down"}}{{else}}{{i18n "Vote Down"}}{{/if}}</span>
-          </button>
-        </div>
         <div class="user-avatar">{{>avatar userId=userId class="circle"}}</div>
         <div class="comment-main">
           <div class="comment-meta">
             <a class="comment-username" href="{{profileUrl}}">{{authorName}}</a>,
             <span class="comment-time">{{ago}},</span>
             <span class="points">{{upvotes}}</span> <span class="unit">points </span>
-            <a href="/comments/{{_id}}" class="comment-permalink icon-link goto-comment">{{i18n "permalink"}}</a>
+            <a href="/comments/{{_id}}" class="comment-permalink icon-link goto-comment"></a>
             {{#if can_edit}}
               | <a class="edit-link" href="/comments/{{_id}}/edit">{{i18n "Edit"}}</a>
             {{/if}}
@@ -33,6 +22,17 @@
               <a href="/comments/{{_id}}" class="comment-reply goto-comment">{{i18n "Reply"}}</a>
             {{/if}}
           {{/if}}
+        </div>
+        <div class="comment-text markdown">{{{htmlBody}}}</div>
+        <div class="comment-actions {{#if upvoted}}upvoted{{else}}not-upvoted{{/if}} {{#if downvoted}}downvoted{{else}}not-downvoted{{/if}}">
+          <button class="{{#if upvoted}}ui-btn{{else}}ui-btn-secondary{{/if}} ui-small upvote">
+            <i class="icon-up"></i>
+            <span>{{#if upvoted}}{{i18n "Voted Up"}}{{else}}{{i18n "Vote Up"}}{{/if}}</span>
+          </button>
+          <button class="{{#if downvoted}}ui-btn{{else}}ui-btn-secondary{{/if}} ui-small downvote" href="#">
+            <i class="icon-down"></i>
+            <span>{{#if downvoted}}{{i18n "Voted Down"}}{{else}}{{i18n "Vote Down"}}{{/if}}</span>
+          </button>
         </div>
       </div>
       {{/if}}
