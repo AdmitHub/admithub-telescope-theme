@@ -123,12 +123,15 @@ icon()
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-row(mult = 1, nested = false)
-  display block
+row-base()
   margin-bottom row-space
   padding-bottom row-space
   border-bottom border
   clearfix()
+
+row(mult = 1, nested = false)
+  display block
+  row-base()
 
   if nested
     .last
@@ -140,4 +143,3 @@ row(mult = 1, nested = false)
       border-bottom 0
       margin-bottom 0
       padding-bottom 0
-

@@ -14,9 +14,7 @@ h1.post-edit-title
   mod-section-header()
 
 .post
-  margin-bottom row-space
-  padding-bottom row-space
-  border-bottom border
+  row()
 
   .center-modules
     width 100%
@@ -27,6 +25,10 @@ h1.post-edit-title
 
   .post-upvote
     ui-unbtn()
+
+.single-post
+  .post
+    row-base()
 
 .post-heading
   type-large()

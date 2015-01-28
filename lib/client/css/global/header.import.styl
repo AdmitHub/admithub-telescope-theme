@@ -279,10 +279,14 @@ input.g-header-search-input
   line-height 1.2 !important
 
 .g-header-touts-cta
-  position absolute
-  top 50%
-  margin-top -0.5em
-  right 0
+  display block
+  margin-top space
+
+  @media mq-med
+    position absolute
+    top 50%
+    margin-top -0.5em
+    right 0
 
 .g-header-search-wrap
   position relative
@@ -331,10 +335,6 @@ input.g-header-search-input
   type-size 28 1
   font-weight bold
   margin-bottom -3px
-  display none
-
-  @media mq-med
-    display inline-block
 
 .g-header-nav
   {class-list-header-links}
