@@ -6,7 +6,7 @@ body,
 input,
 button
   -webkit-font-smoothing antialiased
-  type-regular()
+  type-medium()
   color color-type
 
 body,
@@ -15,7 +15,7 @@ input
 
 form
   +ui-form-inputs()
-    type-regular()
+    type-medium()
 
 // Placeholder styles can't be stacked with any other selector, or browsers
 // ignore them.
@@ -24,8 +24,14 @@ input
     // Careful setting sizes without checking line-heights in firefox and chrome
     type-secondary()
 
-h1, h2, h3, h4, h5, h6, a, a:link, a:visited
+h1, h2, h3, h4, h5, h6
   color color-type
+
+a, a:link, a:visited
+  color color-link
+
+h1, h2, h3, h4, h5, h6
+  font-weight bold
 
 .mod-section-dark
   h1, h2, h3, h4, h5, h6
@@ -73,8 +79,8 @@ a
 .type-medium
   type-medium()
 
-.type-regular
-  type-regular()
+.type-medium
+  type-medium()
 
 .type-large
   type-large()
@@ -101,7 +107,7 @@ a
   type-secondary()
 
   a
-    color color-type
+    color color-link
 
 .type-color-white
   color color-white !important

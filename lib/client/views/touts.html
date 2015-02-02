@@ -4,8 +4,8 @@
       <div class="grid-wrap">
         <div class="grid-space">
           {{#unless sectionIsClosed "admissions-help-from-admithub"}}
-            <div class='grid-row'>
-              <a href="https://www.admithub.com" class="g-header-admithub g-header-row js-closable" id="admissions-help-from-admithub">
+            <div class='grid-row g-header-touts-row'>
+              <a href="https://www.admithub.com" class="g-header-admithub js-closable" id="admissions-help-from-admithub">
                 <img class="g-header-admithub-owls" src="/packages/admithub_admithub-telescope-theme/public/img/owl-repeat@2x.png">
                 <span>Get Admissions Help from AdmitHub</span>
                 <button class="g-header-touts-section-close js-close-section"><i class="icon-x"></i></button>
@@ -14,9 +14,10 @@
             </div>
           {{/unless}}
 
-          <div class='grid-row g-flex-grid'>
-            <div class='g-header-row type-medium pos-relative g-flex-grow'>
-              {{#with randomPartner}}
+          <div class='grid-row'>
+            <div class="g-header-touts-row">
+              <div class='type-medium pos-relative g-flex-grow'>
+                {{#with randomPartner}}
                 <div class="g-header-touts-sponsor-img">
                   <img src="{{ image }}" />
                 </div>
@@ -25,10 +26,9 @@
                   <span class="type-secondary">Thanks to our partner</span>
                   <a href="{{ url }}" target="_blank">{{ name }}</a>
                 </div>
-              {{/with}}
-            </div>
-            <div class='g-header-row'>
-              <a class='type-small type-ui' href='{{ pathFor "contributors" }}'>See all contributors</a>
+                {{/with}}
+              </div>
+              <a class='g-header-touts-cta' href='{{ pathFor "contributors" }}'>See all contributors</a>
             </div>
           </div>
         </div>
