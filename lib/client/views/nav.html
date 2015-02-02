@@ -1,9 +1,13 @@
 <template name="ah_nav_new_questions">
-  <a href="/new">New Questions</a>
+  <li>
+    <a href="/new">New Questions</a>
+  </li>
 </template>
 
 <template name="ah_nav_top_questions">
-  <a href="/top">Top Questions</a>
+  <li>
+    <a href="/top">Top Questions</a>
+  </li>
 </template>
 
 <template name="ah_nav_user">
@@ -19,8 +23,13 @@
       </div>
     </div>
   {{else}}
-    <a class="account-link sign-in" href="/sign-in">{{i18n "Sign In"}}</a>
-    <a class="account-link g-header-nav-user-sign-up sign-up" href="/sign-up">{{i18n "Sign Up"}}</a>
+    <li>
+      <a class="account-link sign-in" href="/sign-in">{{i18n "Sign In"}}</a>
+    </li>
+
+    <li>
+      <a class="account-link g-header-nav-user-sign-up sign-up" href="/sign-up">{{i18n "Sign Up"}}</a>
+    </li>
   {{/if}}
 </template>
 

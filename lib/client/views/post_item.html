@@ -1,14 +1,14 @@
 <template name="ah_post_title_content">
   <div class="post-content">
-    <h4 class="type-large">
+    <h4 class="type-large type-header">
       {{> UI.dynamic template=postTitle data=. }}
     </h4>
 
-    <p class="mod-space-bottom-half">
+    <p class="mod-space-bottom">
       {{> UI.dynamic template=getBodyTemplateName }}
     </p>
 
-    <div class="mod-space-bottom">
+    <div class="mod-space-bottom-1-5">
       {{> UI.dynamic template=postDomain data=. }}
       {{> UI.dynamic template=postInfo data=. }}
       {{> UI.dynamic template=postCategories data=. }}
@@ -20,9 +20,7 @@
     {{#if can_edit}}
       <a href='/posts/{{_id}}/edit' class="edit-link ui-btn ui-small ">Edit</a>
     {{/if}}
-    {{> UI.dynamic template=postShare }}
-    {{> UI.dynamic template=postDiscuss }}
-    {{> UI.dynamic template=postAdmin }}
+    {{> UI.dynamic template=postShare }}{{> UI.dynamic template=postDiscuss }}{{> UI.dynamic template=postAdmin }}
   </div>
 </template>
 <template name="ah_post_item">

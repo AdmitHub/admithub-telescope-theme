@@ -1,7 +1,6 @@
 <template name="ah_post_discuss">
-  <a class="discuss-link type-ui go-to-comments post-link post-discuss" href="/posts/{{_id}}">
-    <i class="icon-comment"></i>
-    <span class="count">{{commentsCount}}</span>
+  <a class="ui-btn-secondary ui-small discuss-link go-to-comments post-link post-discuss" href="/posts/{{_id}}">
+    {{#if commentsCount}}<span class="count">{{commentsCount}}</span>{{/if}}
     <span class="action">Response{{#unless equals commentsCount 1 }}s{{/unless}}</span>
   </a>
 </template>
