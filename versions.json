@@ -9,6 +9,10 @@
       "1.2.13"
     ],
     [
+      "aldeed:autoform",
+      "4.0.2"
+    ],
+    [
       "aldeed:simple-schema",
       "1.1.0"
     ],
@@ -237,6 +241,10 @@
       "0.4.0"
     ],
     [
+      "mrt:moment",
+      "2.8.1"
+    ],
+    [
       "observe-sequence",
       "1.0.3"
     ],
@@ -267,6 +275,10 @@
     [
       "retry",
       "1.0.1"
+    ],
+    [
+      "richsilv:pikaday",
+      "1.0.0"
     ],
     [
       "routepolicy",

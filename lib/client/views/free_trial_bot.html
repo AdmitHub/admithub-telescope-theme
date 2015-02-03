@@ -1,21 +1,21 @@
 <template name='freeTrialBot'>
-  <div class='pg-ftb'>
-    <div class='pg-ftb-header'>
-      <p>
-      Our Profile Survey can help you choose a college by asking you 20 simple questions.
-      </p>
+  <div class='pg-bot'>
+    <div class='pg-bot-header'>
+      <p class='pg-bot-header-left'>Our Profile Survey can help you choose a college by asking you 20 simple questions.</p>
 
-      <form id='js-sms-handoff' data-step='{{ step }}'>
-        You can also complete these questions via text message.
-        <input type='text' placeholder='123-456-7890'
+      <div class='pg-bot-header-right'>
+        <form id='js-sms-handoff' data-step='{{ step }}'>
+          You can also complete these questions via text message.
+          <input type='text' placeholder='123-456-7890'
           name='phone'
           class='js-sms-handoff-phone'
           value='{{ currentUser.profile.phone }}' />
-        <button type='submit js-sms-handoff' data-step='{{ step }}'>Go</button>
-      </form>
+          <button type='submit js-sms-handoff' data-step='{{ step }}'>Go</button>
+        </form>
+      </div>
     </div>
-    <div class='pg-ftb-body'>
-      <div class='pg-ftb-answers'>
+    <div class='pg-bot-body'>
+      <div class='pg-bot-answers'>
         {{#each allAnswers }}
           <div class='q-and-a'>
             <div class='question'>
@@ -27,7 +27,7 @@
           </div>
         {{/each}}
       </div>
-      <div class='pg-ftb-question'>
+      <div class='pg-bot-question'>
         {{#with currentQuestion step }}
           {{#if done}}
             <p>Thanks, all done!</p>
