@@ -76,9 +76,123 @@ input.g-header-search-input
   line-height 1em
   color color-green
 
+.g-header-hamburger
+  display block
+  float right
+  background none
+  border 0
+  height g-header-height
+
+  @media mq-med
+    display none
+
+.g-header-hamburger-bar
+  display block
+  width 2.25rem
+  height 0.35rem
+  margin 0.35rem 0
+  background-color color-white
+
+.g-header-touts
+  clear both
+
+.g-header-touts-row
+  padding space 0
+  position relative
+
+.g-header-touts-section
+  position relative
+  border-bottom border
+
+  .icon-carat-right
+    type-small()
+
+.g-header-touts-section-close
+  position absolute
+  right layout-space
+  top 50%
+  margin-top -0.5em
+  padding-left 1em // make sure it's big enough for fat fingers
+  type-small()
+  line-height 1em !important
+
+.g-header-touts-sponsor-img
+  display inline-block
+  vertical-align middle
+  padding (space/3)
+  border border
+  border-radius 0.4rem
+  height g-header-touts-sponsor-height
+  width g-header-touts-sponsor-height
+
+  img
+    display block
+
+.g-header-touts-sponsor-text
+  display inline-block
+  vertical-align middle
+  margin-left space
+  line-height 1.2 !important
+
+.g-header-touts-cta
+  display block
+  margin-top space
+
+  @media mq-med
+    position absolute
+    top 50%
+    margin-top -0.5em
+    right 0
+
+.g-header-search-wrap
+  position relative
+  margin-left g-header-nav-space
+
+  @media mq-med
+    inline-block()
+
+  .g-header-search
+    padding-left 3rem
+
+    @media mq-med
+      max-width 17.5rem
+
+  .g-header-search-magnifying-glass
+    position absolute
+    left 1em
+    top 50%
+    margin-top -0.5em
+    color color-type-secondary
+    type-small()
+
+.g-flex-grid
+  display: flex
+  flex-direction column
+  @media mq-med
+    flex-direction row
+
+.g-flex-grow
+  flex-grow 1
+
+.g-header-logo
+  z-index 10
+  position relative
+
+  > *
+    display inline-block
+    vertical-align middle
+    margin-right: 0.75rem
+
+.g-header-logo-icon
+  type-size 37.5 1
+
+.g-header-logo-type
+  type-size 28 1
+  font-weight bold
+  margin-bottom -3px
+
 .g-header-nav
-  ul-reset()
-  type-medium() 
+  type-small() 
   display none
   position absolute
   top 0 
@@ -108,13 +222,6 @@ input.g-header-search-input
     > *
       inline-block()
       margin-left g-header-nav-space
-
-  {class-list-header-links}
-    text-transform capitalize
-    display block
-    padding 0.75rem 0
-    line-height inherit
-
 
     @media mq-med
       inline-block()
@@ -220,138 +327,9 @@ input.g-header-search-input
     font-weight: normal
 
 
-.g-header-hamburger
-  display block
-  float right
-  background none
-  border 0
-  height g-header-height
-
-  @media mq-med
-    display none
-
-.g-header-hamburger-bar
-  display block
-  width 2.25rem
-  height 0.35rem
-  margin 0.35rem 0
-  background-color color-white
-
-.g-header-touts
-  clear both
-
-.g-header-touts-row
-  padding space 0
-  position relative
-
-.g-header-touts-section
-  position relative
-  border-bottom border
-
-  .icon-carat-right
-    type-small()
-
-.g-header-touts-section-close
-  position absolute
-  right layout-space
-  top 50%
-  margin-top -0.5em
-  padding-left 1em // make sure it's big enough for fat fingers
-  type-small()
-  line-height 1em !important
-
-.g-header-touts-sponsor-img
-  display inline-block
-  vertical-align middle
-  padding (space/3)
-  border border
-  border-radius 0.4rem
-  height g-header-touts-sponsor-height
-  width g-header-touts-sponsor-height
-
-  img
-    display block
-
-.g-header-touts-sponsor-text
-  display inline-block
-  vertical-align middle
-  margin-left space
-  line-height 1.2 !important
-
-.g-header-touts-cta
-  display block
-  margin-top space
-
-  @media mq-med
-    position absolute
-    top 50%
-    margin-top -0.5em
-    right 0
-
-.g-header-search-wrap
-  position relative
-  margin-left g-header-nav-space
-  mod-space()
-
-  @media mq-med
-    inline-block()
-
-  .g-header-search
-    padding-left 3rem
-
-    @media mq-med
-      max-width 17.5rem
-
-  .g-header-search-magnifying-glass
-    position absolute
-    left 1em
-    top 50%
-    margin-top -0.7em
-    color color-type-secondary
-    type-small()
-
-.g-flex-grid
-  display: flex
-  flex-direction column
-  @media mq-med
-    flex-direction row
-
-.g-flex-grow
-  flex-grow 1
-
-.g-header-logo
-  z-index 10
-  position relative
-
-  > *
-    display inline-block
-    vertical-align middle
-    margin-right: 0.75rem
-
-.g-header-logo-icon
-  type-size 37.5 1
-
-.g-header-logo-type
-  type-size 28 1
-  font-weight bold
-  margin-bottom -3px
-
-.g-header-nav
-  {class-list-header-links}
-    type-medium()
-
-    @media mq-med
-      type-small()
-      line-height g-header-height
-
   .notifications-menu
     @extend .mod-dropdown-trigger
     display block
-
-    @media mq-med-desk
-      ui-border-radius()
-      a
-        padding (grid-gutter/2)
 
     @media mq-med-desk
       margin-bottom 0.75rem
@@ -404,7 +382,6 @@ input.g-header-search-input
   float left
   padding 0 (grid-gutter/2)
   margin-left -(grid-gutter/2)
-  color color-link
 
   .icon-x
     position absolute
@@ -448,8 +425,8 @@ input.g-header-search-input
 
 .g-header-aa-description-wrap
   text-align center
-  mod-section()
-  row 2
+  padding 2rem 0 4rem
+  border-bottom border
 
 .g-header-aa-description
   margin (0 auto)

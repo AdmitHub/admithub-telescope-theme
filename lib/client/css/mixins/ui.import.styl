@@ -32,10 +32,10 @@ ui-large()
     line-height ui-large-height
 
 ui-base()
+  type-size 18
   ui-height ui-height-default
   padding 0 ui-padding
   border-radius 0.2rem
-  type-size 18
 
   > *
     line-height 4.5rem
@@ -73,9 +73,9 @@ ui-btn(background-color = color-green, type-color = color-white)
   text-align center
   border 0
   cursor pointer
+  type-sans()
   ui-btn-color background-color, type-color
   ui-base()
-  type-sans()
   padding 0 ui-padding
   inline-block()
   ui-border-radius()
@@ -89,13 +89,3 @@ ui-btn(background-color = color-green, type-color = color-white)
 
   &:hover
     text-decoration none
-
-ui-form-inputs()
-  .ui-f-input
-  input[type="text"]
-  input[type="password"]
-  input[type="email"]
-  textarea
-  input.form-control
-    {block}
-

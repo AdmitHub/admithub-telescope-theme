@@ -1,6 +1,6 @@
-<template name="ah_nav_new_questions">
+<template name="ah_nav_application_robot">
   <li>
-    <a href="/new">New Questions</a>
+    <a href="/survey">App Robot</a>
   </li>
 </template>
 
@@ -15,7 +15,7 @@
     <div class="mod-dropdown-trigger user-menu">
       <a class="user-name" href="/">{{name}}</a>
       <div class="mod-dropdown">
-        <ul role="menu" aria-labelledby="dLabel">
+        <ul class="mod-dropdown-text-link-list" role="menu" aria-labelledby="dLabel">
           <li><a href="{{profileUrl}}">{{i18n "Profile"}}</a></li>
           <li><a href="/account">{{i18n "Edit Account"}}</a></li> 
           <li><a href="/sign-out">{{i18n "Sign Out"}}</a></li>
@@ -38,7 +38,7 @@
     <div class="mod-dropdown-trigger g-header-nav-admin admin-menu">
       <a class="admin dropdown-top-level" href="/">{{i18n "Admin"}}</a>
       <div class="mod-dropdown">
-        <ul role="menu" aria-labelledby="dLabel">
+        <ul class="mod-dropdown-text-link-list" role="menu" aria-labelledby="dLabel">
           {{#each menu}}
             {{> UI.dynamic template=menuItem data=this}}
           {{/each}}

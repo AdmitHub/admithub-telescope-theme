@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box
+}
+
 body
   background-color color-white
   margin 0
@@ -12,7 +16,8 @@ button
   outline 0
 
 ul
-  list-style: none
+  list-style none
+  padding 0
 
 li
   margin 0
@@ -32,12 +37,6 @@ h1, h2, h3, h4, h5, h6
 img
   max-width 100%
 
-a
-a:link
-a:visited
-a:active
-  font-weight inherit
-
 // BS3 override for radio buttons in forms
 input[type=radio].form-control
   display: inline-block
@@ -49,27 +48,21 @@ input[type=radio].form-control
     font-size 80%
     line-height auto
 
-input[type="submit"]:link
-input[type="submit"]:hover
-input[type="submit"]:active
-input[type="submit"]:visited
-button
-button:link
-button:hover
-button:active
-button:visited
-.button:link
-.button:hover
-.button:active
-.button:visited
-.btn:link
-.btn:hover
-.btn:active
-.btn:visited
-  color inherit
-
 button
   max-width inherit
   width auto
   background-color inherit
   padding 0
+
+table
+  width 100%;
+  border-collapse collapse
+
+  tr
+    border-bottom border
+
+  td
+    padding 1rem
+
+  p
+    margin 0

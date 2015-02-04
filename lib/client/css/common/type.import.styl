@@ -11,11 +11,7 @@ button
 
 body,
 input
-  serif()
-
-form
-  +ui-form-inputs()
-    type-medium()
+  type-serif()
 
 // Placeholder styles can't be stacked with any other selector, or browsers
 // ignore them.
@@ -27,7 +23,7 @@ input
 h1, h2, h3, h4, h5, h6
   color color-type
 
-a, a:link, a:visited
+a
   color color-link
 
 h1, h2, h3, h4, h5, h6
@@ -65,7 +61,17 @@ a
     color darken(color-green, 12)
 
 .alt-on-dark
-  alt-on-dark()
+  color color-white
+
+  a
+    color white
+
+  .type-secondary
+    color rgba(color-white, 0.5)
+
+.alt-on-light
+  a
+    color color-link
 
 .type-serif-bold
   type-serif-bold()

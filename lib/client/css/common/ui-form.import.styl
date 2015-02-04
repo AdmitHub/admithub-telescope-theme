@@ -1,5 +1,9 @@
 form
-  +ui-form-inputs()
+  .ui-f-input
+  input[type="text"]
+  input[type="password"]
+  input[type="email"]
+  textarea
     ui-base()
     display inline-block
     vertical-align middle
@@ -25,3 +29,40 @@ form
   border-bottom border
   padding-bottom row-space
   margin-bottom row-space
+
+form 
+  .form-actions
+    border-top border
+    margin-top 3rem
+    padding-top 3rem
+
+    a
+      float left
+
+    input
+      float right
+
+  .control-group
+    margin-bottom 2rem
+
+    > label 
+      font-weight bold
+      float left
+
+    .note
+      text-align right
+      type-secondary()
+
+    .controls
+      margin-left 20rem
+
+      label
+        display block
+
+      input[type="text"]
+      input[type="email"]
+      textarea
+        width 100%
+
+      textarea
+        min-height 15rem
