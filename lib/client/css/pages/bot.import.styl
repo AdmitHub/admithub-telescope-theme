@@ -1,3 +1,38 @@
-.pg-bot-header {
+pg-bot-answers-width = 25rem
+
+.pg-bot
   border-bottom border
-}
+
+.pg-bot-header
+  border-bottom border
+  padding-bottom 2rem
+  clearfix()
+
+.pg-bot-header-left
+  float left
+  max-width 50rem
+
+.pg-bot-header-right
+  float right
+
+.pg-bot-answers
+  float left
+  width pg-bot-answers-width
+  padding 3rem
+  padding-left 0
+
+.pg-bot-question
+  margin-left pg-bot-answers-width
+  padding 10rem 3rem
+  text-align center
+  border-left border
+
+  > *
+    margin-bottom 3rem
+
+  form
+    input[type="text"]
+    input.form-control
+      display inline-block
+      ui-large()
+      max-width 45rem

@@ -42,24 +42,27 @@ heading-size(font)
   line-height: (0.666 * font)
 
 h1
-  heading-size(4rem)
+  type-huge()
 h2
-  heading-size(3rem)
+  type-xlarge()
 h3
-  heading-size(2.4rem)
+  type-large()
 h4
-  heading-size(2rem)
+  type-medium()
 h5
-  heading-size(1.6rem)
+  type-small()
 h6
-  heading-size(1.2rem)
+  type-xsmall()
+
+strong
+  font-weight bold
 
 a
   transition color 0.2s
+  text-decoration none
 
   &:hover
     color darken(color-green, 12)
-    text-decoration none
 
 .alt-on-dark
   alt-on-dark()

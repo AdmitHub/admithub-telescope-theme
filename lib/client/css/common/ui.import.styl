@@ -28,8 +28,9 @@ a.ui-btn-alt
     color color-green
 
 .ui-btn-secondary
+a.ui-btn-secondary
   @extend .ui-btn
-  ui-btn color-grey-light color-link
+  ui-btn color-grey-light color-white
   font-weight normal
 
 .ui-btn-circle
@@ -71,11 +72,6 @@ a.ui-xsmall
 .ui-round
   border-radius 10rem !important
 
-.ui-btn-on-green
-  @extend .ui-btn
-  ui-btn darken(color-green, 8)
-  box-shadow 0 0 0 color-white
-
 .ui-btn-icon-right
   margin-left 1em
 
@@ -93,3 +89,7 @@ a.ui-xsmall
   background-color: #e4ebdf
   color color-green
   padding-right ui-padding
+
+.ui-btn-set-middle
+  > * 
+    margin 0 1rem

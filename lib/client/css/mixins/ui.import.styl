@@ -24,10 +24,18 @@ ui-xsmall()
   > *
     line-height ui-xsmall-height
 
+ui-large()
+  type-large()
+  ui-height ui-large-height
+
+  > *
+    line-height ui-large-height
+
 ui-base()
   ui-height ui-height-default
   padding 0 ui-padding
   border-radius 0.2rem
+  type-size 18
 
   > *
     line-height 4.5rem
@@ -67,7 +75,7 @@ ui-btn(background-color = color-green, type-color = color-white)
   cursor pointer
   ui-btn-color background-color, type-color
   ui-base()
-  type-ui()
+  type-sans()
   padding 0 ui-padding
   inline-block()
   ui-border-radius()
@@ -88,5 +96,6 @@ ui-form-inputs()
   input[type="password"]
   input[type="email"]
   textarea
+  input.form-control
     {block}
 

@@ -1,7 +1,7 @@
 Package.describe({
   name: "admithub:admithub-telescope-theme",
   summary: "AdmitHub theme for Telescope",
-  version: "0.0.0",
+  version: "0.0.1",
   git: "https://github.com/AdmitHub/admithub-telescope-theme.git"
 });
 
@@ -24,7 +24,6 @@ Package.onUse(function (api) {
       'telescope-rss',
       'telescope-search',
       'telescope-tags',
-      'telescope-theme-base',
       'standard-app-packages',
       'stylus'
   ]);
