@@ -31,15 +31,17 @@
         <div class='grid-2 no-margin'>
           <div class="grid-space">
             <div class='pg-partners-contrib'>
-              <a href='/users/{{ slug }}' class="link-block">
-                <div class="pg-partners-contrib-avatar">
+              <div class="pg-partners-contrib-avatar">
+                <a href='/users/{{ slug }}'>
                   {{> avatar user=. size='large' shape='rounded' }}
-                  <span class='pg-partners-contrib-comment-count'><i class="icon-chat-triangle"></i><span class="count">{{ commentCount }}</span></span>
-                </div><div class="pg-partners-contrib-info">
+                </a>
+                <span class='pg-partners-contrib-comment-count'><i class="icon-chat-triangle"></i><span class="count">{{ commentCount }}</span></span>
+              </div><div class="pg-partners-contrib-info">
+                <a href='/users/{{ slug }}' class='link-block'>
                   <div class='pg-partners-contrib-name link-block-hover'>{{ getDisplayName }}</div>
-                  <div class='signature'>{{{ profile.signatureHTML }}}</div>
-                </div>
-              </a>
+                </a>
+                <div class='signature'>{{{ profile.signatureHTML }}}</div>
+              </div>
             </div>
           </div>
         </div>
