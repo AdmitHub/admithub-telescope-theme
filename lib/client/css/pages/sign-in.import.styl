@@ -10,9 +10,15 @@
     font-weight bold
 
 form
-  .at-input > label
-    font-weight normal
-    margin-bottom 0.5rem
+  .at-input 
+    > label
+      font-weight normal
+      margin-bottom 0.5rem
+      display block
+
+    > input
+      stretch()
+      margin-bottom 2rem
 
 .at-social-btn
   float left
@@ -77,6 +83,8 @@ button#at-twitter
   mod-space-top 2
   clear both
   text-align center
+  type-small()
+  type-secondary()
 
   a
     text-transform capitalize

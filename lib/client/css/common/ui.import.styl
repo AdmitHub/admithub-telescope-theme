@@ -5,17 +5,11 @@
   ui-unbtn()
 
 .ui-btn
-a.ui-btn
-input[type="submit"].button
-{class-list-buttons}
+.button
   ui-btn()
 
   .icon-carat-right
     type-size 15
-
-.ui-btn-alt
-a.ui-btn-alt
-  ui-btn color-purple
 
 .ui-pill-checked
   ui-btn false, color-type-secondary
@@ -28,8 +22,9 @@ a.ui-btn-alt
     color color-green
 
 .ui-btn-secondary
+a.ui-btn-secondary
   @extend .ui-btn
-  ui-btn color-grey-light color-link
+  ui-btn color-grey-light color-white
   font-weight normal
 
 .ui-btn-circle
@@ -71,11 +66,6 @@ a.ui-xsmall
 .ui-round
   border-radius 10rem !important
 
-.ui-btn-on-green
-  @extend .ui-btn
-  ui-btn darken(color-green, 8)
-  box-shadow 0 0 0 color-white
-
 .ui-btn-icon-right
   margin-left 1em
 
@@ -93,3 +83,19 @@ a.ui-xsmall
   background-color: #e4ebdf
   color color-green
   padding-right ui-padding
+
+.ui-btn-set-middle
+  > * 
+    margin 0 1rem
+
+.ui-btn-facebook
+  ui-btn color-facebook, color-white
+
+.ui-btn-twitter
+  ui-btn color-twitter, color-white
+
+.ui-btn-linked-in
+  ui-btn color-linked-in, color-white
+
+.ui-btn-google-plus
+  ui-btn color-google-plus, color-white

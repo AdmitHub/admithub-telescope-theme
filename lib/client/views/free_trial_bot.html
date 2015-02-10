@@ -1,47 +1,49 @@
 <template name='freeTrialBot'>
-  <div class='pg-ftb'>
-    <div class='pg-ftb-header'>
-      <p>
-      Our Profile Survey can help you choose a college by asking you 20 simple questions.
-      </p>
+  <div class='pg-bot'>
+    <div class='pg-bot-header'>
+      <h3 class='pg-bot-header-left'>Our Application Robot can help you choose a college by asking you 20 simple questions.</h3>
 
-      <form id='js-sms-handoff' data-step='{{ step }}'>
-        You can also complete these questions via text message.
-        <input type='text' placeholder='123-456-7890'
+      <div class='pg-bot-header-right'>
+        <form id='js-sms-handoff' data-step='{{ step }}'>
+          <p class="type-small type-secondary space-small">Complete these questions via text:</p>
+          <input type='text' placeholder='123 - 456 - 7890'
           name='phone'
-          class='js-sms-handoff-phone'
+          class='js-sms-handoff-phone ui-form-phone'
           value='{{ currentUser.profile.phone }}' />
-        <button type='submit js-sms-handoff' data-step='{{ step }}'>Go</button>
-      </form>
+          <button class="ui-btn-secondary" type='submit js-sms-handoff' data-step='{{ step }}'>Go</button>
+        </form>
+      </div>
     </div>
-    <div class='pg-ftb-body'>
-      <div class='pg-ftb-answers'>
-        {{#each allAnswers }}
-          <div class='q-and-a'>
-            <div class='question'>
+    <div class='pg-bot-body'>
+      <div class='pg-bot-answers'>
+        <h4 class="space-large">Your Answers</h4>
+        <div class="type-small">
+          {{#each allAnswers }}
+          <div class='q-and-a space-large'>
+            <div>
               <a href='{{ pathFor "freeTrialBot" step=step }}'>
-                <span class='step'>{{ step }}</span> {{ prompt }}
+                <span>{{ step }}.</span> {{ prompt }}
               </a>
             </div>
-            <div class='answer'>{{ answer }}</div>
+            {{ answer }}
           </div>
-        {{/each}}
+          {{/each}}
+        </div>
       </div>
-      <div class='pg-ftb-question'>
+      <div class='pg-bot-question'>
         {{#with currentQuestion step }}
           {{#if done}}
             <p>Thanks, all done!</p>
           {{else}}
-            <div class='question-count'>
+            <div class='question-count type-large'>
               Question {{ num }} of {{ totalNum }}
             </div>
             <div class='question'>
-              {{ question }}
+              <h1>{{ question }}</h1>
             </div>
             <div class='answer'>
               {{#autoForm collection="FreeTrialBots" id="freeTrialBot" doc=doc }}
-                <input type='hidden' value='{{ doc.userId }}' name='userId'
-                       data-schema-key='userId'/>
+                <input type='hidden' value='{{ doc.userId }}' name='userId' data-schema-key='userId'/>
                 {{#if loopn}}
                   <table>
                     <thead>
@@ -96,10 +98,9 @@
                 {{/if}}
               {{/autoForm}}
             </div>
-            <div class='nav'>
-              <button class='js-nav-prev ui-btn' data-step='{{ ../step }}'
-                {{prevDisabled ../step}}>Prev</button>
-              <button class='js-nav-next ui-btn' data-step='{{ ../step }}'
+            <div class='nav ui-btn-set-middle'>
+              <button class='js-nav-prev ui-btn-secondary ui-large' data-step='{{ ../step }}'
+                {{prevDisabled ../step}}>Prev</button><button class='js-nav-next ui-btn ui-large' data-step='{{ ../step }}'
                 {{nextDisabled ../step}}>Next</button>
             </div>
           {{/if}}

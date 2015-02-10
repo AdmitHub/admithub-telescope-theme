@@ -86,30 +86,6 @@ placeholder()
   &::-webkit-input-placeholder
     {block}
   
-
-alt-on-dark(important = false)
-  +ui-form-inputs()
-    border 0
-
-  .type-secondary
-    opacity 0.5
-    color color-white
-
-  a
-  button
-    color color-white
-
-  if important
-    color color-white !important
-
-    h1, h2, h3, h4, h5, h6, a
-      color color-white !important
-  else
-    color color-white
-
-    h1, h2, h3, h4, h5, h6, a
-      color color-white
-
 icon()
   font-family: 'admithub';
   speak: none;
@@ -143,3 +119,6 @@ row(mult = 1, nested = false)
       border-bottom 0
       margin-bottom 0
       padding-bottom 0
+
+stretch()
+  width 100%

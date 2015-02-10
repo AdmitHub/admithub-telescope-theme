@@ -1,5 +1,6 @@
 .footer
   margin-top (space*6)
+  padding 0
 
 .g-footer
   padding grid-gutter 0
@@ -16,6 +17,8 @@
 
 .g-footer-nav-left
 .g-footer-nav-right
+  type-small()
+
   ul
     margin 0 
 
@@ -46,7 +49,10 @@
   clearfix()
   text-align left
   border-bottom border
-  padding row-space 0
+  padding space 0
+
+  &:last-child
+    border-bottom 0
 
 .g-footer-logo-icon
 .g-footer-logo-type

@@ -1,22 +1,68 @@
 form
-  +ui-form-inputs()
+  .ui-f-input
+  input[type="text"]
+  input[type="password"]
+  input[type="email"]
+  textarea
     ui-base()
+    display inline-block
+    vertical-align middle
+    type-serif()
     padding 0 1em
     background-color color-grey-xlight
-    border 0
-    type-medium()
+    border 0 
     color color-type
     text-shadow 0 0 0 rgba(color-white, 0)
 
     &:focus
       box-shadow 0 0 0 rgba(color-white, 0)
-      background-color color-grey-light
+      background-color darken(color-grey-xlight, 3)
       border-color color-green
 
     &.ui-small
       ui-small()
 
+.ui-form-phone
+  max-width 15.5rem
+
 .fieldset-heading
   border-bottom border
   padding-bottom row-space
   margin-bottom row-space
+
+form 
+  .form-actions
+    border-top border
+    margin-top 3rem
+    padding-top 3rem
+
+    a
+      float left
+
+    input
+      float right
+
+  .control-group
+    margin-bottom 2rem
+
+    > label 
+      font-weight bold
+      float left
+
+    .note
+      text-align right
+      type-secondary()
+
+    .controls
+      margin-left 20rem
+
+      label
+        display block
+
+      input[type="text"]
+      input[type="email"]
+      textarea
+        width 100%
+
+      textarea
+        min-height 15rem

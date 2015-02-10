@@ -2,11 +2,11 @@
   position relative
   &:hover
     .mod-dropdown
-      display block
+      display block !important
 
 .g-header-nav .mod-dropdown 
 .mod-dropdown
-  display none
+  display none !important
   position absolute
   right 0
   top 100%
@@ -14,24 +14,27 @@
   min-width mod-dropdown-width
   ui-border-radius()
   text-align left
-  box-shadow 0 0.1rem 1.5rem rgba(color-black, 0.25)
+  border border
+  z-index 1
 
   li:last-child
     {class-list-header-links}
       border-bottom 0
 
-  {class-list-header-links}
-    display block
-    padding 1rem
-    type-small()
-    border-bottom border
-    transition-property none
-    color color-link
-
-    &:hover
-      background-color color-grey-xlight
 
 .mod-dropdown-center
   @extend .mod-dropdown
   pos-x-center mod-dropdown-width
 
+
+.mod-dropdown-text-link-list
+  a
+    color color-link
+    display block
+    padding 1rem
+    type-small()
+    border-bottom border
+    transition-property none
+
+    &:hover
+      background-color color-grey-xlight
