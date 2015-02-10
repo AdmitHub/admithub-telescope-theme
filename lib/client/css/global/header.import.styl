@@ -34,9 +34,9 @@
   position relative
   inline-block()
   color color-type-secondary
+  background-color color-white
   width 100%
   padding (grid-gutter/2) 0
-  background-color color-white
   border 0
 
   @media mq-med
@@ -184,10 +184,10 @@ input.g-header-search-input
     margin-right: 0.75rem
 
 .g-header-logo-icon
-  type-size 37.5 1
+  type-size 30 1
 
 .g-header-logo-type
-  type-size 28 1
+  type-size 25 1
   font-weight bold
   margin-bottom -3px
 
@@ -201,6 +201,7 @@ input.g-header-search-input
   text-align left
   padding grid-page-gutter-mobile
   padding-top g-header-height 
+  margin 0
   background-color color-purple
   box-shadow 0 0.1rem 0.5rem rgba(color-black, 0.15)
 
@@ -226,7 +227,7 @@ input.g-header-search-input
     @media mq-med
       inline-block()
       margin-right 0
-      line-height g-header-height
+      height g-header-height
       padding 0
 
   .btn
@@ -400,9 +401,6 @@ input.g-header-search-input
   pos-y-center-companion()
   inline-block()
   height g-header-height
-
-.g-header-cta
-  margin-left (grid-gutter/2)
 
 .g-header-nav-admin
   > a

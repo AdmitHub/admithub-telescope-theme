@@ -5,7 +5,7 @@
 
       <div class='pg-bot-header-right'>
         <form id='js-sms-handoff' data-step='{{ step }}'>
-          <p class="type-small type-secondary space-small">Complete these questions via text:</p>
+          <div class="type-small type-secondary pg-bot-header-right-explanation">Continue via text Message:</div>
           <input type='text' placeholder='123 - 456 - 7890'
           name='phone'
           class='js-sms-handoff-phone ui-form-phone'
@@ -15,21 +15,6 @@
       </div>
     </div>
     <div class='pg-bot-body'>
-      <div class='pg-bot-answers'>
-        <h4 class="space-large">Your Answers</h4>
-        <div class="type-small">
-          {{#each allAnswers }}
-          <div class='q-and-a space-large'>
-            <div>
-              <a href='{{ pathFor "freeTrialBot" step=step }}'>
-                <span>{{ step }}.</span> {{ prompt }}
-              </a>
-            </div>
-            {{ answer }}
-          </div>
-          {{/each}}
-        </div>
-      </div>
       <div class='pg-bot-question'>
         {{#with currentQuestion step }}
           {{#if done}}
@@ -107,7 +92,21 @@
         {{/with}}
         {{ renderDatepickers }}
       </div>
+      <div class='pg-bot-answers'>
+        <h4 class="space-large">Your Answers</h4>
+        <div class="type-small">
+          {{#each allAnswers }}
+          <div class='q-and-a space-large'>
+            <div>
+              <a href='{{ pathFor "freeTrialBot" step=step }}'>
+                <span>{{ step }}.</span> {{ prompt }}
+              </a>
+            </div>
+            {{ answer }}
+          </div>
+          {{/each}}
+        </div>
+      </div>
     </div>
   </div>
-
 </template>
