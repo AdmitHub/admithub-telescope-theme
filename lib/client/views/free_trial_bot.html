@@ -18,7 +18,10 @@
       <div class='pg-bot-question'>
         {{#with currentQuestion step }}
           {{#if done}}
-            <p>Thanks, all done!</p>
+            <p>
+            Thanks, all done! We'll crunch some numbers and get back to you
+            with the results.
+            </p>
           {{else}}
             <div class='question-count type-large'>
               Question {{ num }} of {{ totalNum }}
@@ -98,7 +101,7 @@
           {{#each allAnswers }}
           <div class='q-and-a space-large'>
             <div>
-              <a href='{{ pathFor "freeTrialBot" step=step }}'>
+              <a href='{{ pathFor "freeTrialBot" step=step }}' class='js-scroll-top'>
                 <span>{{ step }}.</span> {{ prompt }}
               </a>
             </div>
