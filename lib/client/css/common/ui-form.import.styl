@@ -1,9 +1,10 @@
 form
   .ui-f-input
+  .comment-field
+  #editor.controls iframe
   input[type="text"]
   input[type="password"]
   input[type="email"]
-  #editor.controls iframe
   textarea
     ui-base()
     height 4.5rem
@@ -23,6 +24,11 @@ form
 
     &.ui-form-small
       height 3rem
+
+    .comment-field
+      padding 0
+      margin-bottom (space*2)
+
 
 .ui-form-phone
   max-width 15.5rem
