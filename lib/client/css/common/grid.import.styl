@@ -27,6 +27,7 @@
   padding 0 1.5rem
 
 .grid-space
+  position relative
   @media mq-med
     margin-left grid-gutter
 
@@ -40,3 +41,28 @@ for i in 1 2 3 4
 .grid-inline-block
   float none
   inline-block()
+
+.grid-left-sidebar
+  @media mq-med
+    width 20%
+    float left
+
+  @media mq-lg
+    width 17%
+
+.grid-right-sidebar-collapse-left
+  @media mq-lg
+    position absolute
+    top 0
+    right 0
+    width 24%
+
+.grid-posts
+
+  @media mq-med
+    float left
+    width 80%
+    padding-left space*2
+
+  @media mq-lg
+    width 52%

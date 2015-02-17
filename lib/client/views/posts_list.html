@@ -3,12 +3,54 @@
 
   {{> UI.dynamic template=postsListIncoming data=incoming}}
 
-  <div class="posts list">
+  <div class="grid-left-sidebar">
+    <div class="sidebar-section responsive-hide-tablet">
+      <select>
+        <option selected="selected">All Categories</option>
+        <option>Athletics</option>
+        <option>College Search & Selection</option>
+        <option>Community College</option>
+        <option>Counselors</option>
+      </select>
+    </div>
+
+    <nav class="sidebar-section forum-categories responsive-hide-mobile">
+      <ul>
+        <li class="sidebar-header">Categories</li>
+        <li class="forum-category"><a>Athletics</a></li>
+        <li class="forum-category"><a>College Search & Selection</a></li>
+        <li class="forum-category"><a>Community College</a></li>
+        <li class="forum-category"><a>Counselors</a></li>
+        <li class="forum-category"><a>Financial Aid</a></li>
+        <li class="forum-category"><a>First Gen College</a></li>
+        <li class="forum-category"><a>Grad School</a></li>
+        <li class="forum-category"><a>Internations</a></li>
+        <li class="forum-category"><a>Ivy League</a></li>
+        <li class="forum-category"><a>Parents</a></li>
+        <li class="forum-category"><a>Standard Tests</a></li>
+      </ul>
+    </nav>
+
+    <div class="responsive-hide-mobile sidebar-section">
+      <h6 class="sidebar-header"><i class="sidebar-header-icon icon-microphone"></i><span>Podcast</span></h6>
+      <p class="type-secondary type-small">Check out the brand new <a href="https://soundcloud.com/aboutadmissions">AdmitHub podcast</a>, where the AdmitHub founders will help you achieve your goals.</p>
+    </div>
+
+    <div class="responsive-hide-mobile grid-right-sidebar-collapse-left">
+      <h6 class="sidebar-header">App Robot <a class="pos-right" href="/survey">Continue</a></h6>
+      <p class="type-secondary type-small">We’ll help fill out your application when you answer 20 simple questions.</p>
+      <div class="mod-progress-bar"><span class="mod-progress-bar-filled" style="width: 20%;"></span></div>
+    </div>
+  </div>
+
+
+  <div class="grid-posts posts list">
     {{#each posts}}
       {{> UI.dynamic template=post_item}}
     {{/each}}
 
     {{> UI.dynamic template=postsLoadMore}}
   </div>
+
 </template>
 

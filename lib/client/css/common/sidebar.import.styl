@@ -1,0 +1,29 @@
+.sidebar-header
+  type-ui()
+  margin-bottom space
+
+  span, i
+    display inline-block
+    vertical-align middle
+
+.sidebar-header-icon
+  font-size 2.4rem
+  margin-right 0.25rem
+
+.sidebar-section
+  padding-bottom space
+  margin-bottom space
+  position relative
+
+  &:last-child
+    &:after
+      display none
+
+  &:after
+    content: ''
+    position absolute
+    top 100%
+    height 0.1rem
+    background-color color-border
+    width 4.5rem
+    margin-left (space*-1)

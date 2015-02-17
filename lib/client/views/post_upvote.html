@@ -1,5 +1,5 @@
 <template name="ah_post_upvote">
-<div class="ui-small ui-btn-with-rank {{#if upvoted}}post-upvoted ui-pill-checked{{else}}ui-btn{{/if}}">
+<div class="ui-btn{{#if upvoted}}{{else}} ui-btn-with-rank{{/if}}">
     {{#if upvoted}}
       <span class="post-upvoted upvote-link voted">
         <i class="icon-check"></i>

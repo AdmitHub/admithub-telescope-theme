@@ -38,6 +38,7 @@
   width 100%
   padding (grid-gutter/2) 0
   border 0
+  height 3rem
 
   @media mq-med
     width 25rem
@@ -95,17 +96,15 @@ input.g-header-search-input
 
 .g-header-touts
   clear both
+  type-small()
 
 .g-header-touts-row
-  padding space 0
+  padding-top space
   position relative
 
 .g-header-touts-section
   position relative
   border-bottom border
-
-  .icon-carat-right
-    type-small()
 
 .g-header-touts-section-close
   position absolute
@@ -113,13 +112,12 @@ input.g-header-search-input
   top 50%
   margin-top -0.5em
   padding-left 1em // make sure it's big enough for fat fingers
-  type-small()
   line-height 1em !important
 
 .g-header-touts-sponsor-img
   display inline-block
   vertical-align middle
-  padding (space/3)
+  padding (space/4)
   border border
   border-radius 0.4rem
   height g-header-touts-sponsor-height
@@ -131,7 +129,7 @@ input.g-header-search-input
 .g-header-touts-sponsor-text
   display inline-block
   vertical-align middle
-  margin-left space
+  margin-left (space/2)
   line-height 1.2 !important
 
 .g-header-touts-cta
@@ -147,9 +145,11 @@ input.g-header-search-input
 .g-header-search-wrap
   position relative
   margin-left g-header-nav-space
+  margin-bottom space
 
   @media mq-med
     inline-block()
+    margin-bottom 0
 
   .g-header-search
     padding-left 3rem
@@ -164,6 +164,7 @@ input.g-header-search-input
     margin-top -0.5em
     color color-type-secondary
     type-small()
+    line-height 1em
 
 .g-flex-grid
   display: flex
@@ -204,6 +205,13 @@ input.g-header-search-input
   margin 0
   background-color color-purple
   box-shadow 0 0.1rem 0.5rem rgba(color-black, 0.15)
+  type-ui()
+
+  li
+    margin-bottom space
+
+    @media mq-med
+      margin-bottom 0
 
   .user-name
     ellipsis()
@@ -248,7 +256,6 @@ input.g-header-search-input
       a
         margin-bottom 0
         padding 0.5rem 1.5rem
-        color color-type-secondary
 
   .credit-badge
     color orange
@@ -429,3 +436,18 @@ input.g-header-search-input
 .g-header-aa-description
   margin (0 auto)
   type-xlarge()
+
+.g-header-user-menu
+  @media mq-med
+    padding ((g-header-height - 3rem)/2rem)
+
+.g-header-user-avatar
+  dim 3rem
+  display inline-block
+  vertical-align middle
+  border-radius ui-border-radius
+
+.g-header-user-carat
+  display inline-block
+  vertical-align middle
+  margin-left: (space/2)

@@ -1,6 +1,6 @@
 <template name="ah_post_categories">
   <span class="post-categories">
-    {{#each categories}}, <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>{{/each}}
+    {{#each categories}}<a href="{{categoryLink}}" class="post-category category-{{slug}} ui-tag">{{name}}</a>, {{/each}}
   </span>
 </template>
 

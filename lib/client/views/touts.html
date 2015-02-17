@@ -5,7 +5,7 @@
         <div class="grid-space">
           <div class='grid-row'>
             <div class="g-header-touts-row">
-              <div class='type-medium pos-relative g-flex-grow'>
+              <div class='pos-relative g-flex-grow'>
                 {{#with randomPartner}}
                 <div class="g-header-touts-sponsor-img">
                   <img src="{{ image }}" />
@@ -17,7 +17,7 @@
                 </div>
                 {{/with}}
               </div>
-              <a class='g-header-touts-cta' href='{{ pathFor "contributors" }}'>See all contributors</a>
+              <a class='g-header-touts-cta' href='{{ pathFor "contributors" }}'>See all contributors<i class="type-icon-inline icon-carat-right"></i></a>
             </div>
           </div>
         </div>
