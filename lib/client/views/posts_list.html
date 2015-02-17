@@ -1,8 +1,21 @@
 <template name="ah_posts_list">
 <!--<h1 class='post-list-title'>{{ postListTitle }}</h1>-->
-
   {{> UI.dynamic template=postsListIncoming data=incoming}}
 
+  {{> ah_posts_sidebar }}
+
+  <div class="grid-posts posts list">
+    {{#each enumerate posts}}
+      {{#if equals i 2}}{{> UI.dynamic template=newsletterBanner}}{{/if}}
+        
+      {{> UI.dynamic template=post_item data=item}}
+    {{/each}}
+
+    {{> UI.dynamic template=postsLoadMore}}
+  </div>
+</template>
+
+<template name='ah_posts_sidebar'>
   <div class="grid-left-sidebar">
     <div class="sidebar-section responsive-hide-tablet">
       {{> ah_category_select}}
@@ -20,18 +33,5 @@
     <div class="responsive-hide-mobile grid-right-sidebar-collapse-left">
       {{> ah_free_trial_bot_widget }}
     </div>
-
   </div>
-
-  <div class="grid-posts posts list">
-    {{#each enumerate posts}}
-      {{#if equals i 2}}{{> UI.dynamic template=newsletterBanner}}{{/if}}
-        
-      {{> UI.dynamic template=post_item data=item}}
-    {{/each}}
-
-    {{> UI.dynamic template=postsLoadMore}}
-  </div>
-
 </template>
-
