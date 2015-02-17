@@ -1,6 +1,12 @@
 .grid-wrap 
-  max-width grid-width
   margin 0 auto
+  max-width mq-sm-width + 20rem
+
+  @media mq-med
+    max-width mq-med-width + 50rem
+
+  @media mq-lg
+    max-width grid-width
 
 .grid-row
   clearfix()
@@ -65,4 +71,4 @@ for i in 1 2 3 4
     padding-left space*2
 
   @media mq-lg
-    width 52%
+    width 56%

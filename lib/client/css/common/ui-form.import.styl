@@ -1,9 +1,10 @@
 form
   .ui-f-input
+  .comment-field
+  #editor.controls iframe
   input[type="text"]
   input[type="password"]
   input[type="email"]
-  #editor.controls iframe
   textarea
     ui-base()
     height 4.5rem
@@ -19,10 +20,15 @@ form
 
     &:focus
       box-shadow 0 0 0 rgba(color-white, 0)
-      background-color rgba(color-grey-xlight, 0.5)
+      border border-focus
 
     &.ui-form-small
       height 3rem
+
+    .comment-field
+      padding 0
+      margin-bottom (space*2)
+
 
 .ui-form-phone
   max-width 15.5rem
@@ -72,3 +78,8 @@ form
 
 .at-error
   color color-red
+
+.ui-form-input-submit
+  border-bottom-left-radius 0
+  border-top-left-radius 0
+  margin-left -0.1rem

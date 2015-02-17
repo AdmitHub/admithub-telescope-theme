@@ -1,4 +1,46 @@
 .newsletter-banner-form
-  padding 2rem 
+  margin-top: (space*-2)
+  margin-bottom (space*2)
+  padding space
   text-align center
   line-height 3rem
+  background-color color-grey-xxlight
+  border-bottom border
+  text-align left
+  clearfix()
+
+.newsletter-banner-form-title
+  margin-right (space/2)
+
+.newsletter-banner-form-subtitle
+  margin-right (space/2)
+  display block
+
+  @media mq-sm
+    display inline
+
+input[type="email"].newsletter-banner-form-input
+  width 100%
+  padding-right 4.5rem
+
+.newsletter-banner-form-left
+  margin-bottom (space/2)
+  text-align center
+
+  @media mq-sm
+    text-align left
+    margin-bottom 0
+    float left
+    width 55%
+
+.newsletter-banner-form-right
+  position relative
+
+  @media mq-sm
+    float right
+    width 45%
+
+.newsletter-banner-form-submit
+  position absolute
+  right 0
+  top 0.1rem

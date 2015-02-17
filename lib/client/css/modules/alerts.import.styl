@@ -1,7 +1,7 @@
 .flash-messages
   position fixed
   width 100%
-  top (grid-gutter/2)
+  top g-header-height - 1rem
   left 0
   pointer-events none
 
@@ -12,23 +12,26 @@
     position relative
     type-serif()
     type-medium
-    box-shadow 0 0.1rem 0.25rem rgba(color-black, 0.35)
-    color color-white
+    box-shadow 0 0.1rem 1rem rgba(color-black, 0.25)
     padding 1rem 1.5rem
     padding-right 3rem
+    border-radius ui-border-radius
 
   .close
     position absolute
     top 50% 
     right 1rem
-    margin-top -0.8em
+    margin-top -0.5em
     type-xlarge()
-    color color-white
+    line-height 1em
+    color color-link
+    border 0
+    cursor pointer
 
   .alert-danger
   .alert-warning
-    background-color color-red
+    background-color color-white
 
   .alert-success
   .alert-info
-    background-color color-purple
+    background-color color-white

@@ -1,12 +1,14 @@
 <template name="ah_newsletter_banner">
   {{#if showBanner}}
-    <form class="newsletter-banner-form mod-section-grey js-newsletter-banner-wrap">
-      <span class='type-sans-uppercase'>NEWSLETTER</span> Get the latest admissions tips
-      <nobr>
-        <input type="email" class="js-newsletter-email" placeholder="example@email.com"
-          value="{{ currentUser.emails.[0].address }}" />
-        <button class="ui-btn ui-small ah-newsletter-button js-newsletter-button">Go</button>
-      </nobr>
+    <form class="newsletter-banner-form js-newsletter-banner-wrap">
+      <div class="newsletter-banner-form-left">
+        <span class='sidebar-header newsletter-banner-form-title'>NEWSLETTER</span>&nbsp;<span class="type-secondary type-small newsletter-banner-form-subtitle">Get the latest admissions tips</span>
+      </div>
+
+      <div class="newsletter-banner-form-right">
+        <input type="email" class="ui-form-small newsletter-banner-form-input js-newsletter-email" placeholder="example@email.com"
+        value="{{ currentUser.emails.[0].address }}" /><button class="ui-btn ui-form-input-submit ui-small ah-newsletter-button js-newsletter-button newsletter-banner-form-submit">Go</button>
+      </div>
     </form>
   {{/if}}
 </template>
