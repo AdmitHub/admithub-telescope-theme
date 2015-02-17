@@ -24,6 +24,8 @@
                 {{/each}}
               {{/if}}
 
+              {{> search}}
+
               {{#if hasSecondaryNav}}
                 {{#each secondaryNav}}
                   <li>
@@ -31,10 +33,9 @@
                   </li>
                 {{/each}}
               {{/if}}
-
-              {{> search}}
-              {{> ah_header_cta}}
             </ul>
+
+            {{> ah_header_cta}}
 
           </header>
         </div>

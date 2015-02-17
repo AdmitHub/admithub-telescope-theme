@@ -6,13 +6,34 @@
 
 .ui-btn
 .button
-  ui-btn()
+  transition background-color 0.15s
+  text-align center
+  border 0
+  cursor pointer
+  padding 0 ui-padding
+  border-radius 0.2rem
+  ui-btn-color color-green, color-white
+  padding 0 ui-padding
+  inline-block()
+  ui-border-radius()
+  type-ui()
+  ui-height ui-height-default
+
+  > *
+    inline-block()
+    vertical-align middle
+
+    &.button-loader
+      display none
+
+  &:hover
+    text-decoration none
 
   .icon-carat-right
     type-size 15
 
 .ui-pill-checked
-  ui-btn false, color-type-secondary
+  @extend .ui-btn
   border border-secondary
 
   &.ui-small
@@ -24,8 +45,7 @@
 .ui-btn-secondary
 a.ui-btn-secondary
   @extend .ui-btn
-  ui-btn color-grey-light color-white
-  font-weight normal
+  ui-btn-color color-grey-light color-white
 
 .ui-btn-circle
   padding 0
@@ -55,10 +75,6 @@ a.ui-large
     type-size 20
 
 
-.ui-small
-a.ui-small
-  ui-small()
-
 .ui-xsmall
 a.ui-xsmall
   ui-xsmall()
@@ -76,26 +92,44 @@ a.ui-xsmall
 .ui-btn-with-rank
   padding-right 0
 
-.ui-rank-action
-  padding-right ui-padding
-
 .ui-rank
-  background-color: #e4ebdf
-  color color-green
   padding-right ui-padding
+  span
+    border-left 1px solid rgba(color-white, 0.35) 
+    margin-left ui-padding - 0.4rem
+    padding-left ui-padding
 
 .ui-btn-set-middle
   > * 
     margin 0 1rem
 
 .ui-btn-facebook
-  ui-btn color-facebook, color-white
+.ui-btn-twitter
+.ui-btn-linked-in
+.ui-btn-google-plus
+  @extend .ui-btn
+  position relative
+
+  i 
+    position absolute
+    left (space/2)
+    top 50%
+    margin-top: -0.5em
+    line-height 1em
+
+.ui-btn-facebook
+  ui-btn-color color-facebook
 
 .ui-btn-twitter
-  ui-btn color-twitter, color-white
+  ui-btn-color color-twitter
 
 .ui-btn-linked-in
-  ui-btn color-linked-in, color-white
+  ui-btn-color color-linked-in
 
 .ui-btn-google-plus
-  ui-btn color-google-plus, color-white
+  ui-btn-color color-google-plus
+
+.ui-tag
+  background-color #f2e9ee
+  border-radius 10rem
+  padding 0.2rem 0.75rem

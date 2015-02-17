@@ -3,16 +3,41 @@
 
   {{> UI.dynamic template=postsListIncoming data=incoming}}
 
-  <div class="posts list">
+  <div class="grid-left-sidebar">
+    <div class="sidebar-section responsive-hide-tablet">
+      <select>
+        <option selected="selected">All Categories</option>
+        <option>Athletics</option>
+        <option>College Search & Selection</option>
+        <option>Community College</option>
+        <option>Counselors</option>
+      </select>
+    </div>
+
+    <nav class="sidebar-section forum-categories responsive-hide-mobile">
+      {{> ah_category_list}}
+    </nav>
+
+    <div class="responsive-hide-mobile sidebar-section">
+      <h6 class="sidebar-header"><i class="sidebar-header-icon icon-microphone"></i><span>Podcast</span></h6>
+      <p class="type-secondary type-small">Check out the brand new <a href="https://soundcloud.com/aboutadmissions">AdmitHub podcast</a>, where the AdmitHub founders will help you achieve your goals.</p>
+    </div>
+
+    <div class="responsive-hide-mobile grid-right-sidebar-collapse-left">
+      {{> ah_free_trial_bot_widget }}
+    </div>
+
+  </div>
+
+  <div class="grid-posts posts list">
     {{#each enumerate posts}}
-      {{#if equals i 2}}
-        {{> UI.dynamic template=newsletterBanner}}
-      {{/if}}
+      {{#if equals i 2}}{{> UI.dynamic template=newsletterBanner}}{{/if}}
         
       {{> UI.dynamic template=post_item data=item}}
     {{/each}}
 
     {{> UI.dynamic template=postsLoadMore}}
   </div>
+
 </template>
 

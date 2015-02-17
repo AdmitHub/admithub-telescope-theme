@@ -1,7 +1,7 @@
 Package.describe({
   name: "admithub:admithub-telescope-theme",
   summary: "AdmitHub theme for Telescope",
-  version: "0.0.0",
+  version: "0.0.1",
   git: "https://github.com/AdmitHub/admithub-telescope-theme.git"
 });
 
@@ -37,65 +37,62 @@ Package.onUse(function (api) {
   api.addFiles('lib/server/publications.js', ['server']);
 
   api.addFiles('lib/client/partners.js', 'client');
-  api.addFiles("lib/client/css/forum/contributors.import.styl", "client");
+
+  // begin styles
   api.addFiles('lib/client/css/screen.styl', 'client');
 
-  // NOTE: These are not necessary for the api (just including top-level
-  // ``screen.styl`` works fine), but including them here makes automatic
-  // refreshes work in development.
-  api.addFiles('lib/client/css/fonts/icons.import.styl', 'client');
-  api.addFiles('lib/client/css/mixins/ui.import.styl', 'client');
   api.addFiles('lib/client/css/mixins/mod.import.styl', 'client');
-  api.addFiles('lib/client/css/mixins/common.import.styl', 'client');
+  api.addFiles('lib/client/css/mixins/ui.import.styl', 'client');
   api.addFiles('lib/client/css/mixins/type.import.styl', 'client');
-  api.addFiles('lib/client/css/pages/home.import.styl', 'client');
-  api.addFiles('lib/client/css/pages/bot.import.styl', 'client');
-  api.addFiles('lib/client/css/pages/products.import.styl', 'client');
-  api.addFiles('lib/client/css/pages/sign-in.import.styl', 'client');
-  api.addFiles('lib/client/css/pages/productBuy.import.styl', 'client');
-  api.addFiles('lib/client/css/common/ui.import.styl', 'client');
+  api.addFiles('lib/client/css/mixins/common.import.styl', 'client');
+
   api.addFiles('lib/client/css/common/base.import.styl', 'client');
-  api.addFiles('lib/client/css/common/zindex.import.styl', 'client');
-  api.addFiles('lib/client/css/common/icons.import.styl', 'client');
-  api.addFiles('lib/client/css/common/markdown.import.styl', 'client');
-  api.addFiles('lib/client/css/common/type.import.styl', 'client');
-  api.addFiles('lib/client/css/common/sticky-footer.import.styl', 'client');
   api.addFiles('lib/client/css/common/variables.import.styl', 'client');
   api.addFiles('lib/client/css/common/override.import.styl', 'client');
-  api.addFiles('lib/client/css/common/link.import.styl', 'client');
-  api.addFiles('lib/client/css/common/grid.import.styl', 'client');
-  api.addFiles('lib/client/css/common/no.import.styl', 'client');
+
+  api.addFiles('lib/client/css/common/sticky-footer.import.styl', 'client');
+  api.addFiles('lib/client/css/common/type.import.styl', 'client');
   api.addFiles('lib/client/css/common/position.import.styl', 'client');
+  api.addFiles('lib/client/css/common/grid.import.styl', 'client');
+  api.addFiles('lib/client/css/common/zindex.import.styl', 'client');
+  api.addFiles('lib/client/css/common/icons.import.styl', 'client');
+  api.addFiles('lib/client/css/common/ui.import.styl', 'client');
   api.addFiles('lib/client/css/common/ui-form.import.styl', 'client');
+  api.addFiles('lib/client/css/common/markdown.import.styl', 'client');
   api.addFiles('lib/client/css/common/tables.import.styl', 'client');
+  api.addFiles('lib/client/css/common/link.import.styl', 'client');
   api.addFiles('lib/client/css/common/space.import.styl', 'client');
-  api.addFiles('lib/client/css/asset_path_overrides.styl', 'client');
+  api.addFiles('lib/client/css/common/no.import.styl', 'client');
+  api.addFiles('lib/client/css/common/sidebar.import.styl', 'client');
+  api.addFiles('lib/client/css/common/responsive.import.styl', 'client');
+
   api.addFiles('lib/client/css/modules/section.import.styl', 'client');
-  api.addFiles('lib/client/css/modules/alerts.import.styl', 'client');
-  api.addFiles('lib/client/css/modules/markdown.import.styl', 'client');
-  api.addFiles('lib/client/css/modules/dropdown.import.styl', 'client');
-  api.addFiles('lib/client/css/modules/sticky-footer.import.styl', 'client');
   api.addFiles('lib/client/css/modules/hero.import.styl', 'client');
+  api.addFiles('lib/client/css/modules/dropdown.import.styl', 'client');
+  api.addFiles('lib/client/css/modules/markdown.import.styl', 'client');
+  api.addFiles('lib/client/css/modules/alerts.import.styl', 'client');
+  api.addFiles('lib/client/css/modules/progress-bar.import.styl', 'client');
+
+  api.addFiles('lib/client/css/global/header.import.styl', 'client');
   api.addFiles('lib/client/css/global/footer.import.styl', 'client');
   api.addFiles('lib/client/css/global/content.import.styl', 'client');
-  api.addFiles('lib/client/css/global/header.import.styl', 'client');
-  api.addFiles('lib/client/css/screen.styl', 'client');
-  api.addFiles('lib/client/css/forum/newsletter.import.styl', 'client');
+
   api.addFiles('lib/client/css/forum/posts.import.styl', 'client');
-  api.addFiles('lib/client/css/forum/search.import.styl', 'client');
-  api.addFiles('lib/client/css/forum/notifications.import.styl', 'client');
   api.addFiles('lib/client/css/forum/comments.import.styl', 'client');
+  api.addFiles('lib/client/css/forum/newsletter.import.styl', 'client');
+  api.addFiles('lib/client/css/forum/search.import.styl', 'client');
   api.addFiles('lib/client/css/forum/user.import.styl', 'client');
   api.addFiles('lib/client/css/forum/contributors.import.styl', 'client');
-  // End unnecessary css exports
+  api.addFiles('lib/client/css/forum/categories.import.styl', 'client');
 
+  api.addFiles('lib/client/css/pages/sign-in.import.styl', 'client');
+  api.addFiles('lib/client/css/pages/bot.import.styl', 'client');
+  // end styles
 
   api.addFiles('lib/client/views/ah_category_list.html', 'client');
   api.addFiles('lib/client/views/ah_category_list.js', 'client');
   api.addFiles('lib/client/views/ah_free_trial_bot_widget.html', 'client');
   api.addFiles('lib/client/views/ah_free_trial_bot_widget.js', 'client');
-  api.addFiles('lib/client/views/ah_podcast_tout.html', 'client');
-  api.addFiles('lib/client/views/ah_podcast_tout.js', 'client');
   api.addFiles('lib/client/views/contributors.html', 'client');
   api.addFiles('lib/client/views/contributors.js', 'client');
   api.addFiles('lib/client/views/error_item.html', 'client');

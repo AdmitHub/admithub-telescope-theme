@@ -1,0 +1,9 @@
+<template name='ah_category_list'>
+  <ul>
+    <li class='sidebar-header'>Categories</li>
+    {{#each categories}}
+      <li class='forum-category'><a href='{{ href }}'>{{ name }}</a></li>
+    {{/each}}
+  </ul>
+</template>
+

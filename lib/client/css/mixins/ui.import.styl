@@ -4,18 +4,7 @@ ui-height(height, children = true)
 
   if children
     > *
-      line-height height !important
-
-ui-small()
-  type-small()
-  ui-height ui-small-height
-
-  > *
-    line-height ui-small-height
-
-  .icon-x
-  .icon-check
-    type-size 14
+      line-height height
 
 ui-xsmall()
   type-small()
@@ -32,13 +21,6 @@ ui-large()
     line-height ui-large-height
 
 ui-base()
-  type-size 18
-  ui-height ui-height-default
-  padding 0 ui-padding
-  border-radius 0.2rem
-
-  > *
-    line-height 4.5rem
 
 ui-unbtn()
   font-size inherit
@@ -67,25 +49,3 @@ ui-btn-color(background-color, type-color = color-white)
 
 ui-border-radius()
   border-radius ui-border-radius
-
-ui-btn(background-color = color-green, type-color = color-white)
-  transition background-color 0.15s
-  text-align center
-  border 0
-  cursor pointer
-  type-sans()
-  ui-btn-color background-color, type-color
-  ui-base()
-  padding 0 ui-padding
-  inline-block()
-  ui-border-radius()
-
-  > *
-    inline-block()
-    vertical-align top
-
-    &.button-loader
-      display none
-
-  &:hover
-    text-decoration none

@@ -33,6 +33,9 @@ h1.post-edit-title
 .post-heading
   type-large()
 
+.post-info
+  type-small()
+
 a.post-title
   display block
   margin-bottom 1rem
@@ -58,14 +61,6 @@ a.post-title
     .post-unupvote
       inline-block()
       vertical-align top
-
-  .post-rank
-    border-left border-secondary
-
-.post-rank
-  border-left border-style rgba(color-white, 0.25)
-  margin-left ui-padding - 0.4rem
-  padding-left ui-padding
 
 .post-unupvote
   display none
@@ -100,3 +95,7 @@ input[type='text'].white-input
 .post-actions
   > * 
     margin-right (space/2)
+
+.post-meta-item
+  display inline-block
+  type-small()

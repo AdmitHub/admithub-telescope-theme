@@ -48,7 +48,8 @@ form
     padding 0 (grid-gutter/2)
 
 button#at-facebook
-  ui-btn color-facebook
+  @extend .ui-btn
+  ui-btn-color color-facebook
   ui-small()
   margin-right 2.5%
 
@@ -58,7 +59,8 @@ button#at-facebook
       @extend .icon-facebook:before
 
 button#at-twitter
-  ui-btn color-twitter
+  @extend .ui-btn
+  ui-btn-color color-twitter
   ui-small()
   margin-left 2.5%
 

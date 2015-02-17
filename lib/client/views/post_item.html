@@ -8,9 +8,10 @@
       {{> UI.dynamic template=getBodyTemplateName }}
     </p>
 
-    <div class="mod-space-bottom-1-5">
+    <div class="mod-space-bottom-1-5 post-info">
       {{> UI.dynamic template=postDomain data=. }}
       {{> UI.dynamic template=postInfo data=. }}
+      <span class="type-secondary">in</span>
       {{> UI.dynamic template=postCategories data=. }}
     </div>
   </div>
@@ -18,7 +19,7 @@
   <div class="post-actions">
     {{> UI.dynamic template=postUpvote }}
     {{#if can_edit}}
-      <a href='/posts/{{_id}}/edit' class="edit-link ui-btn ui-small ">Edit</a>
+      <a href='/posts/{{_id}}/edit' class="edit-link ui-btn ">Edit</a>
     {{/if}}
     {{> UI.dynamic template=postShare }}{{> UI.dynamic template=postDiscuss }}{{> UI.dynamic template=postAdmin }}
   </div>
