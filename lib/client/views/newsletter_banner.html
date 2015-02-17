@@ -1,39 +1,12 @@
 <template name="ah_newsletter_banner">
   {{#if showBanner}}
-    <div class="grid-wrap newsletter-banner-wrap js-newsletter-banner">
-      <div class="grid-row">
-        <div class="grid-space">
-          <form class="newsletter-banner-form">
-            <div class="grid-inner-row">
-              <h4 class="type-center type-large mod-space-bottom">Get the latest college admission tips</h4>
-
-              {{#if isNotConnected}}
-                <div class="grid-2">
-                  <div class="grid-space">
-                    <input type="email" class="js-newsletter-email" placeholder="example@email.com">
-                  </div>
-                </div>
-
-                <div class="grid-2">
-                  <div class="grid-space newsletter-submit-wrap">
-                    <button class="ui-btn ah-newsletter-button js-newsletter-button">Get Newsletter<span class="button-loader"><img src="/img/loading-balls.svg"/></span></button>
-                  </div>
-                </div>
-              {{else}}
-                <!-- one-column view without email form for signed in users -->
-                <div class='grid-2' style='float: none; margin-left: auto; margin-right: auto;'>
-                  <div class="grid-space newsletter-submit-wrap">
-                    <button class="ui-btn ui-small ah-newsletter-button js-newsletter-button">Get Newsletter<span class="button-loader"><img src="/img/loading-balls.svg"/></span></button>
-                  </div>
-                </div>
-              {{/if}}
-
-              <button class="js-newsletter-dismiss ui-unbtn ui-btn-circle ui-small newsletter-dismiss"><i class="icon-x"></i></button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <h4 class="newsletter-subscribed">Thanks for subscribing!</h4>
-    </div>
+    <form class="newsletter-banner-form mod-section-grey">
+      <span class='type-sans-uppercase'>NEWSLETTER</span> Get the latest admissions tips
+      <nobr>
+        <input type="email" class="js-newsletter-email" placeholder="example@email.com"
+          value="{{ currentUser.emails.[0].address }}" />
+        <button class="ui-btn ui-small ah-newsletter-button js-newsletter-button">Go</button>
+      </nobr>
+    </form>
   {{/if}}
 </template>

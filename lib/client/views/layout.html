@@ -50,12 +50,13 @@
   <div class="outer-wrapper {{currentPage}}">
     <div class="inner-wrapper template-{{pageName}}">
       {{> UI.dynamic template=nav}}
-      {{#each heroModules}}
-        {{> UI.dynamic template=getTemplate}}
-      {{/each}}
       <div class="grid-wrap g-content">
         <div class="grid-row">
           <div class="grid-space">
+            {{> ah_category_list}}
+            {{> ah_podcast_tout}}
+            {{> ah_free_trial_bot_widget}}
+
             {{> UI.dynamic template=error}}
             {{> yield}}
             {{> UI.dynamic template=footer}}
