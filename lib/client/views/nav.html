@@ -20,12 +20,15 @@
 <template name="ah_nav_user">
   {{#if isLoggedIn}}
     <div class="mod-dropdown-trigger g-header-user-menu user-menu">
-      <a class="user-dropdown g-header-user-menu-trigger" href="/"><img class="g-header-user-avatar" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/p160x160/10373495_10107552233819774_1922263080497234285_n.jpg?oh=8db5d18917b477950a3e5c0d58f27d0d&oe=55968402&__gda__=1435209363_1e52bb8d56e1680f1f8301d5b3c89f8c" /><i class="g-header-user-carat type-icon-inline icon-carat-down"></i></a>
+      <a class="user-dropdown g-header-user-menu-trigger" href="/">{{>avatar userId=currentUser._id size='small' class='pos-inline-block' }} <i class="g-header-user-carat type-icon-inline icon-carat-down"></i></a>
       <div class="mod-dropdown">
         <ul class="mod-dropdown-text-link-list" role="menu" aria-labelledby="dLabel">
           <li><a href="{{profileUrl}}">{{i18n "Profile"}}</a></li>
           <li><a href="/account">{{i18n "Edit Account"}}</a></li> 
           <li><a href="/sign-out">{{i18n "Sign Out"}}</a></li>
+          {{#if isAdmin}}
+            {{> ah_nav_admin}}
+          {{/if}}
         </ul>
       </div>
     </div>
@@ -35,15 +38,9 @@
 
 <template name="ah_nav_admin">
   {{#if isAdmin}}
-    <div class="mod-dropdown-trigger g-header-nav-admin admin-menu">
-      <a class="admin dropdown-top-level" href="/">{{i18n "Admin"}}</a>
-      <div class="mod-dropdown">
-        <ul class="mod-dropdown-text-link-list" role="menu" aria-labelledby="dLabel">
-          {{#each menu}}
-            {{> UI.dynamic template=menuItem data=this}}
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+    <li><hr></li>
+    {{#each menu}}
+      {{> UI.dynamic template=menuItem data=this}}
+    {{/each}}
   {{/if}}
 </template>
