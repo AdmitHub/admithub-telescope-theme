@@ -2,6 +2,13 @@
   <li>
     <a href="/survey">App Robot</a>
   </li>
+    <li>
+      <a class="account-link sign-in" href="/sign-in">Sign In</a>
+    </li>
+
+    <li>
+      <a class="account-link g-header-nav-user-sign-up sign-up" href="/sign-up">Register</a>
+    </li>
 </template>
 
 <template name="ah_nav_top_questions">
@@ -23,13 +30,6 @@
       </div>
     </div>
   {{else}}
-    <li>
-      <a class="account-link sign-in" href="/sign-in">{{i18n "Sign In"}}</a>
-    </li>
-
-    <li>
-      <a class="account-link g-header-nav-user-sign-up sign-up" href="/sign-up">{{i18n "Sign Up"}}</a>
-    </li>
   {{/if}}
 </template>
 
