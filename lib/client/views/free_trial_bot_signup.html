@@ -1,0 +1,42 @@
+<template name='free_trial_bot_signup'>
+  <div class='pg-bot'>
+    <div class='pg-bot-header'>
+      <h3 class='pg-bot-header-left'>Our Application Robot can help you choose a college by asking you {{ questionCount }} simple questions.</h3>
+      <!-- TODO: phone handoff? -->
+    </div>
+    <div class='pg-bot-body'>
+      <div class='pg-bot-question'>
+        {{#with currentQuestion step}}
+          <div class='question'>
+            <h1>{{ question }}</h1>
+          </div>
+          <div class='answer'>
+            {{#autoForm schema=schema id="freeTrialBotSignup"}}
+              {{> afQuickField name=field options="auto" label-style='display: none' value=value}}
+            {{/autoForm}}
+          </div>
+          <div class='nav ui-btn-set-middle'>
+            <button class='js-nav-prev ui-btn-secondary ui-large' data-step='{{ ../step }}'
+                {{prevDisabled ../step}}>Prev</button><button class='js-nav-next ui-btn ui-large' data-step='{{ ../step }}'
+                {{nextDisabled ../step}}>Next</button>
+          </div>
+        {{/with}}
+      </div>
+    </div>
+    <div class='pg-bot-answers'>
+      <h4 class="space-large">Your Answers</h4>
+      <div class="type-small">
+        {{#each allAnswers }}
+        <div class='q-and-a space-large'>
+          <div>
+            <a href='{{ pathFor "freeTrialBot" step=step }}' class='js-scroll-top'>
+              <span>{{ step }}.</span> {{ prompt }}
+            </a>
+          </div>
+          {{ answer }}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>
