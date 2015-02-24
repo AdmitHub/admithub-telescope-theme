@@ -101,6 +101,8 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/free_trial_bot.js', 'client');
   api.addFiles('lib/client/views/free_trial_bot_signup.html', 'client');
   api.addFiles('lib/client/views/free_trial_bot_signup.js', 'client');
+  api.addFiles('lib/client/views/free_trial_bot_parent_educator.html', 'client');
+  api.addFiles('lib/client/views/free_trial_bot_parent_educator.js', 'client');
   api.addFiles('lib/client/views/header_cta.html', 'client');
   api.addFiles('lib/client/views/header_cta.js', 'client');
   api.addFiles('lib/client/views/header.html', 'client');
