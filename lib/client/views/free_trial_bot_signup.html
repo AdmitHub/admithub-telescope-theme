@@ -6,21 +6,48 @@
     </div>
     <div class='pg-bot-body'>
       <div class='pg-bot-question'>
-        {{#with currentQuestion step}}
-          <div class='question'>
-            <h1>{{ question }}</h1>
-          </div>
-          <div class='answer'>
-            {{#autoForm schema=schema id="freeTrialBotSignup"}}
-              {{> afQuickField name=field options="auto" label-style='display: none' value=value}}
-            {{/autoForm}}
-          </div>
-          <div class='nav ui-btn-set-middle'>
-            <button class='js-nav-prev ui-btn-secondary ui-large' data-step='{{ ../step }}'
-                {{prevDisabled ../step}}>Prev</button><button class='js-nav-next ui-btn ui-large' data-step='{{ ../step }}'
-                {{nextDisabled ../step}}>Next</button>
-          </div>
-        {{/with}}
+        {{ enforceQuestionOrder step }}
+        {{#if equals errorState "existing_email"}}
+          {{> free_trial_bot_signup_existing_email }}
+        {{else}}
+          {{#with currentQuestion step}}
+            {{#if type}}
+              <div class='question'>
+                <h1>{{ question }}</h1>
+              </div>
+              <div class='answer'>
+                <form id='freeTrialBotSignup'>
+                  {{#if equals type "select"}}
+                    <select name='{{ field}}' data-schema-key='{{ field }}'>
+                      {{#each def.allowedValues}}
+                        {{#if equals . ../value}}
+                          <option value='{{ . }}' selected='selected'>{{ . }}</option>
+                        {{else}}
+                          <option value='{{ . }}'>{{ . }}</option>
+                        {{/if}}
+                      {{/each}}
+                    </select>
+
+                  {{ else }}
+                    <input type='{{ type }}' value='{{ value }}' name='{{ field }}' data-schema-key='{{ field }}' />
+                    {{#if errorMsg }}
+                      <div class='has-error'>
+                        <span class='help-block'>
+                          {{ errorMsg }}
+                        </span>
+                      </div>
+                    {{/if}}
+                  {{/if}}
+                </form>
+              </div>
+              <div class='nav ui-btn-set-middle'>
+                <button class='js-nav-prev ui-btn-secondary ui-large' data-step='{{ ../step }}'
+                    {{prevDisabled ../step}}>Prev</button><button class='js-nav-next ui-btn ui-large' data-step='{{ ../step }}'
+                    {{nextDisabled ../step}}>Next</button>
+              </div>
+            {{/if}}
+          {{/with}}
+        {{/if}}
       </div>
     </div>
     <div class='pg-bot-answers'>
@@ -37,6 +64,49 @@
         </div>
         {{/each}}
       </div>
+    </div>
+  </div>
+  {{#if showTracker step 1 "load-question-1"}}
+    <!-- Facebook Conversion Code for Began web-based bot -->
+    <script>(function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+      }
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', '6019739790441', {'value':'0.00','currency':'USD'}]);
+    </script>
+  {{/if}}
+  {{#if showTracker step 2 "load-question-2"}}
+    <!-- Facebook Conversion Code for Began web-based bot -->
+    <script>(function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+      }
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', '6019739820641', {'value':'0.00','currency':'USD'}]);
+    </script>
+  {{/if}}
+</template>
+
+<template name='free_trial_bot_signup_existing_email'>
+  <div class='question'>
+    <h1>You already have an account!</h1>
+    <div class='nav ui-btn-set-middle'>
+      <a class='ui-btn ui-large' href='/sign-in'>Sign In</a>
     </div>
   </div>
 </template>

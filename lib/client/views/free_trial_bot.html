@@ -17,42 +17,6 @@
     <div class='pg-bot-body'>
       <div class='pg-bot-question'>
         {{#with currentQuestion step }}
-          {{#if showBeginBotTracker ../step}}
-            <!-- Facebook Conversion Code for Began web-based bot -->
-            <script>(function() {
-              var _fbq = window._fbq || (window._fbq = []);
-              if (!_fbq.loaded) {
-                var fbds = document.createElement('script');
-                fbds.async = true;
-                fbds.src = '//connect.facebook.net/en_US/fbds.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(fbds, s);
-                _fbq.loaded = true;
-              }
-            })();
-            window._fbq = window._fbq || [];
-            window._fbq.push(['track', '6021661227641', {'value':'0.00','currency':'USD'}]);
-            </script>
-            <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6021661227641&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
-          {{/if}}
-          {{#if showParentContactInfoTracker ../step doc}}
-            <!-- Facebook Conversion Code for Web-based bot Parent info given -->
-            <script>(function() {
-              var _fbq = window._fbq || (window._fbq = []);
-              if (!_fbq.loaded) {
-              var fbds = document.createElement('script');
-              fbds.async = true;
-              fbds.src = '//connect.facebook.net/en_US/fbds.js';
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(fbds, s);
-              _fbq.loaded = true;
-              }
-              })();
-              window._fbq = window._fbq || [];
-              window._fbq.push(['track', '6021661435241', {'value':'0.00','currency':'USD'}]);
-            </script>
-            <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6021661435241&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
-          {{/if}}
           {{#if done}}
             <p>
             Thanks, all done! We'll crunch some numbers and get back to you
@@ -148,4 +112,22 @@
       </div>
     </div>
   </div>
+  {{#if showTrackerRegistrationComplete}}
+    <!-- Facebook Conversion Code for Began web-based bot -->
+    <script>(function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+      }
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', '6021661435241', {'value':'0.00','currency':'USD'}]);
+    </script>
+  {{/if}}
+
 </template>
