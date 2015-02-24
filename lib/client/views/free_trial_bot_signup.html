@@ -33,7 +33,7 @@
                     {{#if errorMsg }}
                       <div class='has-error'>
                         <span class='help-block'>
-                          {{ errorMsg }}
+                          {{{ errorMsg }}}
                         </span>
                       </div>
                     {{/if}}
@@ -93,13 +93,4 @@
     </script>
     <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=6019739820641&amp;ev=PixelInitialized" /></noscript>
   {{/if}}
-</template>
-
-<template name='free_trial_bot_signup_existing_email'>
-  <div class='question'>
-    <h1>You already have an account!</h1>
-    <div class='nav ui-btn-set-middle'>
-      <a class='ui-btn ui-large' href='/sign-in'>Sign In</a>
-    </div>
-  </div>
 </template>
