@@ -139,7 +139,9 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/posts_list.html', 'client');
   api.addFiles('lib/client/views/posts_list.js', 'client');
   api.addFiles('lib/client/views/posts_load_more.html', 'client');
+  api.addFiles('lib/client/views/comment_edit.js', 'client');
   api.addFiles('lib/client/views/comment_form.html', 'client');
+  api.addFiles('lib/client/views/comment_form.js', 'client');
   api.addFiles('lib/client/views/comment_item.html', 'client');
   api.addFiles('lib/client/views/comment_item.js', 'client');
   api.addFiles('lib/client/views/search.html', 'client');
