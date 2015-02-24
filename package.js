@@ -150,6 +150,8 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/search.js', 'client');
   api.addFiles('lib/client/views/touts.html', 'client');
   api.addFiles('lib/client/views/touts.js', 'client');
+  api.addFiles('lib/client/views/trackers.html', 'client');
+  api.addFiles('lib/client/views/trackers.js', 'client');
   api.addFiles('lib/client/views/typekit.html', 'client');
 
   api.addFiles('public/icons/admithub.eot', 'client');
