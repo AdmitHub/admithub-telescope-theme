@@ -160,6 +160,7 @@ Package.onUse(function (api) {
   api.addFiles('public/icons/admithub.woff', 'client');
 
   api.addFiles('public/img/favicon.ico', 'client');
+  api.addFiles('public/img/georgia-state-university_200x200.jpg', 'client');
   api.addFiles('public/img/st-anselm-crest.png', 'client');
   api.addFiles('public/img/st-anselm-logo.png', 'client');
   api.addFiles('public/img/cooper-square-128.png', 'client');
