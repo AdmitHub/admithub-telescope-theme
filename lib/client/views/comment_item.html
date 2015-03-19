@@ -1,5 +1,5 @@
 <template name="ah_comment_item">
-  <li class="comment module comment-displayed" id="{{_id}}">
+  <li class="comment module comment-displayed {{commentClass}}" id="{{_id}}">
    <div class="comment-body">
       {{#if isDeleted}}
         <div class="comment-deleted">This comment has been deleted.</div>
@@ -9,17 +9,17 @@
         <div class="comment-main">
           <div class="comment-meta">
             <a class="comment-username" href="{{profileUrl}}">{{authorName}}</a>,
-            <span class="comment-time">{{ago}},</span>
-            <span class="points">{{upvotes}}</span> <span class="unit">points </span>
+            <span class="comment-time">{{timeAgo ago}},</span>
+            <span class="points">{{upvotes}}</span> <span class="unit">point{{#unless equals upvotes 1 }}s{{/unless}} </span>
             <a href="/comments/{{_id}}" class="comment-permalink icon-link goto-comment"></a>
-            {{#if can_edit}}
-              | <a class="edit-link" href="/comments/{{_id}}/edit">{{i18n "Edit"}}</a>
+            {{#if canEdit this}}
+              | <a class="edit-link" href="/comments/{{_id}}/edit">{{_ "edit"}}</a>
             {{/if}}
           </div>
           <div class='signature'>{{> userSignature profile=author.profile }}</div>
           {{#if canComment}}
             {{#if getSetting "nestedComments" true}}
-              <a href="/comments/{{_id}}" class="comment-reply goto-comment">{{i18n "Reply"}}</a>
+              <a href="/comments/{{_id}}" class="comment-reply goto-comment">{{_ "reply"}}</a>
             {{/if}}
           {{/if}}
         </div>
@@ -27,18 +27,18 @@
         <div class="comment-actions {{#if upvoted}}upvoted{{else}}not-upvoted{{/if}} {{#if downvoted}}downvoted{{else}}not-downvoted{{/if}}">
           <button class="{{#if upvoted}}ui-btn{{else}}ui-btn-secondary{{/if}} ui-small upvote">
             <i class="icon-up"></i>
-            <span>{{#if upvoted}}{{i18n "Voted Up"}}{{else}}{{i18n "Vote Up"}}{{/if}}</span>
+            <span>{{#if upvoted}}Voted Up{{else}}Vote Up{{/if}}</span>
           </button>
           <button class="{{#if downvoted}}ui-btn{{else}}ui-btn-secondary{{/if}} ui-small downvote" href="#">
             <i class="icon-down"></i>
-            <span>{{#if downvoted}}{{i18n "Voted Down"}}{{else}}{{i18n "Vote Down"}}{{/if}}</span>
+            <span>{{#if downvoted}}Voted Down{{else}}Vote Down{{/if}}</span>
           </button>
         </div>
       </div>
       {{/if}}
       {{#if showChildComments}}
         <ul class="comment-children comment-list">
-        {{#each child_comments}}
+        {{#each childComments}}
           {{#with this}}
             {{> UI.dynamic template=comment_item}}
           {{/with}}

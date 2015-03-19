@@ -5,7 +5,7 @@
   {{> ah_posts_sidebar }}
 
   <div class="grid-posts posts list">
-    {{#each enumerate posts}}
+    {{#each enumerate postsCursor}}
       {{#if equals i 2}}{{> UI.dynamic template=newsletterBanner}}{{/if}}
         
       {{> UI.dynamic template=post_item data=item}}

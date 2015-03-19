@@ -28,8 +28,11 @@ Package.onUse(function (api) {
       'stylus'
   ]);
 
+  api.addFiles('lib/permissions.js', ['client', 'server']);
   api.addFiles('lib/admithub.js', ['client', 'server']);
+  api.addFiles('lib/routes.js', ['client', 'server']);
   api.addFiles('lib/_fields.js', ['client', 'server']);
+  api.addFiles('lib/helpers.js', ['client', 'server']);
   api.addFiles('lib/freeTrialBot.js', ['client', 'server']);
   api.addFiles("lib/smsvalidations.js", ['client', 'server']);
 
@@ -93,6 +96,9 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/ah_category_list.js', 'client');
   api.addFiles('lib/client/views/ah_free_trial_bot_widget.html', 'client');
   api.addFiles('lib/client/views/ah_free_trial_bot_widget.js', 'client');
+  api.addFiles('lib/client/views/comment_form.html', 'client');
+  api.addFiles('lib/client/views/comment_item.html', 'client');
+  api.addFiles('lib/client/views/comment_item.js', 'client');
   api.addFiles('lib/client/views/contributors.html', 'client');
   api.addFiles('lib/client/views/contributors.js', 'client');
   api.addFiles('lib/client/views/error_item.html', 'client');
@@ -129,6 +135,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/post_discuss.html', 'client');
   api.addFiles('lib/client/views/post_edit.html', 'client');
   api.addFiles('lib/client/views/post_info.html', 'client');
+  api.addFiles('lib/client/views/post_info.js', 'client');
   api.addFiles('lib/client/views/post_item.html', 'client');
   api.addFiles('lib/client/views/post_item.js', 'client');
   api.addFiles('lib/client/views/post_page.html', 'client');
@@ -136,16 +143,13 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/post_share.html', 'client');
   api.addFiles('lib/client/views/post_share.js', 'client');
   api.addFiles('lib/client/views/post_submit.html', 'client');
+  api.addFiles('lib/client/views/post_title.html', 'client');
+  api.addFiles('lib/client/views/post_title.js', 'client');
   api.addFiles('lib/client/views/post_upvote.html', 'client');
   api.addFiles('lib/client/views/post_upvote.js', 'client');
   api.addFiles('lib/client/views/posts_list.html', 'client');
   api.addFiles('lib/client/views/posts_list.js', 'client');
   api.addFiles('lib/client/views/posts_load_more.html', 'client');
-  api.addFiles('lib/client/views/comment_edit.js', 'client');
-  api.addFiles('lib/client/views/comment_form.html', 'client');
-  api.addFiles('lib/client/views/comment_form.js', 'client');
-  api.addFiles('lib/client/views/comment_item.html', 'client');
-  api.addFiles('lib/client/views/comment_item.js', 'client');
   api.addFiles('lib/client/views/search.html', 'client');
   api.addFiles('lib/client/views/search.js', 'client');
   api.addFiles('lib/client/views/touts.html', 'client');
@@ -153,6 +157,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/trackers.html', 'client');
   api.addFiles('lib/client/views/trackers.js', 'client');
   api.addFiles('lib/client/views/typekit.html', 'client');
+  api.addFiles('lib/client/views/user_email.html', 'client');
 
   api.addFiles('public/icons/admithub.eot', 'client');
   api.addFiles('public/icons/admithub.svg', 'client');
@@ -175,12 +180,21 @@ Package.onUse(function (api) {
   // Make sure this is added *after* screen.styl above.
   api.addFiles('lib/client/css/asset_path_overrides.styl', 'client');
 
-  api.export([
-       'templates',
-       'themeSettings',
-       'primaryNav',
-       'secondaryNav',
-       'FreeTrialBots',
-       'FreeTrialBotSchema'
-  ]);
+  // Permissions overrides
+  api.export("isAdminById");
+  api.export('isAdmin');
+  api.export('updateAdmin');
+  api.export('adminMongoQuery');
+  api.export('notAdminMongoQuery');
+  api.export('getEmail');
+  api.export('getUserSetting');
+
+  // Template overrides
+  api.export('templates');
+  api.export('themeSettings');
+  api.export('primaryNav');
+  api.export('secondaryNav');
+  api.export('FreeTrialBots');
+  api.export('FreeTrialBotSchema');
+  api.export('slugifyPost');
 });

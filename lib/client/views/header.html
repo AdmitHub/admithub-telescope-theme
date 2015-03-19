@@ -18,21 +18,17 @@
             <a class="g-header-logo" href="/"><i class="g-header-logo-icon icon-logo"></i><span class="g-header-logo-type">{{site_title}}</span></a>
 
             <ul class="g-header-nav js-header-nav">
-              {{#if hasPrimaryNav}}
-                {{#each primaryNav}}
-                  {{> UI.dynamic template=getTemplate}}
-                {{/each}}
-              {{/if}}
+              {{#each primaryNav}}
+                {{> UI.dynamic template=getTemplate}}
+              {{/each}}
 
               {{> search}}
 
-              {{#if hasSecondaryNav}}
-                {{#each secondaryNav}}
-                  <li>
-                    {{> UI.dynamic template=getTemplate}}
-                  </li>
-                {{/each}}
-              {{/if}}
+              {{#each secondaryNav}}
+                <li>
+                  {{> UI.dynamic template=getTemplate}}
+                </li>
+              {{/each}}
             </ul>
 
             {{> ah_header_cta}}

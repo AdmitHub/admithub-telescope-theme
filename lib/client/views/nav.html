@@ -25,9 +25,9 @@
       <a class="user-dropdown g-header-user-menu-trigger" href="/">{{>avatar userId=currentUser._id size='small' class='pos-inline-block' }} <i class="g-header-user-carat type-icon-inline icon-carat-down"></i></a>
       <div class="mod-dropdown">
         <ul class="mod-dropdown-text-link-list" role="menu" aria-labelledby="dLabel">
-          <li><a href="{{profileUrl}}">{{i18n "Profile"}}</a></li>
-          <li><a href="/account">{{i18n "Edit Account"}}</a></li> 
-          <li><a href="/sign-out">{{i18n "Sign Out"}}</a></li>
+          <li><a href="{{profileUrl}}">{{_ "profile"}}</a></li>
+          <li><a href="/account">{{_ "edit_account"}}</a></li> 
+          <li><a href="/sign-out">{{_ "sign_out"}}</a></li>
           {{#if isAdmin}}
             {{> ah_nav_admin}}
           {{/if}}
