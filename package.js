@@ -101,8 +101,6 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/comment_item.js', 'client');
   api.addFiles('lib/client/views/contributors.html', 'client');
   api.addFiles('lib/client/views/contributors.js', 'client');
-  api.addFiles('lib/client/views/error_item.html', 'client');
-  api.addFiles('lib/client/views/error_item.js', 'client');
   api.addFiles('lib/client/views/free_trial_bot.html', 'client');
   api.addFiles('lib/client/views/free_trial_bot.js', 'client');
   api.addFiles('lib/client/views/free_trial_bot_signup.html', 'client');
@@ -115,6 +113,8 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/header.js', 'client');
   api.addFiles('lib/client/views/layout.html', 'client');
   api.addFiles('lib/client/views/layout.js', 'client');
+  api.addFiles('lib/client/views/message_item.html', 'client');
+  api.addFiles('lib/client/views/message_item.js', 'client');
   api.addFiles('lib/client/views/nav.html', 'client');
   api.addFiles('lib/client/views/nav_notifications.html', 'client');
   api.addFiles('lib/client/views/nav_notifications.js', 'client');
