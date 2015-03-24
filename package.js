@@ -158,6 +158,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/trackers.js', 'client');
   api.addFiles('lib/client/views/typekit.html', 'client');
   api.addFiles('lib/client/views/user_email.html', 'client');
+  api.addFiles('lib/client/views/user_email.js', 'client');
 
   api.addFiles('public/icons/admithub.eot', 'client');
   api.addFiles('public/icons/admithub.svg', 'client');
@@ -188,6 +189,7 @@ Package.onUse(function (api) {
   api.export('notAdminMongoQuery');
   api.export('getEmail');
   api.export('getUserSetting');
+  api.export('adminUsers');
 
   // Template overrides
   api.export('templates');

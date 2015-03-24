@@ -2,7 +2,7 @@
   <div class="grid-small grid-block dialog user-edit">
     {{#with user}}
     <div>
-      Please fill in your profile below to finish signing up.
+      <h3>Please fill in your profile below to finish signing up.</h3>
     </div>
     <form>
       <div class="control-group">
@@ -16,9 +16,7 @@
           <input name="email" type="text" value="{{emails.[0].address}}" />
         </div>
       </div>
-      {{#each userProfileFinishSignup}}
-        {{> UI.dynamic template=getTemplate data=..}}
-      {{/each}}
+      {{> editUserTags }}
       <div class="form-actions">
         <input type="submit" class="button" value="{{_ "submit"}}" />
       </div>
