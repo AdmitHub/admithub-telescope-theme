@@ -1,6 +1,8 @@
 <template name="ah_post_submit">
   <h1 class='post-edit-title'>Ask Question</h1>
   <div class="single-post grid submit">
-    {{> quickForm collection="Posts" id="submitPostForm" template="telescope" label-class="control-label" input-col-class="controls" type="method" meteormethod="submitPost"}}
+    <div class='grid-block form-horizontal'>
+      {{> quickForm collection="Posts" id="submitPostForm" template="telescope" label-class="control-label" input-col-class="controls" type="method" meteormethod="submitPost"}}
+    </div>
   </div>
 </template>
