@@ -30,7 +30,7 @@
               <h1>{{ question }}</h1>
             </div>
             <div class='answer'>
-              {{#autoForm collection="FreeTrialBots" id="freeTrialBot" doc=doc }}
+              {{#autoForm collection="FreeTrialBots" id="freeTrialBot" doc=doc type="normal"}}
                 <input type='hidden' value='{{ doc.userId }}' name='userId' data-schema-key='userId'/>
                 {{#if loopn}}
                   <table>
@@ -46,7 +46,7 @@
                       <tr class='js-add-multiple-row'>
                         {{#each loopn}}
                           <td>
-                            {{> afQuickField name=field options="auto" label-style="display: none"  style='width: 100%;' }}
+                            {{> afQuickField name=field options=ah_afOptionsFromSchema label-style="display: none"  style='width: 100%;' }}
                           </td>
                         {{/each}}
                         <td><button class='ui-btn js-add-multiple' data-step='{{ ../../step }}'>Add</button></td>
@@ -73,16 +73,16 @@
                 {{#if branch}}
                   {{#each branch}}
                     {{ prompt }}
-                    {{> afQuickField name=field options="auto" label-style="display: none" }}
+                    {{> afQuickField name=field options=ah_afOptionsFromSchema label-style="display: none" }}
                   {{/each}}
                 {{/if}}
                 {{#if multipleBooleans }}
                   {{#each multipleBooleans}}
-                    {{> afQuickField name=field options="auto" label-style="display: none" }}
+                    {{> afQuickField name=field options=ah_afOptionsFromSchema label-style="display: none" }}
                   {{/each}}
                 {{/if}}
                 {{#if field}}
-                  {{> afQuickField name=field options="auto" label-style="display: none" }}
+                  {{> afQuickField name=field options=ah_afOptionsFromSchema label-style="display: none" }}
                 {{/if}}
               {{/autoForm}}
             </div>

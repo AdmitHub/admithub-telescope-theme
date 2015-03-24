@@ -11,7 +11,7 @@ Package.onUse(function (api) {
       'underscore',
       'alanning:roles',
       'aldeed:simple-schema',
-      'aldeed:autoform',
+      'aldeed:autoform@5.0.0',
       'bengott:avatar',
       'jparker:gravatar',
       'iron:router',
