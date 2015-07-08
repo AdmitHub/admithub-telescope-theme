@@ -9,18 +9,24 @@
     <section class='mod-section sponsors'>
       <h2 class="mod-section-header">Sponsors</h2>
 
-      {{#each aboutAdmissionsPartners}}
-        <div class='pg-partners-sponsor'>
-          <a href='{{ url }}' target='_blank' class="link-block">
-            <div href='{{ url }}' class="pg-partners-img-wrap link-block-hover" target='_blank'>
-              <img src="{{ image }}">
-            </div><div class='pg-partners-info'>
-              <h4 class="pg-partners-info-title" >{{ name }}</h4>
-              <p class="type-medium">{{ description }}</p>
+      <div class="grid-inner-row">
+        {{#each aboutAdmissionsPartners}}
+        <div class="grid-2">
+          <div class="grid-space">
+            <div class='pg-partners-sponsor'>
+              <a href='{{ url }}' target='_blank' class="link-block">
+                <div href='{{ url }}' class="pg-partners-img-wrap link-block-hover" target='_blank'>
+                  <img src="{{ image }}">
+                </div><div class='pg-partners-info'>
+                  <h4 class="pg-partners-info-title" >{{ name }}</h4>
+                  <p class="type-medium js-description">{{{ shortDescription 75 }}}</p>
+                </div>
+              </a>
             </div>
-          </a>
+          </div>
         </div>
-      {{/each}}
+        {{/each}}
+      </div>
     </section>
 
     <section class="mod-section contributors">
