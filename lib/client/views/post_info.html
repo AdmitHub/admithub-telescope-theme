@@ -1,8 +1,13 @@
 <template name="ah_post_info">
   <span class="type-secondary">
     <!--span class="points">{{baseScore}} <span class="unit">{{pointsUnitDisplayText}}</span></span-->
-    <span class="post-time">Posted {{timeAgo postedAt}}</span>
-    {{> UI.dynamic template=postAuthorName data=.}} 
+    <span>Posted </span>
+    {{#if canViewTimestamp}}
+      <span class="post-time">{{timeAgo postedAt}}</span>
+    {{/if}}
+    {{#if canViewUsername}}
+      {{> UI.dynamic template=postAuthorName data=.}} 
+    {{/if}}
     {{> UI.dynamic template=userTagsForPost data=.}}
   </span>
 </template>
