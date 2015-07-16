@@ -96,6 +96,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/client/views/ah_category_list.js', 'client');
   api.addFiles('lib/client/views/ah_free_trial_bot_widget.html', 'client');
   api.addFiles('lib/client/views/ah_free_trial_bot_widget.js', 'client');
+  api.addFiles('lib/client/views/ah_userTagsForPost.html', 'client');
   api.addFiles('lib/client/views/comment_form.html', 'client');
   api.addFiles('lib/client/views/comment_item.html', 'client');
   api.addFiles('lib/client/views/comment_item.js', 'client');

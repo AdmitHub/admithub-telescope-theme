@@ -11,8 +11,10 @@
     <div class="mod-space-bottom-1-5 post-info">
       {{> UI.dynamic template=postDomain data=. }}
       {{> UI.dynamic template=postInfo data=. }}
-      <span class="type-secondary">in</span>
-      {{> UI.dynamic template=postCategories data=. }}
+      {{#if categories}}
+        <span class="type-secondary">in</span>
+        {{> UI.dynamic template=postCategories data=. }}
+      {{/if}}
     </div>
   </div>
 

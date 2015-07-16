@@ -1,18 +1,25 @@
 <template name="ah_post_info">
   <span class="type-secondary">
     <!--span class="points">{{baseScore}} <span class="unit">{{pointsUnitDisplayText}}</span></span-->
-    <span>Posted </span>
-    {{#if canViewTimestamp}}
-      <span class="post-time">{{timeAgo postedAt}}</span>
+    {{#if showPostedLine}}
+      <span>Posted </span>
+
+      {{#if canSeeTimestamps}}
+        <span class="post-time">{{timeAgo postedAt}}</span>
+      {{/if}}
+
+      {{#if usernameOrTags}}
+        <span>by </span>
+        {{#if canSeeUsernames}}
+          {{> UI.dynamic template=postAuthorName data=.}} 
+        {{/if}}
+        {{> UI.dynamic template=userTagsForPost data=.}}
+      {{/if}}
     {{/if}}
-    {{#if canViewUsername}}
-      {{> UI.dynamic template=postAuthorName data=.}} 
-    {{/if}}
-    {{> UI.dynamic template=userTagsForPost data=.}}
   </span>
 </template>
 
 <template name="ah_post_author_name">
-  by <a class="post-author" href="{{profileUrl userId}}">{{displayName userId}}</a>
+  <a class="post-author" href="{{profileUrl userId}}">{{displayName userId}}</a>{{#if hasTags}}<span>, </span>{{/if}}
 </template>
 
