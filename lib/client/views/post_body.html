@@ -1,5 +1,5 @@
 <template name='ah_post_body'>
-  <div class='post-body markdown'>{{{targetBlankNoFollow htmlBody}}}</div>
+  <div class='post-body markdown'>{{#if htmlBody}}{{{targetBlankNoFollow htmlBody}}}{{/if}}</div>
 </template>
 <template name='ah_post_teaser'>
   <div class="post-body markdown post-teaser">{{{targetBlankNoFollow postBodyTeaser}}}</div>
